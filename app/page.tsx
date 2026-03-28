@@ -1,7 +1,6 @@
 export default function Home() {
   return (
     <main style={{ padding: "40px", color: "white", background: "#050505", minHeight: "100vh" }}>
-      
       <h1 style={{ fontSize: "48px", fontWeight: 800 }}>
         Aspire Game Academy
       </h1>
@@ -11,9 +10,9 @@ export default function Home() {
       </p>
 
       <div style={{ marginTop: "40px" }}>
-        <img 
-          src="/aspiregameacademy.png" 
-          alt="Aspire Game Academy Logo" 
+        <img
+          src="/aspiregameacademy.png"
+          alt="Aspire Game Academy Logo"
           style={{ width: "200px" }}
         />
       </div>
@@ -23,7 +22,6 @@ export default function Home() {
           Apply Now
         </a>
       </div>
-
     </main>
   );
 }
