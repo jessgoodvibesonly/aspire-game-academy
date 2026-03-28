@@ -3,8 +3,8 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        backgroundColor: "#000",
-        color: "#fff",
+        backgroundColor: "#000000",
+        color: "#ffffff",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -12,18 +12,16 @@ export default function Home() {
       }}
     >
       <div style={{ maxWidth: "900px", width: "100%" }}>
-        
-        {/* LOGO */}
         <img
           src="/aspiregameacademylogo.png"
           alt="Aspire Game Academy Logo"
           style={{
             width: "120px",
             marginBottom: "30px",
+            display: "block",
           }}
         />
 
-        {/* TITLE */}
         <h1
           style={{
             fontSize: "64px",
@@ -35,18 +33,18 @@ export default function Home() {
           Aspire Game Academy
         </h1>
 
-        {/* SUBTEXT */}
         <p
           style={{
             fontSize: "20px",
-            color: "#aaa",
+            color: "#b3b3b3",
             marginBottom: "40px",
+            lineHeight: "1.5",
           }}
         >
-          A studio-aligned training academy built to prepare real-world game talent in Prince Edward Island.
+          A studio-aligned training academy built to prepare real-world game
+          talent in Prince Edward Island.
         </p>
 
-        {/* BUTTON */}
         <a
           href="#"
           style={{
@@ -54,7 +52,7 @@ export default function Home() {
             background: "linear-gradient(135deg, #6a5cff, #4b3cff)",
             padding: "14px 28px",
             borderRadius: "10px",
-            color: "#fff",
+            color: "#ffffff",
             textDecoration: "none",
             fontWeight: 600,
             fontSize: "16px",
