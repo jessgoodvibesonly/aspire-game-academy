@@ -3,17 +3,19 @@ export default function Home() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#050505",
-        color: "#ffffff",
-        padding: "80px 20px",
-        fontFamily: "Arial, sans-serif",
+        backgroundColor: "#000",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px",
       }}
     >
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "900px", width: "100%" }}>
         
         {/* LOGO */}
         <img
-          src="/aspiregameacademy.png"
+          src="/aspiregameacademylogo.png"
           alt="Aspire Game Academy Logo"
           style={{
             width: "120px",
@@ -24,9 +26,10 @@ export default function Home() {
         {/* TITLE */}
         <h1
           style={{
-            fontSize: "56px",
-            fontWeight: "bold",
+            fontSize: "64px",
+            fontWeight: 700,
             marginBottom: "20px",
+            lineHeight: "1.1",
           }}
         >
           Aspire Game Academy
@@ -36,13 +39,11 @@ export default function Home() {
         <p
           style={{
             fontSize: "20px",
-            color: "#cccccc",
+            color: "#aaa",
             marginBottom: "40px",
-            lineHeight: "1.6",
           }}
         >
-          A studio-aligned training academy built to prepare real-world game
-          talent in Prince Edward Island.
+          A studio-aligned training academy built to prepare real-world game talent in Prince Edward Island.
         </p>
 
         {/* BUTTON */}
@@ -50,13 +51,13 @@ export default function Home() {
           href="#"
           style={{
             display: "inline-block",
+            background: "linear-gradient(135deg, #6a5cff, #4b3cff)",
             padding: "14px 28px",
-            background: "#4f46e5",
-            color: "#ffffff",
+            borderRadius: "10px",
+            color: "#fff",
             textDecoration: "none",
-            borderRadius: "8px",
+            fontWeight: 600,
             fontSize: "16px",
-            fontWeight: "bold",
           }}
         >
           Apply Now
