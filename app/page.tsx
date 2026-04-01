@@ -140,7 +140,7 @@ export default function Home() {
               maxWidth: "1000px",
             }}
           >
-            Aspire Game Academy
+            Learn how real game studios operate in 7 days.
           </h1>
 
           <p
@@ -153,7 +153,7 @@ export default function Home() {
               maxWidth: "980px",
             }}
           >
-            Become studio-ready in 7 days.
+            Studio-aligned. Hands-on. Real-world.
           </p>
 
           <p
@@ -165,9 +165,9 @@ export default function Home() {
               maxWidth: "980px",
             }}
           >
-            Aspire Game Academy is a fast, industry-aligned bootcamp designed to
-            prepare real-world game talent through practical exposure to QA,
-            production, live ops, studio workflows, and professional readiness.
+            Aspire Game Academy is a 7-day in-person industry immersion designed
+            to fast-track aspiring talent into the game industry through real
+            workflows, direct mentorship, and practical exposure.
           </p>
 
           <p
@@ -179,10 +179,9 @@ export default function Home() {
               maxWidth: "980px",
             }}
           >
-            This is not a dragged-out academic program. It is a high-impact,
-            live, instructor-led intensive built to give students useful
-            knowledge fast and help them better understand how game studios
-            actually work.
+            This is not a traditional course. This is a focused pop-up training
+            experience built to help students understand how real studios
+            actually operate across QA, production, and live operations.
           </p>
 
           <div
@@ -211,12 +210,12 @@ export default function Home() {
             }}
           >
             {[
-              "7 days",
+              "7 consecutive days",
               "10:00 AM to 3:00 PM",
               "35 hours total",
+              "10 to 20 students",
               "Certificate included",
-              "$995 early bird",
-              "$1,250 regular",
+              "$1,997 USD",
             ].map((item) => (
               <div
                 key={item}
@@ -242,37 +241,41 @@ export default function Home() {
       {/* WHAT IT IS */}
       <section id="program" style={sectionStyle}>
         <div style={smallLabelStyle}>What It Is</div>
-        <h2 style={h2Style}>A live, intensive game industry bootcamp</h2>
-        <p style={bodyStyle}>
-          Aspire Game Academy is built for aspiring game industry talent,
-          career-switchers, and students who want real-world exposure without
-          spending months in a traditional program.
+        <h2 style={h2Style}>This is not a course</h2>
+        <p style={{ ...bodyStyle, color: "#b8ffe8", fontWeight: 700 }}>
+          This is a real-world game studio experience.
         </p>
         <p style={bodyStyle}>
-          The focus is practical. Students learn how game studios actually
-          operate, how teams communicate, how workflows move, and how to think
-          more professionally inside a studio environment.
+          Aspire Game Academy is built for aspiring game industry talent,
+          career-switchers, and students who want practical exposure without
+          dragging things out for months.
+        </p>
+        <p style={bodyStyle}>
+          Students learn how studios actually function, how teams communicate,
+          how workflows move, and how to think more professionally inside a real
+          game production environment.
         </p>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
             <h3 style={{ marginTop: 0, fontSize: "24px" }}>Fast by design</h3>
             <p style={{ margin: 0, color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              One focused 7-day intensive. In, out, done, and useful.
+              One focused 7-day pop-up intensive built for clarity, momentum,
+              and useful exposure.
             </p>
           </div>
           <div style={cardStyle}>
             <h3 style={{ marginTop: 0, fontSize: "24px" }}>Real-world focus</h3>
             <p style={{ margin: 0, color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Practical workflows, studio awareness, communication, QA,
-              production, and live ops.
+              QA, production, studio communication, task flow, release support,
+              and live ops awareness.
             </p>
           </div>
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Scalable format</h3>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Pop-up format</h3>
             <p style={{ margin: 0, color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Built for pop-up training in multiple cities with strong local
-              instructors and a clear certificate model.
+              Designed for city-by-city launch with strong instructors, simple
+              venues, and focused cohorts.
             </p>
           </div>
         </div>
@@ -283,31 +286,32 @@ export default function Home() {
       {/* WHO IT'S FOR */}
       <section style={sectionStyle}>
         <div style={smallLabelStyle}>Who It’s For</div>
-        <h2 style={h2Style}>Built for beginners, aspiring talent, and career-switchers</h2>
+        <h2 style={h2Style}>Built for aspiring talent and career-switchers</h2>
         <p style={bodyStyle}>
-          Students do not need to already be working in the gaming industry.
-          This model is beginner-friendly and designed to create a stronger,
-          faster bridge into the real world of game development and operations.
+          Students do not need prior game industry experience. This model is
+          designed to create a faster, more practical bridge into the real world
+          of game development and operations.
         </p>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <strong style={{ fontSize: "20px" }}>Aspiring talent</strong>
+            <strong style={{ fontSize: "20px" }}>Aspiring game talent</strong>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              People looking for a more realistic starting point in gaming.
+              People looking for a stronger, more realistic entry point into the
+              industry.
             </p>
           </div>
           <div style={cardStyle}>
             <strong style={{ fontSize: "20px" }}>Students wanting more</strong>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Students who want practical, applied knowledge instead of just theory.
+              Students who want practical exposure instead of theory only.
             </p>
           </div>
           <div style={cardStyle}>
             <strong style={{ fontSize: "20px" }}>Career-switchers</strong>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
               People from tech, support, design, media, or adjacent fields who
-              want to understand studio workflows.
+              want to understand real studio workflows.
             </p>
           </div>
         </div>
@@ -322,13 +326,13 @@ export default function Home() {
 
         <div style={gridStyle}>
           {[
-            ["Day 1", "Industry reality, studio roles, and how games are actually made"],
-            ["Day 2", "QA thinking, issue spotting, and stronger bug reporting"],
-            ["Day 3", "Production workflows, sprints, communication, and task flow"],
-            ["Day 4", "Live ops, release support, updates, and player-facing thinking"],
-            ["Day 5", "Studio simulation and guided team-style problem solving"],
-            ["Day 6", "Professional readiness, applications, portfolio direction, and positioning"],
-            ["Day 7", "Final exercise, review, completion, and certificate presentation"],
+            ["Day 1", "Industry reality, studio roles, pipeline awareness, and how games are actually made"],
+            ["Day 2", "QA thinking, issue spotting, testing basics, and stronger bug reporting"],
+            ["Day 3", "Production workflows, communication, task flow, and sprint-style thinking"],
+            ["Day 4", "Live ops basics, updates, release support, and player-facing awareness"],
+            ["Day 5", "Hands-on project work and guided studio-style collaboration"],
+            ["Day 6", "Professional readiness, portfolio direction, applications, and positioning"],
+            ["Day 7", "Final exercise, review, wrap-up, and certificate presentation"],
           ].map(([day, text]) => (
             <div key={day} style={cardStyle}>
               <div
@@ -353,37 +357,34 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* LOCATIONS */}
+      {/* VALUE */}
       <section style={sectionStyle}>
-        <div style={smallLabelStyle}>Launch Cities</div>
-        <h2 style={h2Style}>Pop-up model starting in June</h2>
+        <div style={smallLabelStyle}>Why It Matters</div>
+        <h2 style={h2Style}>Real exposure in 7 days</h2>
         <p style={bodyStyle}>
-          This format is designed to work city by city with strong instructors,
-          simple venues, and clear cohort dates.
+          Most people spend years guessing how to break into the game industry.
+          Aspire Game Academy gives students a fast, practical, premium entry
+          point that helps them better understand how real studios function.
         </p>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Tampa, Florida</h3>
-            <p style={{ color: "#b8ffe8", fontWeight: 700 }}>June 8–14, 2026</p>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Small cohort</h3>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Strong first launch city with a lower-friction test market.
+              10 to 20 students for stronger engagement, better interaction, and
+              a more premium feel.
             </p>
           </div>
-
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Austin, Texas</h3>
-            <p style={{ color: "#b8ffe8", fontWeight: 700 }}>June 22–28, 2026</p>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Industry-led</h3>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Great workshop culture and strong tech energy.
+              Taught by people with real-world game industry experience.
             </p>
           </div>
-
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>San Diego, California</h3>
-            <p style={{ color: "#b8ffe8", fontWeight: 700 }}>July 13–19, 2026</p>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Useful fast</h3>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Premium coastal market with strong branding potential.
+              Clear, practical exposure without wasting months.
             </p>
           </div>
         </div>
@@ -391,14 +392,49 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* PRICING */}
+      {/* POP-UP MODEL */}
       <section style={sectionStyle}>
-        <div style={smallLabelStyle}>Tuition</div>
-        <h2 style={h2Style}>Simple, premium, and easy to understand</h2>
+        <div style={smallLabelStyle}>Pop-Up Model</div>
+        <h2 style={h2Style}>Designed to launch city by city</h2>
+        <p style={bodyStyle}>
+          Aspire Game Academy is structured as a premium 7-day pop-up program
+          that can be launched in multiple cities with local instructors, simple
+          venues, and clear cohort dates.
+        </p>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Early Bird</h3>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Focused format</h3>
+            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
+              One week. One city. One strong live experience.
+            </p>
+          </div>
+          <div style={cardStyle}>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Professional energy</h3>
+            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
+              Premium positioning for students and strong visibility for local
+              instructors.
+            </p>
+          </div>
+          <div style={cardStyle}>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Built to scale</h3>
+            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
+              Easy to replicate in new markets as Aspire grows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
+      {/* TUITION */}
+      <section style={sectionStyle}>
+        <div style={smallLabelStyle}>Tuition</div>
+        <h2 style={h2Style}>Simple, premium, and clear</h2>
+
+        <div style={gridStyle}>
+          <div style={cardStyle}>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Student Tuition</h3>
             <div
               style={{
                 fontSize: "42px",
@@ -407,27 +443,24 @@ export default function Home() {
                 marginBottom: "10px",
               }}
             >
-              $995
+              $1,997
             </div>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Best for early signups and faster seat commitment.
+              Includes 7 live in-person training days, mentorship, hands-on
+              learning, and certificate of completion.
             </p>
           </div>
 
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Regular Tuition</h3>
-            <div
-              style={{
-                fontSize: "42px",
-                fontWeight: 800,
-                color: "#b8ffe8",
-                marginBottom: "10px",
-              }}
-            >
-              $1,250
-            </div>
-            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.6 }}>
-              Full live access, hands-on training, and certificate of completion.
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>What’s Included</h3>
+            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>
+              35 total hours
+              <br />
+              Live instruction
+              <br />
+              Practical exposure
+              <br />
+              Certificate included
             </p>
           </div>
         </div>
@@ -438,29 +471,40 @@ export default function Home() {
       {/* TEACH */}
       <section style={sectionStyle}>
         <div style={smallLabelStyle}>Teach With Aspire</div>
-        <h2 style={h2Style}>Aspire Game Academy City Leads</h2>
+        <h2 style={h2Style}>Lead a city cohort</h2>
         <p style={bodyStyle}>
-          This model is designed to scale with strong local instructors who can
-          teach, attract students, and build energy around each cohort.
+          Aspire Game Academy is built with real industry professionals who can
+          lead, mentor, and bring real-world studio experience into the room.
         </p>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Suggested structure</h3>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Instructor structure</h3>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>
-              $1,000 base teaching fee
+              $1,500 base instructor fee
               <br />
-              + $150 per paid student
+              + $150 per student
               <br />
-              + bonus once 12 students are reached
+              + $500 bonus at 20 students
+            </p>
+          </div>
+
+          <div style={cardStyle}>
+            <h3 style={{ marginTop: 0, fontSize: "24px" }}>Program schedule</h3>
+            <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>
+              7 consecutive days
+              <br />
+              10:00 AM to 3:00 PM daily
+              <br />
+              10 to 20 students
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={{ marginTop: 0, fontSize: "24px" }}>Why it works</h3>
             <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.7 }}>
-              It motivates strong teaching and gives instructors a reason to
-              help fill their own cohort.
+              Strong teaching, premium positioning, and a shared incentive to
+              help fill the cohort.
             </p>
           </div>
         </div>
@@ -478,7 +522,7 @@ export default function Home() {
       >
         <div style={smallLabelStyle}>Apply</div>
         <h2 style={{ ...h2Style, maxWidth: "900px", margin: "0 auto 18px auto" }}>
-          Real-world game industry readiness, without dragging it out
+          Your path into the game industry starts here
         </h2>
         <p
           style={{
@@ -488,8 +532,8 @@ export default function Home() {
           }}
         >
           Whether you want to join as a student or teach as a city lead, Aspire
-          Game Academy is built to move fast, stay practical, and prepare people
-          for real studio environments.
+          Game Academy is built to move fast, stay practical, and deliver a
+          real-world studio-aligned experience.
         </p>
 
         <div
