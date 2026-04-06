@@ -208,7 +208,9 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Learn how real game studios operate in 7 days.
+              Learn how real game studios operate in{" "}
+              <br />
+              <span style={{ color: "#72e6ff" }}>7 days.</span>
             </h1>
 
             <p
@@ -522,7 +524,9 @@ export default function Home() {
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <strong style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}>
+            <strong
+              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
+            >
               Aspiring game talent
             </strong>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
@@ -531,7 +535,9 @@ export default function Home() {
             </p>
           </div>
           <div style={cardStyle}>
-            <strong style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}>
+            <strong
+              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
+            >
               Students wanting more
             </strong>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
@@ -539,7 +545,9 @@ export default function Home() {
             </p>
           </div>
           <div style={cardStyle}>
-            <strong style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}>
+            <strong
+              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
+            >
               Career-switchers
             </strong>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
