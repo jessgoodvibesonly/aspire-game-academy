@@ -563,7 +563,7 @@ export default function Home() {
           <div style={smallLabelStyle}>Curriculum</div>
           <h2 style={h2Style}>Created with AAA production leadership</h2>
           <p style={bodyStyle}>
-            This production-focused curriculum was created by <strong style={{ color: colors.text }}>Fred Dosolla</strong> for Aspire Game Academy, bringing real-world studio production thinking into the structure of the program.
+            This production-focused curriculum was created by <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real-world studio production thinking into the structure of the program.
           </p>
         </div>
       </section>
