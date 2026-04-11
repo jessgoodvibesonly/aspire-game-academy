@@ -183,11 +183,30 @@ export default function Home() {
   ];
 
   const outcomes = [
-    "Plan and run real production workflows",
-    "Manage cross-functional teams and vendors",
-    "Track delivery, risks, and quality",
-    "Support release and live operations",
-    "Communicate like a producer in a real studio",
+    "Build a playable team project",
+    "Run standups and production check-ins",
+    "Track scope, blockers, and priorities",
+    "Respond to release and live ops scenarios",
+    "Present work like a real studio team",
+  ];
+
+  const studentWork = [
+    {
+      title: "Playable game slice",
+      text: "Work in teams to shape and present a small playable project, not just ideas on paper.",
+    },
+    {
+      title: "Daily standups",
+      text: "Practice how teams align, assign tasks, surface blockers, and keep work moving.",
+    },
+    {
+      title: "Production boards",
+      text: "Map scope, priorities, milestones, and handoffs using studio-style production thinking.",
+    },
+    {
+      title: "Live ops scenarios",
+      text: "React to updates, player issues, release pressure, and real-world delivery moments.",
+    },
   ];
 
   return (
@@ -254,9 +273,9 @@ export default function Home() {
                 maxWidth: "940px",
               }}
             >
-              Learn AAA production workflows in{" "}
+              Pop-up game academy
               <br />
-              <span style={{ color: colors.cyan }}>7 days.</span>
+              <span style={{ color: colors.cyan }}>in cities worldwide.</span>
             </h1>
 
             <p
@@ -269,7 +288,7 @@ export default function Home() {
                 maxWidth: "900px",
               }}
             >
-              Production-focused. Studio-aligned. Real-world.
+              7 days inside video game production.
             </p>
 
             <p
@@ -281,9 +300,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Aspire Game Academy is a 7-day in-person production intensive
-              designed to teach how real game studios plan, ship, support, and
-              scale games across concept, production, release, and live ops.
+              Aspire Game Academy is a global, in-person pop-up school taught by AAA industry leaders with real studio backgrounds.
             </p>
 
             <p
@@ -295,10 +312,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Built for aspiring producers, career-switchers, and future studio
-              leaders who want practical exposure to the workflows, decisions,
-              communication, and execution standards used inside modern game
-              development teams.
+              Students step inside the full game lifecycle, build in teams, run standups, tackle production challenges, and experience how games move from concept to release and live ops.
             </p>
 
             <div
@@ -327,11 +341,11 @@ export default function Home() {
               }}
             >
               {[
+                "Pop-up city format",
                 "7 consecutive days",
-                "Production-focused",
-                "10:00 AM to 3:00 PM",
-                "35 hours total",
-                "10 to 20 students",
+                "10:00 AM to 2:00 PM",
+                "Team project",
+                "Live ops scenarios",
                 "Certificate included",
               ].map((item) => (
                 <div key={item} style={statPillStyle}>
@@ -422,7 +436,7 @@ export default function Home() {
                       marginBottom: "12px",
                     }}
                   >
-                    AAA Production Intensive
+                    Global Pop-Up Program
                   </div>
 
                   <div
@@ -434,9 +448,9 @@ export default function Home() {
                       marginBottom: "14px",
                     }}
                   >
-                    One focused week.
+                    Learn it.
                     <br />
-                    Real production exposure.
+                    Build it.
                   </div>
 
                   <p
@@ -448,8 +462,7 @@ export default function Home() {
                       maxWidth: "430px",
                     }}
                   >
-                    Learn the systems, communication, and execution standards
-                    used to move games from concept to release and beyond.
+                    A fast, immersive week where students work like a studio team and see how production connects every part of game development.
                   </p>
                 </div>
 
@@ -557,13 +570,37 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
+      {/* WHAT STUDENTS WORK ON */}
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>What Students Work On</div>
+          <h2 style={h2Style}>Not just lessons. Real studio-style work.</h2>
+          <p style={bodyStyle}>
+            Students are not just watching how games are made. They are stepping into the process and working through it together.
+          </p>
+        </div>
+
+        <div style={gridStyle}>
+          {studentWork.map((item) => (
+            <div key={item.title} style={cardStyle}>
+              <h3 style={cardTitleStyle}>{item.title}</h3>
+              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
       {/* CURRICULUM CREDIT */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Curriculum</div>
           <h2 style={h2Style}>Created with AAA production leadership</h2>
           <p style={bodyStyle}>
-            This production-focused curriculum was created by <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real-world studio production thinking into the structure of the program.
+            The production-heavy foundation of this program was created by <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
           </p>
         </div>
       </section>
@@ -576,7 +613,7 @@ export default function Home() {
           <div style={smallLabelStyle}>7-Day Intensive</div>
           <h2 style={h2Style}>Production-Focused Curriculum</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Designed to teach how games move from concept to live operations.
+            From concept to release to live ops, in one focused week.
           </p>
         </div>
 
@@ -610,12 +647,9 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Outcome</div>
-          <h2 style={h2Style}>By the end of the course, participants can</h2>
+          <h2 style={h2Style}>By the end of the course, students can</h2>
           <p style={bodyStyle}>
-            Students finish the program with stronger production awareness,
-            clearer communication skills, and a better understanding of how
-            delivery, quality, release, and live operations are coordinated in a
-            real studio environment.
+            Students leave with clearer production awareness, stronger team communication, and practical experience connecting planning, delivery, release, and live operations.
           </p>
         </div>
 
@@ -634,7 +668,7 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Who It’s For</div>
-          <h2 style={h2Style}>Built for future producers and studio operators</h2>
+          <h2 style={h2Style}>Built for future producers and game team talent</h2>
           <p style={bodyStyle}>
             This program is designed for aspiring producers, coordinators,
             project-minded creatives, career-switchers, and people who want to
@@ -686,12 +720,9 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Why It Matters</div>
-          <h2 style={h2Style}>A faster bridge into real production thinking</h2>
+          <h2 style={h2Style}>A faster way into the real side of game development</h2>
           <p style={bodyStyle}>
-            Many people understand games from the player side, but not from the
-            production side. Aspire Game Academy helps close that gap with a
-            concentrated, practical, high-value intensive built around how games
-            are really delivered.
+            Many people love games without ever seeing how teams actually build, coordinate, release, and support them. Aspire Game Academy helps close that gap in a format that feels current, practical, and exciting.
           </p>
         </div>
 
@@ -726,11 +757,9 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Pop-Up Model</div>
-          <h2 style={h2Style}>Designed to launch city by city</h2>
+          <h2 style={h2Style}>Built to launch city by city</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is structured as a premium 7-day in-person
-            intensive that can be launched in multiple cities with local
-            instructors, focused cohorts, and strong production positioning.
+            Aspire Game Academy is designed as a global pop-up model that can activate in different cities with focused cohorts, local energy, and strong studio-style positioning.
           </p>
         </div>
 
@@ -738,20 +767,19 @@ export default function Home() {
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Focused format</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              One city, one week, one strong immersive learning experience.
+              One city. One week. One immersive game production experience.
             </p>
           </div>
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Professional energy</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Designed to feel serious, studio-aligned, and premium from the
-              first touchpoint onward.
+              Designed to feel exciting, polished, and studio-aligned from the first touchpoint onward.
             </p>
           </div>
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Built to scale</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Easy to replicate in future markets as Aspire expands.
+              Easy to replicate as Aspire grows into new cities and new communities.
             </p>
           </div>
         </div>
@@ -795,19 +823,18 @@ export default function Home() {
               $1,997
             </div>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
-              Includes 7 live in-person training days, practical production
-              exposure, mentorship, and a certificate of completion.
+              Includes 7 live in-person training days, studio-style teamwork, practical production exposure, and a certificate of completion.
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>What’s Included</h3>
             <p style={{ color: colors.muted, lineHeight: 1.9, margin: 0 }}>
-              35 total hours
+              28 total hours
               <br />
               Live instruction
               <br />
-              Production-focused curriculum
+              Team project work
               <br />
               Certificate included
             </p>
@@ -823,9 +850,7 @@ export default function Home() {
           <div style={smallLabelStyle}>Teach With Aspire</div>
           <h2 style={h2Style}>Lead a city cohort</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is built with experienced industry professionals
-            who can lead, mentor, and bring real-world studio production
-            knowledge into the room.
+            Aspire Game Academy is built for experienced industry professionals who can lead, mentor, and bring real studio knowledge into an exciting pop-up learning environment.
           </p>
         </div>
 
@@ -846,7 +871,7 @@ export default function Home() {
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
               7 consecutive days
               <br />
-              10:00 AM to 3:00 PM daily
+              10:00 AM to 2:00 PM daily
               <br />
               10 to 20 students
             </p>
@@ -880,7 +905,7 @@ export default function Home() {
             margin: "0 auto 18px auto",
           }}
         >
-          Your path into production starts here
+          Your path into the game industry starts here
         </h2>
         <p
           style={{
@@ -889,9 +914,7 @@ export default function Home() {
             maxWidth: "900px",
           }}
         >
-          Whether you want to join as a student or teach as a city lead,
-          Aspire Game Academy is built to move fast, stay practical, and deliver
-          a real-world production-aligned experience.
+          Join as a student or step in as an instructor. Aspire Game Academy is built to move fast, stay practical, and deliver a game industry experience that feels real from day one.
         </p>
 
         <div
