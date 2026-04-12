@@ -15,6 +15,9 @@ export default function Home() {
     glow: "rgba(114,230,255,0.18)",
   };
 
+  const studentFormLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLScB1ZxdmvHP4lwGXU0-VViByCPDDGfezhg1J0XtknGbm6ohcw/viewform";
+
   const pageStyle = {
     minHeight: "100vh",
     background: `
@@ -81,9 +84,8 @@ export default function Home() {
   } as const;
 
   const cardStyle = {
-    background: `
-      linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))
-    `,
+    background:
+      "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03))",
     border: `1px solid ${colors.cardBorder}`,
     borderRadius: "22px",
     padding: "26px",
@@ -215,52 +217,40 @@ export default function Home() {
       <section
         style={{
           ...containerStyle,
-          paddingTop: "40px",
+          paddingTop: "56px",
           paddingBottom: "84px",
         }}
       >
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "minmax(0, 1.08fr) minmax(320px, 0.92fr)",
-            gap: "40px",
+            gridTemplateColumns: "minmax(0, 1.15fr) minmax(320px, 0.85fr)",
+            gap: "44px",
             alignItems: "center",
           }}
         >
           <div>
             <div
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "12px",
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                borderRadius: "999px",
-                padding: "10px 16px",
-                marginBottom: "26px",
-                boxShadow: "0 0 20px rgba(114,230,255,0.08)",
+                width: "150px",
+                height: "150px",
+                borderRadius: "6px",
+                overflow: "hidden",
+                marginBottom: "34px",
+                boxShadow: "0 0 34px rgba(114,230,255,0.14)",
+                background: "rgba(255,255,255,0.03)",
               }}
             >
-              <span
+              <img
+                src="/aspiregameacademylogo.png"
+                alt="Aspire Game Academy Logo"
                 style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "999px",
-                  background: colors.cyan,
-                  boxShadow: "0 0 14px rgba(114,230,255,0.7)",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
                 }}
               />
-              <span
-                style={{
-                  fontSize: "14px",
-                  fontWeight: 800,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  color: colors.cyan,
-                }}
-              >
-                Aspire Agency Global Inc.
-              </span>
             </div>
 
             <h1
@@ -270,7 +260,7 @@ export default function Home() {
                 fontWeight: 900,
                 margin: "0 0 22px 0",
                 letterSpacing: "-2.5px",
-                maxWidth: "940px",
+                maxWidth: "980px",
               }}
             >
               Pop-up game academy
@@ -323,7 +313,7 @@ export default function Home() {
                 marginBottom: "24px",
               }}
             >
-              <a href="#" style={buttonPrimaryStyle}>
+              <a href={studentFormLink} style={buttonPrimaryStyle}>
                 Apply as a Student
               </a>
 
@@ -402,29 +392,6 @@ export default function Home() {
                   textAlign: "center",
                 }}
               >
-                <div
-                  style={{
-                    width: "160px",
-                    height: "160px",
-                    borderRadius: "28px",
-                    overflow: "hidden",
-                    boxShadow:
-                      "0 0 0 1px rgba(255,255,255,0.08), 0 0 24px rgba(114,230,255,0.18)",
-                    background: "rgba(255,255,255,0.04)",
-                  }}
-                >
-                  <img
-                    src="/aspiregameacademylogo.png"
-                    alt="Aspire Game Academy Logo"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                </div>
-
                 <div>
                   <div
                     style={{
@@ -600,7 +567,8 @@ export default function Home() {
           <div style={smallLabelStyle}>Curriculum</div>
           <h2 style={h2Style}>Created with AAA production leadership</h2>
           <p style={bodyStyle}>
-            The production-heavy foundation of this program was created by <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
+            The production-heavy foundation of this program was created by{" "}
+            <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
           </p>
         </div>
       </section>
@@ -632,7 +600,9 @@ export default function Home() {
               >
                 {item.day}
               </div>
-              <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>{item.title}</h3>
+              <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>
+                {item.title}
+              </h3>
               <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
                 {item.text}
               </p>
@@ -925,7 +895,7 @@ export default function Home() {
             justifyContent: "center",
           }}
         >
-          <a href="#" style={buttonPrimaryStyle}>
+          <a href={studentFormLink} style={buttonPrimaryStyle}>
             Apply as a Student
           </a>
 
