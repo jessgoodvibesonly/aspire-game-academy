@@ -18,6 +18,9 @@ export default function Home() {
   const studentFormLink =
     "https://docs.google.com/forms/d/e/1FAIpQLScB1ZxdmvHP4lwGXU0-VViByCPDDGfezhg1J0XtknGbm6ohcw/viewform";
 
+  const instructorFormLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSdL3eUQqETiIFCaD_wtzKdZSNOTmiEC835jVFSsc8J8SNZGnA/viewform";
+
   const pageStyle = {
     minHeight: "100vh",
     background: `
@@ -213,7 +216,6 @@ export default function Home() {
 
   return (
     <main style={pageStyle}>
-      {/* HERO */}
       <section
         style={{
           ...containerStyle,
@@ -489,7 +491,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* WHAT IT IS */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>What It Is</div>
@@ -537,7 +538,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* WHAT STUDENTS WORK ON */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>What Students Work On</div>
@@ -561,7 +561,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* CURRICULUM CREDIT */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Curriculum</div>
@@ -575,7 +574,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* CURRICULUM */}
       <section id="curriculum" style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>7-Day Intensive</div>
@@ -613,7 +611,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* OUTCOMES */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Outcome</div>
@@ -634,7 +631,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* WHO IT'S FOR */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Who It’s For</div>
@@ -686,7 +682,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* VALUE */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Why It Matters</div>
@@ -723,7 +718,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* POP-UP MODEL */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Pop-Up Model</div>
@@ -757,7 +751,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* TUITION */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Tuition</div>
@@ -814,7 +807,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* TEACH */}
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Teach With Aspire</div>
@@ -859,7 +851,6 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      {/* CTA */}
       <section
         style={{
           ...sectionStyle,
@@ -899,7 +890,7 @@ export default function Home() {
             Apply as a Student
           </a>
 
-          <a href="#" style={buttonSecondaryStyle}>
+          <a href={instructorFormLink} style={buttonSecondaryStyle}>
             Apply to Teach
           </a>
         </div>
