@@ -3,5 +3,6 @@ body {
   padding: 0;
   background: #050505;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
