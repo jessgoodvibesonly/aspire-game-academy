@@ -227,7 +227,7 @@ export default function Home() {
     "Aspiring QA and Dev QA talent",
     "Technical creatives",
     "Career starters and career shifters",
-    "People who want real industry context fast",
+    "People looking for a faster path into games",
   ];
 
   return (
@@ -563,7 +563,7 @@ export default function Home() {
       <section id="curriculum" style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Inside the 7 Days</div>
-          <h2 style={h2Style}>Original production-focused curriculum</h2>
+          <h2 style={h2Style}>Production-focused curriculum</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
             A practical week designed to move from concept to release to live ops.
           </p>
