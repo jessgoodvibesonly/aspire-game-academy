@@ -43,7 +43,7 @@ export default function Home() {
   const sectionStyle = {
     maxWidth: "1200px",
     margin: "0 auto",
-    padding: "84px 0",
+    padding: "78px 0",
   } as const;
 
   const dividerStyle = {
@@ -73,17 +73,17 @@ export default function Home() {
 
   const bodyStyle = {
     fontSize: "clamp(18px, 1.8vw, 22px)",
-    lineHeight: 1.75,
+    lineHeight: 1.72,
     color: colors.muted,
     margin: "0 0 18px 0",
-    maxWidth: "940px",
+    maxWidth: "920px",
   };
 
   const gridStyle = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: "20px",
-    marginTop: "30px",
+    marginTop: "28px",
   } as const;
 
   const cardStyle = {
@@ -149,69 +149,58 @@ export default function Home() {
     letterSpacing: "-0.4px",
   };
 
-  const curriculumDays = [
-    {
-      day: "Day 1",
-      title: "How Games Actually Ship",
-      text: "Production reality, roles, pods, multi-studio setups, milestones, tools, and mapping a game idea into a roadmap.",
-    },
-    {
-      day: "Day 2",
-      title: "Production Thinking & Prioritization",
-      text: "Backlogs, epics, scope, time, quality, dependencies, critical path basics, and writing clearer tickets.",
-    },
-    {
-      day: "Day 3",
-      title: "Agile in Practice",
-      text: "Sprint cadence, estimation, definition of ready, definition of done, WIP limits, reporting, and running a mock sprint.",
-    },
-    {
-      day: "Day 4",
-      title: "Art & External Development Pipelines",
-      text: "Managing art pipelines, vendor briefs, review loops, quality control, handoffs, approvals, and communication standards.",
-    },
-    {
-      day: "Day 5",
-      title: "QA, Builds & Release Readiness",
-      text: "Bug lifecycle, triage, severity vs priority, build pipelines, certification basics, release gates, and readiness reporting.",
-    },
-    {
-      day: "Day 6",
-      title: "Live Ops, Data & Continuous Delivery",
-      text: "Live ops cadence, metrics, A/B testing, player feedback loops, KPIs, experiments, and coordinating updates across teams.",
-    },
-    {
-      day: "Day 7",
-      title: "Leadership, Communication & Career Readiness",
-      text: "Stakeholder communication, meetings, conflict resolution, time management, CV positioning, and a full mini-production cycle.",
-    },
-  ];
-
-  const outcomes = [
-    "Build a playable team project",
-    "Run standups and production check-ins",
-    "Track scope, blockers, and priorities",
-    "Respond to release and live ops scenarios",
-    "Present work like a real studio team",
+  const quickFacts = [
+    "7 Days",
+    "In Person",
+    "AAA-Led",
+    "Certificate Included",
+    "Real Production Workflows",
   ];
 
   const studentWork = [
     {
-      title: "Playable game slice",
-      text: "Work in teams to shape and present a small playable project, not just ideas on paper.",
+      title: "Work like a team",
+      text: "Learn how roles connect across production, QA, communication, and delivery.",
     },
     {
-      title: "Daily standups",
-      text: "Practice how teams align, assign tasks, surface blockers, and keep work moving.",
+      title: "Run standups",
+      text: "Practice alignment, blockers, priorities, and team momentum.",
     },
     {
-      title: "Production boards",
-      text: "Map scope, priorities, milestones, and handoffs using studio-style production thinking.",
+      title: "Track production priorities",
+      text: "Think in systems, scope, timing, handoffs, and release readiness.",
     },
     {
-      title: "Live ops scenarios",
-      text: "React to updates, player issues, release pressure, and real-world delivery moments.",
+      title: "Learn live ops reality",
+      text: "Get exposed to events, updates, player flows, and modern game operations.",
     },
+  ];
+
+  const curriculumBuckets = [
+    {
+      title: "Production Foundations",
+      text: "How games move from concept to launch, and how teams stay aligned along the way.",
+    },
+    {
+      title: "Agile + Team Workflows",
+      text: "Standups, priorities, blockers, communication, and the rhythm of real production.",
+    },
+    {
+      title: "QA Inside Development",
+      text: "Shift-left QA, systems thinking, and testing while features are still being built.",
+    },
+    {
+      title: "Live Ops + Release Reality",
+      text: "Events, updates, player impact, and what it takes to support a game after launch.",
+    },
+  ];
+
+  const builtFor = [
+    "Future producers",
+    "Aspiring QA and Dev QA talent",
+    "Technical creatives",
+    "Career starters and career shifters",
+    "People who want real industry context fast",
   ];
 
   return (
@@ -226,7 +215,7 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "minmax(0, 1.15fr) minmax(320px, 0.85fr)",
+            gridTemplateColumns: "minmax(0, 1.1fr) minmax(320px, 0.9fr)",
             gap: "44px",
             alignItems: "center",
           }}
@@ -257,54 +246,42 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: "clamp(52px, 8vw, 96px)",
-                lineHeight: 0.98,
+                fontSize: "clamp(50px, 8vw, 94px)",
+                lineHeight: 0.96,
                 fontWeight: 900,
                 margin: "0 0 22px 0",
                 letterSpacing: "-2.5px",
                 maxWidth: "980px",
               }}
             >
-              Pop-up game academy
+              Break into the
               <br />
-              <span style={{ color: colors.cyan }}>in cities worldwide.</span>
+              <span style={{ color: colors.cyan }}>game industry in 7 days.</span>
             </h1>
 
             <p
               style={{
-                fontSize: "clamp(22px, 2.3vw, 34px)",
-                lineHeight: 1.35,
+                fontSize: "clamp(21px, 2.2vw, 30px)",
+                lineHeight: 1.38,
                 fontWeight: 800,
                 color: colors.mint,
-                margin: "0 0 24px 0",
-                maxWidth: "900px",
+                margin: "0 0 18px 0",
+                maxWidth: "920px",
               }}
             >
-              7 days inside video game production.
+              Learn how modern game teams actually work across production, QA, live ops, and delivery.
             </p>
 
             <p
               style={{
-                fontSize: "clamp(19px, 2vw, 24px)",
-                lineHeight: 1.75,
+                fontSize: "clamp(18px, 1.9vw, 23px)",
+                lineHeight: 1.72,
                 color: "rgba(255,255,255,0.84)",
-                margin: "0 0 16px 0",
+                margin: "0 0 32px 0",
                 maxWidth: "920px",
               }}
             >
-              Aspire Game Academy is a global, in-person pop-up school taught by AAA industry leaders with real studio backgrounds.
-            </p>
-
-            <p
-              style={{
-                fontSize: "clamp(19px, 2vw, 24px)",
-                lineHeight: 1.75,
-                color: colors.soft,
-                margin: "0 0 34px 0",
-                maxWidth: "920px",
-              }}
-            >
-              Students step inside the full game lifecycle, build in teams, run standups, tackle production challenges, and experience how games move from concept to release and live ops.
+              A global, in-person pop-up academy built by Aspire Agency Global Inc.
             </p>
 
             <div
@@ -316,11 +293,11 @@ export default function Home() {
               }}
             >
               <a href={studentFormLink} style={buttonPrimaryStyle}>
-                Apply as a Student
+                Join the First Cohort
               </a>
 
-              <a href="#curriculum" style={buttonSecondaryStyle}>
-                View Curriculum
+              <a href={instructorFormLink} style={buttonSecondaryStyle}>
+                Apply to Teach
               </a>
             </div>
 
@@ -332,14 +309,7 @@ export default function Home() {
                 marginTop: "8px",
               }}
             >
-              {[
-                "Pop-up city format",
-                "7 consecutive days",
-                "10:00 AM to 2:00 PM",
-                "Team project",
-                "Live ops scenarios",
-                "Certificate included",
-              ].map((item) => (
+              {quickFacts.map((item) => (
                 <div key={item} style={statPillStyle}>
                   {item}
                 </div>
@@ -405,7 +375,7 @@ export default function Home() {
                       marginBottom: "12px",
                     }}
                   >
-                    Global Pop-Up Program
+                    Aspire PODS Connection
                   </div>
 
                   <div
@@ -431,7 +401,7 @@ export default function Home() {
                       maxWidth: "430px",
                     }}
                   >
-                    A fast, immersive week where students work like a studio team and see how production connects every part of game development.
+                    Train closer to the real industry through the same production mindset behind Aspire PODS.
                   </p>
                 </div>
 
@@ -493,44 +463,33 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>What It Is</div>
-          <h2 style={h2Style}>A production-focused game industry immersion</h2>
+          <div style={smallLabelStyle}>Why It’s Different</div>
+          <h2 style={h2Style}>Train closer to the real industry</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Built to reflect how games are actually planned, built, shipped, and operated.
+            Aspire Game Academy is connected to the same production mindset behind Aspire PODS.
           </p>
           <p style={bodyStyle}>
-            This is not just an introduction to the industry. It is a focused,
-            practical intensive designed to show how producers coordinate
-            design, art, engineering, QA, and external partners across a real
-            game development lifecycle.
-          </p>
-          <p style={bodyStyle}>
-            Students gain exposure to production thinking, prioritization,
-            sprint planning, vendor management, release readiness, live ops, and
-            communication standards used in modern studios.
+            Small, structured teams are how modern games stay aligned across production, QA, communication, and delivery. This academy is built to give students a real feel for how that world works.
           </p>
         </div>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Studio reality</h3>
+            <h3 style={cardTitleStyle}>Built for modern studios</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Learn how production really works across milestones, delivery,
-              risk, handoffs, and team coordination.
+              Learn how teams coordinate, communicate, and move work forward in real production environments.
             </p>
           </div>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Practical thinking</h3>
+            <h3 style={cardTitleStyle}>Faster than traditional pathways</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Move beyond theory into prioritization, execution, communication,
-              and decision-making under real constraints.
+              Get a focused industry immersion in one week instead of months of disconnected theory.
             </p>
           </div>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Career relevance</h3>
+            <h3 style={cardTitleStyle}>Closer to real opportunities</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Build stronger production awareness, professional language, and
-              industry readiness in one concentrated week.
+              Designed to help students understand where they fit and how to move toward real game industry roles.
             </p>
           </div>
         </div>
@@ -540,10 +499,10 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>What Students Work On</div>
-          <h2 style={h2Style}>Not just lessons. Real studio-style work.</h2>
+          <div style={smallLabelStyle}>What You’ll Actually Do</div>
+          <h2 style={h2Style}>More than just listening</h2>
           <p style={bodyStyle}>
-            Students are not just watching how games are made. They are stepping into the process and working through it together.
+            This is a practical, team-based experience built to show how game development actually feels in motion.
           </p>
         </div>
 
@@ -561,46 +520,19 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Curriculum</div>
-          <h2 style={h2Style}>Created with AAA production leadership</h2>
-          <p style={bodyStyle}>
-            The production-heavy foundation of this program was created by{" "}
-            <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
-          </p>
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
-
       <section id="curriculum" style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>7-Day Intensive</div>
-          <h2 style={h2Style}>Production-Focused Curriculum</h2>
+          <div style={smallLabelStyle}>Inside the 7 Days</div>
+          <h2 style={h2Style}>Fast, focused, and production-led</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            From concept to release to live ops, in one focused week.
+            Curriculum created with AAA production leadership, including Fred Dossola.
           </p>
         </div>
 
         <div style={gridStyle}>
-          {curriculumDays.map((item) => (
-            <div key={item.day} style={cardStyle}>
-              <div
-                style={{
-                  color: colors.cyan,
-                  fontWeight: 800,
-                  fontSize: "15px",
-                  letterSpacing: "1.6px",
-                  marginBottom: "10px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {item.day}
-              </div>
-              <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>
-                {item.title}
-              </h3>
+          {curriculumBuckets.map((item) => (
+            <div key={item.title} style={cardStyle}>
+              <h3 style={cardTitleStyle}>{item.title}</h3>
               <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
                 {item.text}
               </p>
@@ -613,15 +545,12 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Outcome</div>
-          <h2 style={h2Style}>By the end of the course, students can</h2>
-          <p style={bodyStyle}>
-            Students leave with clearer production awareness, stronger team communication, and practical experience connecting planning, delivery, release, and live operations.
-          </p>
+          <div style={smallLabelStyle}>Built For</div>
+          <h2 style={h2Style}>For people who want real industry context fast</h2>
         </div>
 
         <div style={gridStyle}>
-          {outcomes.map((item) => (
+          {builtFor.map((item) => (
             <div key={item} style={cardStyle}>
               <h3 style={cardTitleStyle}>{item}</h3>
             </div>
@@ -633,117 +562,30 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Who It’s For</div>
-          <h2 style={h2Style}>Built for future producers and game team talent</h2>
+          <div style={smallLabelStyle}>Cities Coming Soon</div>
+          <h2 style={h2Style}>Pop-up cohorts will be announced by city</h2>
           <p style={bodyStyle}>
-            This program is designed for aspiring producers, coordinators,
-            project-minded creatives, career-switchers, and people who want to
-            understand how cross-functional teams actually work together to ship
-            games.
+            Aspire Game Academy is launching as a pop-up model, with future cohorts planned in select cities. Join the first cohort and be first to hear when locations open.
           </p>
         </div>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <strong
-              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
-            >
-              Aspiring producers
-            </strong>
+            <h3 style={cardTitleStyle}>Early access</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              People drawn to planning, communication, coordination, and
-              helping teams move work forward.
+              Be first to receive cohort details, launch updates, and city announcements.
             </p>
           </div>
           <div style={cardStyle}>
-            <strong
-              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
-            >
-              Career-switchers
-            </strong>
+            <h3 style={cardTitleStyle}>Limited spots</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              People from operations, project management, tech, media, support,
-              or adjacent fields who want to move into games.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <strong
-              style={{ fontSize: "21px", display: "block", marginBottom: "12px" }}
-            >
-              Studio-curious talent
-            </strong>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Students and aspiring professionals who want a more realistic view
-              of how studios actually function.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
-
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Why It Matters</div>
-          <h2 style={h2Style}>A faster way into the real side of game development</h2>
-          <p style={bodyStyle}>
-            Many people love games without ever seeing how teams actually build, coordinate, release, and support them. Aspire Game Academy helps close that gap in a format that feels current, practical, and exciting.
-          </p>
-        </div>
-
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>AAA-aligned</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Curriculum shaped around real production workflows, not generic
-              classroom theory.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Practical exposure</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Learn prioritization, sprint planning, vendor coordination,
-              release readiness, and live ops collaboration.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Premium format</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              One focused week with strong positioning, small cohorts, and
-              practical production relevance.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
-
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Pop-Up Model</div>
-          <h2 style={h2Style}>Built to launch city by city</h2>
-          <p style={bodyStyle}>
-            Aspire Game Academy is designed as a global pop-up model that can activate in different cities with focused cohorts, local energy, and strong studio-style positioning.
-          </p>
-        </div>
-
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Focused format</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              One city. One week. One immersive game production experience.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Professional energy</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Designed to feel exciting, polished, and studio-aligned from the first touchpoint onward.
+              Each cohort is designed to stay focused, practical, and high-touch.
             </p>
           </div>
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Built to scale</h3>
             <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Easy to replicate as Aspire grows into new cities and new communities.
+              The model is designed to expand city by city while keeping the quality high.
             </p>
           </div>
         </div>
@@ -754,7 +596,7 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Tuition</div>
-          <h2 style={h2Style}>Simple, premium, and clear</h2>
+          <h2 style={h2Style}>Simple and clear</h2>
         </div>
 
         <div
@@ -786,7 +628,7 @@ export default function Home() {
               $1,997
             </div>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
-              Includes 7 live in-person training days, studio-style teamwork, practical production exposure, and a certificate of completion.
+              Includes 7 live in-person training days, team-based learning, practical production exposure, and a certificate of completion.
             </p>
           </div>
 
@@ -797,7 +639,7 @@ export default function Home() {
               <br />
               Live instruction
               <br />
-              Team project work
+              Team-based experience
               <br />
               Certificate included
             </p>
@@ -810,9 +652,9 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Teach With Aspire</div>
-          <h2 style={h2Style}>Lead a city cohort</h2>
+          <h2 style={h2Style}>Lead a cohort</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is built for experienced industry professionals who can lead, mentor, and bring real studio knowledge into an exciting pop-up learning environment.
+            Aspire Game Academy is built for experienced industry professionals who can lead, mentor, and bring real studio knowledge into a fast, exciting pop-up learning environment.
           </p>
         </div>
 
@@ -842,8 +684,7 @@ export default function Home() {
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Ideal fit</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              Production-minded leaders with real studio experience, strong
-              communication, and mentoring ability.
+              Strong communicators with real studio experience and a practical teaching mindset.
             </p>
           </div>
         </div>
@@ -866,16 +707,16 @@ export default function Home() {
             margin: "0 auto 18px auto",
           }}
         >
-          Your path into the game industry starts here
+          Join the first cohort
         </h2>
         <p
           style={{
             ...bodyStyle,
             margin: "0 auto 34px auto",
-            maxWidth: "900px",
+            maxWidth: "860px",
           }}
         >
-          Join as a student or step in as an instructor. Aspire Game Academy is built to move fast, stay practical, and deliver a game industry experience that feels real from day one.
+          Limited spots. Early applicants will be first to receive cohort details, launch updates, and city announcements.
         </p>
 
         <div
@@ -887,7 +728,7 @@ export default function Home() {
           }}
         >
           <a href={studentFormLink} style={buttonPrimaryStyle}>
-            Apply as a Student
+            Join the First Cohort
           </a>
 
           <a href={instructorFormLink} style={buttonSecondaryStyle}>
