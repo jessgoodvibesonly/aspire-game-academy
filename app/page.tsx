@@ -154,7 +154,7 @@ export default function Home() {
     "In Person",
     "AAA-Led",
     "Certificate Included",
-    "Real Production Workflows",
+    "Small Team Project",
   ];
 
   const studentWork = [
@@ -167,8 +167,8 @@ export default function Home() {
       text: "Practice alignment, blockers, priorities, and team momentum.",
     },
     {
-      title: "Track production priorities",
-      text: "Think in systems, scope, timing, handoffs, and release readiness.",
+      title: "Build a small project",
+      text: "Work through a mini production cycle and create something to present by the end of the week.",
     },
     {
       title: "Learn live ops reality",
@@ -176,23 +176,50 @@ export default function Home() {
     },
   ];
 
-  const curriculumBuckets = [
+  const curriculumDays = [
     {
-      title: "Production Foundations",
-      text: "How games move from concept to launch, and how teams stay aligned along the way.",
+      day: "Day 1",
+      title: "How Games Actually Ship",
+      text: "Production reality, roles, pods, multi-studio setups, milestones, tools, and mapping a game idea into a roadmap.",
     },
     {
-      title: "Agile + Team Workflows",
-      text: "Standups, priorities, blockers, communication, and the rhythm of real production.",
+      day: "Day 2",
+      title: "Production Thinking & Prioritization",
+      text: "Backlogs, epics, scope, time, quality, dependencies, critical path basics, and writing clearer tickets.",
     },
     {
-      title: "QA Inside Development",
-      text: "Shift-left QA, systems thinking, and testing while features are still being built.",
+      day: "Day 3",
+      title: "Agile in Practice",
+      text: "Sprint cadence, estimation, definition of ready, definition of done, WIP limits, reporting, and running a mock sprint.",
     },
     {
-      title: "Live Ops + Release Reality",
-      text: "Events, updates, player impact, and what it takes to support a game after launch.",
+      day: "Day 4",
+      title: "Art & External Development Pipelines",
+      text: "Managing art pipelines, vendor briefs, review loops, quality control, handoffs, approvals, and communication standards.",
     },
+    {
+      day: "Day 5",
+      title: "QA, Builds & Release Readiness",
+      text: "Bug lifecycle, triage, severity vs priority, build pipelines, certification basics, release gates, and readiness reporting.",
+    },
+    {
+      day: "Day 6",
+      title: "Live Ops, Data & Continuous Delivery",
+      text: "Live ops cadence, metrics, A/B testing, player feedback loops, KPIs, experiments, and coordinating updates across teams.",
+    },
+    {
+      day: "Day 7",
+      title: "Leadership, Communication & Career Readiness",
+      text: "Stakeholder communication, meetings, conflict resolution, time management, CV positioning, and a full mini-production cycle.",
+    },
+  ];
+
+  const outcomes = [
+    "Build and present a small team project",
+    "Run standups and production check-ins",
+    "Track scope, blockers, and priorities",
+    "Respond to release and live ops scenarios",
+    "Communicate like a real studio team",
   ];
 
   const builtFor = [
@@ -269,7 +296,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Learn how modern game teams actually work across production, QA, live ops, and delivery.
+              Learn how modern game teams actually work across production, QA, live ops, and delivery — and build a small team project during the week.
             </p>
 
             <p
@@ -502,7 +529,7 @@ export default function Home() {
           <div style={smallLabelStyle}>What You’ll Actually Do</div>
           <h2 style={h2Style}>More than just listening</h2>
           <p style={bodyStyle}>
-            This is a practical, team-based experience built to show how game development actually feels in motion.
+            This is a practical, team-based experience where students work through a mini production cycle and build a small project together during the week.
           </p>
         </div>
 
@@ -520,22 +547,69 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>Curriculum</div>
+          <h2 style={h2Style}>Created with AAA production leadership</h2>
+          <p style={bodyStyle}>
+            The production-heavy foundation of this program was created by{" "}
+            <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
+          </p>
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
       <section id="curriculum" style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Inside the 7 Days</div>
-          <h2 style={h2Style}>Fast, focused, and production-led</h2>
+          <h2 style={h2Style}>Original production-focused curriculum</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Curriculum created with AAA production leadership, including Fred Dossola.
+            A practical week designed to move from concept to release to live ops.
           </p>
         </div>
 
         <div style={gridStyle}>
-          {curriculumBuckets.map((item) => (
-            <div key={item.title} style={cardStyle}>
-              <h3 style={cardTitleStyle}>{item.title}</h3>
+          {curriculumDays.map((item) => (
+            <div key={item.day} style={cardStyle}>
+              <div
+                style={{
+                  color: colors.cyan,
+                  fontWeight: 800,
+                  fontSize: "15px",
+                  letterSpacing: "1.6px",
+                  marginBottom: "10px",
+                  textTransform: "uppercase",
+                }}
+              >
+                {item.day}
+              </div>
+              <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>
+                {item.title}
+              </h3>
               <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
                 {item.text}
               </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>Outcome</div>
+          <h2 style={h2Style}>By the end of the week, students can</h2>
+          <p style={bodyStyle}>
+            Students leave with clearer production awareness, stronger team communication, and something tangible to present from the week.
+          </p>
+        </div>
+
+        <div style={gridStyle}>
+          {outcomes.map((item) => (
+            <div key={item} style={cardStyle}>
+              <h3 style={cardTitleStyle}>{item}</h3>
             </div>
           ))}
         </div>
@@ -628,7 +702,7 @@ export default function Home() {
               $1,997
             </div>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
-              Includes 7 live in-person training days, team-based learning, practical production exposure, and a certificate of completion.
+              Includes 7 live in-person training days, a small team project, practical production exposure, and a certificate of completion.
             </p>
           </div>
 
@@ -639,7 +713,7 @@ export default function Home() {
               <br />
               Live instruction
               <br />
-              Team-based experience
+              Small team project
               <br />
               Certificate included
             </p>
