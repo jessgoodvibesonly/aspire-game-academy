@@ -699,7 +699,7 @@ export default function Home() {
                 letterSpacing: "-1px",
               }}
             >
-              $1,997
+              $1,997 USD
             </div>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
               Includes 7 live in-person training days, a small team project, practical production exposure, and a certificate of completion.
