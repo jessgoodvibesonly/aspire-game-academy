@@ -30,7 +30,7 @@ export default function Home() {
       linear-gradient(135deg, ${colors.bg0} 0%, ${colors.bg1} 46%, ${colors.bg2} 100%)
     `,
     color: colors.text,
-    padding: "0 24px 100px 24px",
+    padding: "0 clamp(14px, 4vw, 24px) 100px clamp(14px, 4vw, 24px)",
     fontFamily:
       'Inter, Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   } as const;
@@ -43,7 +43,7 @@ export default function Home() {
   const sectionStyle = {
     maxWidth: "1200px",
     margin: "0 auto",
-    padding: "78px 0",
+    padding: "clamp(56px, 8vw, 78px) 0",
   } as const;
 
   const dividerStyle = {
@@ -81,7 +81,7 @@ export default function Home() {
 
   const gridStyle = {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
     gap: "20px",
     marginTop: "28px",
   } as const;
@@ -119,6 +119,8 @@ export default function Home() {
     fontSize: "18px",
     boxShadow: "0 14px 34px rgba(95, 78, 255, 0.34)",
     border: "1px solid rgba(255,255,255,0.10)",
+    minWidth: "220px",
+    textAlign: "center",
   } as const;
 
   const buttonSecondaryStyle = {
@@ -132,6 +134,8 @@ export default function Home() {
     fontWeight: 700,
     fontSize: "18px",
     backdropFilter: "blur(6px)",
+    minWidth: "220px",
+    textAlign: "center",
   } as const;
 
   const sectionIntroStyle = {
@@ -222,6 +226,50 @@ export default function Home() {
     "Communicate like a real studio team",
   ];
 
+
+  const responsiveStyles = `
+    @media (max-width: 980px) {
+      .hero-section {
+        padding-top: 32px !important;
+        padding-bottom: 56px !important;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px !important;
+      }
+
+      .hero-panel {
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      .tuition-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-root {
+        padding-bottom: 72px !important;
+      }
+
+      .logo-wrap {
+        width: 110px !important;
+        height: 110px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .cta-row a {
+        width: 100%;
+      }
+
+      .metrics-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+    }
+  `;
+
   const builtFor = [
     "Future producers",
     "Aspiring QA and Dev QA talent",
@@ -231,8 +279,10 @@ export default function Home() {
   ];
 
   return (
-    <main style={pageStyle}>
+    <main className="page-root" style={pageStyle}>
+      <style>{responsiveStyles}</style>
       <section
+        className="hero-section"
         style={{
           ...containerStyle,
           paddingTop: "56px",
@@ -240,6 +290,7 @@ export default function Home() {
         }}
       >
         <div
+          className="hero-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "minmax(0, 1.1fr) minmax(320px, 0.9fr)",
@@ -249,6 +300,7 @@ export default function Home() {
         >
           <div>
             <div
+              className="logo-wrap"
               style={{
                 width: "150px",
                 height: "150px",
@@ -312,6 +364,7 @@ export default function Home() {
             </p>
 
             <div
+              className="cta-row"
               style={{
                 display: "flex",
                 gap: "16px",
@@ -329,6 +382,7 @@ export default function Home() {
             </div>
 
             <div
+              className="facts-row"
               style={{
                 display: "flex",
                 flexWrap: "wrap",
@@ -346,6 +400,7 @@ export default function Home() {
 
           <div>
             <div
+              className="hero-panel"
               style={{
                 position: "relative",
                 borderRadius: "30px",
@@ -433,6 +488,7 @@ export default function Home() {
                 </div>
 
                 <div
+                  className="metrics-grid"
                   style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
@@ -674,6 +730,7 @@ export default function Home() {
         </div>
 
         <div
+          className="tuition-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1.1fr 0.9fr",
