@@ -691,8 +691,18 @@ export default function Home() {
       <div style={dividerStyle} />
 
       <section style={sectionStyle}>
+        <div className="marquee-wrapper">
+          <div className="marquee-track">
+            <span>
+              Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
+            </span>
+            <span>
+              Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
+            </span>
+          </div>
+        </div>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Cities Coming Soon</div>
+          <div style={smallLabelStyle}>Pop-Up Locations 2026</div>
           <h2 style={h2Style}>Pop-up cohorts will be announced by city</h2>
           <p style={bodyStyle}>
             Aspire Game Academy is launching as a pop-up model, with future cohorts planned in select cities. Join the first cohort and be first to hear when locations open.
