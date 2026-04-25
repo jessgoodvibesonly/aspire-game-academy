@@ -153,6 +153,21 @@ export default function Home() {
     letterSpacing: "-0.4px",
   };
 
+  const flagshipBadgeStyle = {
+    display: "inline-block",
+    padding: "4px 10px",
+    borderRadius: "999px",
+    fontSize: "12px",
+    fontWeight: 800,
+    textTransform: "uppercase" as const,
+    letterSpacing: "1px",
+    color: "#d6faff",
+    background: "rgba(114,230,255,0.16)",
+    border: "1px solid rgba(114,230,255,0.32)",
+    marginLeft: "8px",
+    verticalAlign: "middle" as const,
+  };
+
   const quickFacts = [
     "7 Days",
     "In Person",
@@ -226,6 +241,46 @@ export default function Home() {
     "Communicate like a real studio team",
   ];
 
+  const academyRegions = [
+    {
+      region: "United States",
+      locations: [
+        { label: "Los Angeles", flagship: true },
+        { label: "Las Vegas", flagship: true },
+        { label: "San Francisco", flagship: true },
+        { label: "Chicago" },
+        { label: "Austin" },
+      ],
+    },
+    {
+      region: "Canada",
+      locations: [{ label: "Charlottetown" }, { label: "Ottawa" }],
+    },
+    {
+      region: "United Kingdom",
+      locations: [{ label: "Across England", activation: "Multi-city activation" }],
+    },
+    {
+      region: "France",
+      locations: [{ label: "Across France", activation: "Multi-city activation" }],
+    },
+    {
+      region: "Netherlands",
+      locations: [{ label: "Amsterdam" }],
+    },
+    {
+      region: "Russia",
+      locations: [{ label: "St. Petersburg" }],
+    },
+  ];
+
+  const allLocations = academyRegions.flatMap((entry) =>
+    entry.locations.map((location) => ({
+      ...location,
+      region: entry.region,
+    })),
+  );
+
 
   const responsiveStyles = `
     @media (max-width: 980px) {
@@ -266,6 +321,10 @@ export default function Home() {
 
       .metrics-grid {
         grid-template-columns: minmax(0, 1fr) !important;
+      }
+
+      .location-panel {
+        padding: 18px !important;
       }
     }
   `;
@@ -692,32 +751,60 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Cities Coming Soon</div>
-          <h2 style={h2Style}>Pop-up cohorts will be announced by city</h2>
+          <div style={smallLabelStyle}>Locations</div>
+          <h2 style={h2Style}>Pop-up cohorts organized by region</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is launching as a pop-up model, with future cohorts planned in select cities. Join the first cohort and be first to hear when locations open.
+            Aspire Game Academy is launching globally with locations grouped by region for cleaner enrollment flows across desktop and mobile. Entries such as <strong style={{ color: colors.text }}>Across England</strong> and <strong style={{ color: colors.text }}>Across France</strong> are multi-city activations.
           </p>
         </div>
 
         <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Early access</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Be first to receive cohort details, launch updates, and city announcements.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Limited spots</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Each cohort is designed to stay focused, practical, and high-touch.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Built to scale</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              The model is designed to expand city by city while keeping the quality high.
-            </p>
-          </div>
+          {academyRegions.map((entry) => (
+            <div key={entry.region} style={cardStyle}>
+              <h3 style={cardTitleStyle}>{entry.region}</h3>
+              <div style={{ display: "grid", gap: "12px" }}>
+                {entry.locations.map((location) => (
+                  <div
+                    key={`${entry.region}-${location.label}`}
+                    style={{
+                      padding: "12px 14px",
+                      borderRadius: "12px",
+                      background: location.flagship
+                        ? "linear-gradient(180deg, rgba(114,230,255,0.12), rgba(255,255,255,0.02))"
+                        : "rgba(255,255,255,0.03)",
+                      border: location.flagship
+                        ? "1px solid rgba(114,230,255,0.34)"
+                        : "1px solid rgba(255,255,255,0.10)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        color: colors.text,
+                        fontWeight: location.flagship ? 800 : 700,
+                        letterSpacing: location.flagship ? "0.1px" : "normal",
+                      }}
+                    >
+                      {location.label}
+                      {location.flagship ? (
+                        <span style={flagshipBadgeStyle}>Flagship</span>
+                      ) : null}
+                    </div>
+                    {location.activation ? (
+                      <div
+                        style={{
+                          color: colors.soft,
+                          fontSize: "13px",
+                          marginTop: "4px",
+                        }}
+                      >
+                        {location.activation}
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -847,8 +934,62 @@ export default function Home() {
             maxWidth: "860px",
           }}
         >
-          Limited spots. Early applicants will be first to receive cohort details, launch updates, and city announcements.
+          Limited spots. Student and instructor forms use the same region-grouped location list shown below, including multi-city activations.
         </p>
+
+        <div
+          className="location-panel"
+          style={{
+            ...cardStyle,
+            maxWidth: "760px",
+            margin: "0 auto 28px auto",
+            textAlign: "left",
+          }}
+        >
+          <div style={{ color: colors.cyan, fontWeight: 800, marginBottom: "10px" }}>
+            Preferred Academy Location
+          </div>
+          <select
+            defaultValue=""
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              border: "1px solid rgba(255,255,255,0.14)",
+              background: "rgba(4,6,12,0.68)",
+              color: colors.text,
+              padding: "14px 12px",
+              fontSize: "16px",
+              outline: "none",
+            }}
+          >
+            <option value="" disabled>
+              Select a region and location
+            </option>
+            {academyRegions.map((entry) => (
+              <optgroup key={entry.region} label={entry.region}>
+                {entry.locations.map((location) => (
+                  <option
+                    key={`${entry.region}-${location.label}-option`}
+                    value={`${entry.region} - ${location.label}`}
+                  >
+                    {location.label}
+                    {location.flagship ? " (Flagship)" : ""}
+                    {location.activation ? ` — ${location.activation}` : ""}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+          <p
+            style={{
+              color: colors.soft,
+              margin: "10px 0 0 0",
+              fontSize: "14px",
+            }}
+          >
+            Total live locations and activations: {allLocations.length}
+          </p>
+        </div>
 
         <div
           style={{
