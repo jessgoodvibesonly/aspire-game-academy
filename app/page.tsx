@@ -267,6 +267,17 @@ export default function Home() {
       .metrics-grid {
         grid-template-columns: minmax(0, 1fr) !important;
       }
+
+      .tour-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .tour-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
     }
   `;
 
@@ -276,6 +287,38 @@ export default function Home() {
     "Technical creatives",
     "Career starters and career shifters",
     "People looking for a faster path into games",
+  ];
+
+  const flagshipCities = new Set(["Los Angeles", "Las Vegas", "San Francisco"]);
+
+  const tourRegions = [
+    {
+      region: "United States",
+      cities: [
+        "Los Angeles",
+        "Las Vegas",
+        "San Francisco",
+        "Chicago",
+        "Austin",
+        "St. Petersburg, Florida",
+      ],
+    },
+    {
+      region: "Canada",
+      cities: ["Charlottetown", "Ottawa"],
+    },
+    {
+      region: "United Kingdom",
+      cities: ["Across England"],
+    },
+    {
+      region: "France",
+      cities: ["Across France"],
+    },
+    {
+      region: "Netherlands",
+      cities: ["Amsterdam"],
+    },
   ];
 
   return (
@@ -692,32 +735,98 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Cities Coming Soon</div>
-          <h2 style={h2Style}>Pop-up cohorts will be announced by city</h2>
+          <div style={smallLabelStyle}>World Tour</div>
+          <h2 style={h2Style}>Pop-Up Locations 2026</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is launching as a pop-up model, with future cohorts planned in select cities. Join the first cohort and be first to hear when locations open.
+            Aspire Game Academy is launching pop-up cohorts in high-impact game, tech, and creative hubs across North America and Europe.
           </p>
         </div>
 
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Early access</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Be first to receive cohort details, launch updates, and city announcements.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Limited spots</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Each cohort is designed to stay focused, practical, and high-touch.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Built to scale</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              The model is designed to expand city by city while keeping the quality high.
-            </p>
-          </div>
+        <div
+          className="tour-grid"
+          style={{
+            marginTop: "34px",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gap: "24px",
+            alignItems: "start",
+          }}
+        >
+          {tourRegions.map((group) => (
+            <div
+              key={group.region}
+              style={{
+                paddingBottom: "8px",
+                borderBottom: "1px solid rgba(255,255,255,0.14)",
+              }}
+            >
+              <h3
+                style={{
+                  margin: "0 0 12px 0",
+                  fontSize: "clamp(20px, 2.2vw, 28px)",
+                  letterSpacing: "0.8px",
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  color: colors.mint,
+                }}
+              >
+                {group.region}
+              </h3>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "8px 10px",
+                  alignItems: "center",
+                  fontSize: "clamp(17px, 1.6vw, 21px)",
+                  lineHeight: 1.65,
+                  color: colors.muted,
+                }}
+              >
+                {group.cities.map((city, idx) => {
+                  const isFlagship = flagshipCities.has(city);
+                  const isLast = idx === group.cities.length - 1;
+
+                  return (
+                    <span key={city}>
+                      <span
+                        style={{
+                          color: isFlagship ? colors.text : colors.muted,
+                          fontWeight: isFlagship ? 800 : 500,
+                          letterSpacing: isFlagship ? "0.2px" : "0",
+                        }}
+                      >
+                        {city}
+                      </span>
+                      {isFlagship && (
+                        <span
+                          style={{
+                            marginLeft: "7px",
+                            padding: "2px 8px",
+                            fontSize: "11px",
+                            fontWeight: 800,
+                            letterSpacing: "1.1px",
+                            textTransform: "uppercase",
+                            borderRadius: "999px",
+                            border: "1px solid rgba(114,230,255,0.34)",
+                            background: "rgba(114,230,255,0.12)",
+                            color: "#c9fbff",
+                            verticalAlign: "middle",
+                          }}
+                        >
+                          Flagship
+                        </span>
+                      )}
+                      {!isLast && (
+                        <span style={{ color: "rgba(255,255,255,0.42)" }}> · </span>
+                      )}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
