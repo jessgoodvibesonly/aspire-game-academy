@@ -6,3 +6,33 @@ body {
   font-family: Inter, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.marquee-track span {
+  margin-right: 40px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
