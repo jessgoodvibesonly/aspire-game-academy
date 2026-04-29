@@ -1,38 +1,210 @@
+:root {
+  --bg: #070b16;
+  --bg-soft: #101830;
+  --panel: #141f3f;
+  --text: #f5f7ff;
+  --muted: #c7d2ef;
+  --accent: #59d5ff;
+  --accent-2: #7a6cff;
+  --line: rgba(149, 173, 234, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  background: #050505;
-  color: white;
-  font-family: Inter, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(89, 213, 255, 0.22), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(122, 108, 255, 0.16), transparent 32%),
+    linear-gradient(180deg, var(--bg) 0%, #070d1f 45%, #091127 100%);
+  color: var(--text);
+  font-family: Inter, Avenir, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-.marquee-wrapper {
-  width: 100%;
+.aga-page {
+  padding-bottom: 4rem;
+}
+
+.aga-container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.aga-section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.aga-kicker {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.aga-hero {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.aga-hero-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+}
+
+p {
+  color: var(--muted);
+  max-width: 75ch;
+  line-height: 1.7;
+}
+
+.aga-lead {
+  font-size: clamp(1rem, 1.9vw, 1.25rem);
+}
+
+.aga-hero-image-wrap {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
   overflow: hidden;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-soft);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
 }
 
-.marquee-track {
+.aga-hero-image,
+.aga-badges {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aga-card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.aga-card {
+  background: rgba(20, 31, 63, 0.75);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.aga-price {
+  font-size: clamp(2rem, 4.8vw, 3.5rem);
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.aga-instructors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.aga-avatar-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  border: 2px dashed rgba(189, 204, 246, 0.5);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.aga-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.aga-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.aga-form select {
+  width: 100%;
+  background: rgba(13, 22, 45, 0.95);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.aga-form-actions,
+.aga-hero-actions {
   display: flex;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-  white-space: nowrap;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
-.marquee-track span {
-  margin-right: 40px;
+.aga-form-actions {
+  grid-column: 1 / -1;
+  margin-top: 0.3rem;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
+.aga-btn {
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.aga-btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #4aaef9 100%);
+  color: #061129;
+}
+
+.aga-btn-secondary {
+  background: linear-gradient(135deg, var(--accent-2) 0%, #5f58f8 100%);
+  color: #fff;
+}
+
+.aga-btn-tertiary {
+  background: transparent;
+  color: #d5ddf7;
+  border-color: var(--line);
+}
+
+@media (max-width: 900px) {
+  .aga-hero-grid,
+  .aga-card-grid,
+  .aga-form {
+    grid-template-columns: 1fr;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .aga-instructors-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .aga-instructors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
