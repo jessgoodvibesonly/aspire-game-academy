@@ -247,6 +247,10 @@ export default function Home() {
       .tuition-grid {
         grid-template-columns: minmax(0, 1fr) !important;
       }
+
+      .instructor-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
     }
 
     @media (max-width: 640px) {
@@ -276,6 +280,23 @@ export default function Home() {
     "Technical creatives",
     "Career starters and career shifters",
     "People looking for a faster path into games",
+  ];
+
+  const instructorOutline = [
+    "Day 1: Introduction to Unreal Engine and project setup",
+    "Day 2: Navigating the editor, levels, lighting, and assets",
+    "Day 3: Materials, environments, and visual polish",
+    "Day 4: Blueprints and basic interactivity",
+    "Day 5: Player movement, cameras, and simple gameplay systems",
+    "Day 6: Building a mini interactive scene",
+    "Day 7: Final polish, presentation, and badge completion",
+  ];
+
+  const instructorLocations = [
+    "Netherlands",
+    "London, UK",
+    "Across Europe",
+    "Virtual",
   ];
 
   return (
@@ -828,6 +849,294 @@ export default function Home() {
               Strong communicators with real studio experience and a practical teaching mindset.
             </p>
           </div>
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>Global Instructor Roster</div>
+          <h2 style={h2Style}>Meet the instructors powering each 7-day class</h2>
+          <p style={bodyStyle}>
+            Our global instructors bring real studio experience into focused 7-day pop-up classes. Each class is designed around practical skills, real production workflows, and badge-based recognition students can proudly share.
+          </p>
+        </div>
+
+        <div
+          className="instructor-roster-card"
+          style={{
+            position: "relative",
+            borderRadius: "28px",
+            padding: "clamp(20px, 4vw, 34px)",
+            border: "1px solid rgba(114,230,255,0.42)",
+            background:
+              "linear-gradient(145deg, rgba(8,11,22,0.95) 0%, rgba(20,10,34,0.94) 55%, rgba(8,18,34,0.95) 100%)",
+            boxShadow:
+              "0 24px 60px rgba(0,0,0,0.42), 0 0 40px rgba(114,230,255,0.17), inset 0 0 0 1px rgba(255,255,255,0.08)",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              inset: "auto auto -60px -40px",
+              width: "210px",
+              height: "210px",
+              borderRadius: "999px",
+              filter: "blur(38px)",
+              background: "rgba(95,220,255,0.22)",
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              inset: "-60px -30px auto auto",
+              width: "230px",
+              height: "230px",
+              borderRadius: "999px",
+              filter: "blur(48px)",
+              background: "rgba(141,91,255,0.25)",
+              pointerEvents: "none",
+            }}
+          />
+
+          <div
+            className="instructor-grid"
+            style={{
+              position: "relative",
+              display: "grid",
+              gridTemplateColumns: "minmax(250px, 0.7fr) minmax(0, 1.3fr)",
+              gap: "24px",
+              alignItems: "start",
+            }}
+          >
+            <aside
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(114,230,255,0.24)",
+                borderRadius: "24px",
+                padding: "18px",
+              }}
+            >
+              <div
+                style={{
+                  borderRadius: "20px",
+                  border: "1px solid rgba(114,230,255,0.45)",
+                  padding: "14px",
+                  background:
+                    "linear-gradient(180deg, rgba(114,230,255,0.12), rgba(12,16,28,0.86))",
+                  marginBottom: "18px",
+                }}
+              >
+                <div
+                  style={{
+                    borderRadius: "14px",
+                    border: "1px solid rgba(255,255,255,0.18)",
+                    background: "#080c18",
+                    padding: "10px",
+                    boxShadow: "inset 0 0 0 2px rgba(114,230,255,0.12)",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "172px",
+                      height: "172px",
+                      margin: "0 auto",
+                      borderRadius: "999px",
+                      border: "3px solid rgba(114,230,255,0.76)",
+                      background:
+                        "radial-gradient(circle at 35% 30%, #8bf3ff 0%, #2f4d77 38%, #141a29 80%)",
+                      boxShadow: "0 0 32px rgba(114,230,255,0.35)",
+                    }}
+                    aria-hidden
+                  />
+                </div>
+              </div>
+
+              <div
+                style={{
+                  border: "1px solid rgba(255,108,220,0.45)",
+                  background:
+                    "linear-gradient(135deg, rgba(255,108,220,0.12), rgba(20,14,34,0.88))",
+                  borderRadius: "16px",
+                  padding: "14px",
+                }}
+              >
+                <div
+                  style={{
+                    color: colors.mint,
+                    fontSize: "12px",
+                    letterSpacing: "1.8px",
+                    textTransform: "uppercase",
+                    marginBottom: "8px",
+                    fontWeight: 800,
+                  }}
+                >
+                  Class Badge
+                </div>
+                <p style={{ margin: 0, fontWeight: 800, lineHeight: 1.6 }}>
+                  ASPIRE BADGES
+                  <br />
+                  UNREAL FOUNDATIONS
+                  <br />
+                  BUILD • CREATE • PRESENT
+                  <br />
+                  REAL-WORLD GAME PRODUCTION
+                </p>
+              </div>
+            </aside>
+
+            <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "10px",
+                  marginBottom: "14px",
+                }}
+              >
+                {["Collectible Instructor Card", "Arcade Edition"].map((item) => (
+                  <span
+                    key={item}
+                    style={{
+                      borderRadius: "999px",
+                      border: "1px solid rgba(114,230,255,0.34)",
+                      background: "rgba(114,230,255,0.09)",
+                      padding: "7px 12px",
+                      fontSize: "12px",
+                      fontWeight: 700,
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <h3 style={{ ...cardTitleStyle, fontSize: "34px", marginBottom: "8px" }}>
+                Aydan Aliyeva
+              </h3>
+              <p
+                style={{
+                  margin: "0 0 14px 0",
+                  color: colors.mint,
+                  fontWeight: 800,
+                  fontSize: "20px",
+                }}
+              >
+                Unreal Authorized Instructor
+              </p>
+
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                  gap: "12px",
+                  marginBottom: "18px",
+                }}
+              >
+                {[
+                  ["Location", "Utrecht, Netherlands"],
+                  ["Languages Spoken", "English, Turkish, Azerbaijani"],
+                  ["Game Industry Experience", "6–10 years"],
+                  ["Aspire Badge", "Aspire Badges – Unreal Foundations"],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    style={{
+                      borderRadius: "14px",
+                      border: "1px solid rgba(255,255,255,0.16)",
+                      background: "rgba(255,255,255,0.04)",
+                      padding: "12px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "12px",
+                        textTransform: "uppercase",
+                        letterSpacing: "1.4px",
+                        color: colors.soft,
+                        marginBottom: "6px",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {label}
+                    </div>
+                    <div style={{ fontWeight: 700, lineHeight: 1.45 }}>{value}</div>
+                  </div>
+                ))}
+              </div>
+
+              <p style={{ margin: "0 0 18px 0", color: colors.muted, lineHeight: 1.75 }}>
+                Aydan is an Unreal Authorized Instructor with international experience helping students and creators understand real-time 3D workflows, interactive environments, and game production fundamentals. Her teaching style is practical, visual, and beginner-friendly, helping students move from idea to working prototype with confidence.
+              </p>
+
+              <div style={{ ...gridStyle, marginTop: 0, marginBottom: "18px" }}>
+                <div style={cardStyle}>
+                  <h4 style={{ ...cardTitleStyle, fontSize: "22px" }}>
+                    7-Day Class Title
+                  </h4>
+                  <p style={{ margin: 0, color: colors.mint, lineHeight: 1.6, fontWeight: 700 }}>
+                    Unreal Engine Foundations: Build Your First Interactive World
+                  </p>
+                </div>
+                <div style={cardStyle}>
+                  <h4 style={{ ...cardTitleStyle, fontSize: "22px" }}>
+                    Upcoming Class Locations
+                  </h4>
+                  <ul style={{ margin: 0, paddingLeft: "18px", lineHeight: 1.8, color: colors.muted }}>
+                    {instructorLocations.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div style={cardStyle}>
+                <h4 style={{ ...cardTitleStyle, fontSize: "22px" }}>
+                  7-Day Class Outline
+                </h4>
+                <ul style={{ margin: 0, paddingLeft: "18px", color: colors.muted, lineHeight: 1.8 }}>
+                  {instructorOutline.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "14px",
+                  marginTop: "18px",
+                }}
+              >
+                <a href="https://www.linkedin.com/" style={buttonSecondaryStyle}>
+                  LinkedIn / Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "16px",
+            marginTop: "28px",
+            justifyContent: "center",
+          }}
+        >
+          <a href={instructorFormLink} style={buttonPrimaryStyle}>
+            Join the Instructor Roster
+          </a>
+          <a href={studentFormLink} style={buttonSecondaryStyle}>
+            Register Student Interest
+          </a>
         </div>
       </section>
 
