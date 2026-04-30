@@ -156,6 +156,7 @@ export default function Home() {
   const quickFacts = [
     "Global Pop-Ups",
     "3-Day or 7-Day",
+    "In-Person",
     "Instructor-Led",
     "Studio Workflows",
     "Aspire Badges",
