@@ -366,9 +366,9 @@ export default function Home() {
                 maxWidth: "980px",
               }}
             >
-              Break into the
+              Enter real
               <br />
-              <span style={{ color: colors.cyan }}>game industry in 7 days.</span>
+              <span style={{ color: colors.cyan }}>game production.</span>
             </h1>
 
             <p
@@ -381,7 +381,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Learn how modern game teams actually work across production, QA, live ops, and delivery — and build a small team project during the week.
+              Learn directly from industry professionals running live production, QA, design, and live ops across global teams.
             </p>
 
             <p
@@ -393,7 +393,19 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              A global, in-person pop-up academy built by Aspire Agency Global Inc.
+              Aspire Game Academy is a hands-on, in-person experience where you don’t just learn — you work through real workflows used in modern studios.
+            </p>
+
+            <p
+              style={{
+                fontSize: "clamp(18px, 1.9vw, 23px)",
+                lineHeight: 1.72,
+                color: "rgba(255,255,255,0.84)",
+                margin: "0 0 32px 0",
+                maxWidth: "920px",
+              }}
+            >
+              Built for people who want real experience, real insight, and a faster path into the games industry.
             </p>
 
             <div
