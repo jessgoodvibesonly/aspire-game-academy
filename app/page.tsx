@@ -278,6 +278,39 @@ export default function Home() {
     "People looking for a faster path into games",
   ];
 
+  const globalInstructors = [
+    {
+      name: "Maya Chen",
+      role: "Senior Game Producer",
+      location: "Singapore",
+      languages: "English, Mandarin",
+      specialties: "Agile production, cross-studio coordination, milestone planning",
+      bio: "Maya has led mobile and PC teams through multi-region launches, with a focus on transparent workflows and healthy production rhythm.",
+      courseFocus: "Production leadership and sprint execution for small, high-output teams.",
+      badge: "Aspire Badge: Pod Leadership Mentor",
+    },
+    {
+      name: "Diego Alvarez",
+      role: "Live Ops & Monetization Lead",
+      location: "Mexico City, Mexico",
+      languages: "Spanish, English",
+      specialties: "Live events, KPI analysis, release planning, player retention",
+      bio: "Diego blends player-first design thinking with operational discipline to help teams ship updates that are both stable and engaging.",
+      courseFocus: "Live ops planning, event cadence, and data-informed production choices.",
+      badge: "Aspire Badge: Live Operations Architect",
+    },
+    {
+      name: "Amina Okafor",
+      role: "QA Production Manager",
+      location: "London, UK",
+      languages: "English, French",
+      specialties: "QA pipelines, risk management, release readiness, vendor QA",
+      bio: "Amina specializes in turning complex release cycles into clear quality gates that keep teams aligned under pressure.",
+      courseFocus: "QA strategy, triage systems, and release confidence in fast cycles.",
+      badge: "Aspire Badge: Release Readiness Coach",
+    },
+  ];
+
   return (
     <main className="page-root" style={pageStyle}>
       <style>{responsiveStyles}</style>
@@ -829,6 +862,117 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section>
+
+      <div style={dividerStyle} />
+
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>Global Faculty</div>
+          <h2 style={h2Style}>Meet the Global Instructors</h2>
+          <p style={bodyStyle}>
+            Meet a growing network of experienced game industry instructors bringing global studio perspective into each Aspire cohort.
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "22px",
+          }}
+        >
+          {globalInstructors.map((instructor) => (
+            <article
+              key={instructor.name}
+              style={{
+                ...cardStyle,
+                borderRadius: "16px",
+                padding: "20px",
+                background:
+                  "linear-gradient(180deg, rgba(111,99,255,0.16), rgba(8,10,18,0.92) 38%, rgba(8,10,18,0.98))",
+                boxShadow:
+                  "0 0 20px rgba(95,220,255,0.12), 0 0 28px rgba(141,91,255,0.12), inset 0 0 0 1px rgba(114,230,255,0.10)",
+              }}
+            >
+              <div
+                style={{
+                  position: "relative",
+                  borderRadius: "10px",
+                  border: "1px solid rgba(114,230,255,0.34)",
+                  overflow: "hidden",
+                  marginBottom: "16px",
+                  background:
+                    "linear-gradient(180deg, rgba(8,12,22,0.95), rgba(20,10,34,0.95))",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    backgroundImage:
+                      "linear-gradient(rgba(114,230,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(114,230,255,0.16) 1px, transparent 1px)",
+                    backgroundSize: "26px 26px",
+                    opacity: 0.5,
+                  }}
+                />
+                <div
+                  style={{
+                    position: "relative",
+                    zIndex: 1,
+                    aspectRatio: "4 / 5",
+                    display: "grid",
+                    placeItems: "center",
+                    color: "rgba(255,255,255,0.75)",
+                    fontWeight: 700,
+                    letterSpacing: "1.2px",
+                    textTransform: "uppercase",
+                    fontSize: "13px",
+                    textAlign: "center",
+                    padding: "14px",
+                  }}
+                >
+                  Photo Placeholder
+                </div>
+              </div>
+
+              <h3 style={{ ...cardTitleStyle, marginBottom: "6px" }}>{instructor.name}</h3>
+              <p style={{ margin: "0 0 12px 0", color: colors.mint, fontWeight: 700 }}>
+                {instructor.role}
+              </p>
+              <p style={{ margin: "0 0 6px 0", color: colors.soft, lineHeight: 1.65 }}>
+                <strong style={{ color: colors.text }}>Location:</strong> {instructor.location}
+              </p>
+              <p style={{ margin: "0 0 6px 0", color: colors.soft, lineHeight: 1.65 }}>
+                <strong style={{ color: colors.text }}>Languages:</strong> {instructor.languages}
+              </p>
+              <p style={{ margin: "0 0 10px 0", color: colors.soft, lineHeight: 1.65 }}>
+                <strong style={{ color: colors.text }}>Specialty Areas:</strong> {instructor.specialties}
+              </p>
+              <p style={{ margin: "0 0 10px 0", color: colors.muted, lineHeight: 1.7 }}>
+                {instructor.bio}
+              </p>
+              <p style={{ margin: "0 0 10px 0", color: colors.muted, lineHeight: 1.7 }}>
+                <strong style={{ color: colors.text }}>Course Focus:</strong> {instructor.courseFocus}
+              </p>
+              <p style={{ margin: 0, color: colors.cyan, fontWeight: 700, lineHeight: 1.65 }}>
+                {instructor.badge}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <p
+          style={{
+            ...bodyStyle,
+            fontSize: "16px",
+            marginTop: "18px",
+            color: colors.soft,
+            maxWidth: "none",
+          }}
+        >
+          More global instructors are being added as new city cohorts open.
+        </p>
       </section>
 
       <div style={dividerStyle} />
