@@ -154,11 +154,11 @@ export default function Home() {
   };
 
   const quickFacts = [
-    "7 Days",
-    "In Person",
-    "AAA-Led",
-    "Certificate Included",
-    "Small Team Project",
+    "Global Pop-Ups",
+    "3-Day or 7-Day",
+    "Instructor-Led",
+    "Studio Workflows",
+    "Aspire Badges",
   ];
 
   const studentWork = [
@@ -332,30 +332,6 @@ export default function Home() {
           }}
         >
           <div>
-            <div
-              className="logo-wrap"
-              style={{
-                width: "150px",
-                height: "150px",
-                borderRadius: "6px",
-                overflow: "hidden",
-                marginBottom: "34px",
-                boxShadow: "0 0 34px rgba(114,230,255,0.14)",
-                background: "rgba(255,255,255,0.03)",
-              }}
-            >
-              <img
-                src="/aspiregameacademylogo.png"
-                alt="Aspire Game Academy Logo"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-
             <h1
               style={{
                 fontSize: "clamp(50px, 8vw, 94px)",
@@ -364,11 +340,13 @@ export default function Home() {
                 margin: "0 0 22px 0",
                 letterSpacing: "-2.5px",
                 maxWidth: "980px",
+                textShadow:
+                  "0 0 16px rgba(114,230,255,0.25), 0 0 34px rgba(141,91,255,0.22)",
               }}
             >
-              Break into the
+              Global Pop-Up
               <br />
-              <span style={{ color: colors.cyan }}>game industry in 7 days.</span>
+              <span style={{ color: colors.cyan }}>Game Academy</span>
             </h1>
 
             <p
@@ -381,7 +359,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Learn how modern game teams actually work across production, QA, live ops, and delivery — and build a small team project during the week.
+              Real-world game industry training led by working professionals.
             </p>
 
             <p
@@ -393,7 +371,10 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              A global, in-person pop-up academy built by Aspire Agency Global Inc.
+              Aspire Game Academy brings hands-on production, QA, design, live ops, art, and technical training to cities around the world through immersive pop-up learning experiences.
+              <br />
+              <br />
+              Choose a 3-day condensed intensive or a 7-day part-time academy format. Learn the workflows, tools, and thinking used inside modern game studios.
             </p>
 
             <div
@@ -484,13 +465,13 @@ export default function Home() {
                     style={{
                       fontSize: "14px",
                       fontWeight: 800,
-                      color: colors.cyan,
+                      color: "#ffcf45",
                       letterSpacing: "2.5px",
                       textTransform: "uppercase",
                       marginBottom: "12px",
                     }}
                   >
-                    Aspire PODS Connection
+                    Global Cohort Experience
                   </div>
 
                   <div
@@ -505,6 +486,8 @@ export default function Home() {
                     Learn it.
                     <br />
                     Build it.
+                    <br />
+                    Badge it.
                   </div>
 
                   <p
@@ -516,8 +499,24 @@ export default function Home() {
                       maxWidth: "430px",
                     }}
                   >
-                    Train closer to the real industry through the same production mindset behind Aspire PODS.
+                    Students complete real-world challenges, build practical skills, and earn Aspire Badges across production, game design, QA + DevQA, live ops, game art, and technical foundations.
                   </p>
+                </div>
+
+                <div
+                  style={{
+                    width: "100%",
+                    borderRadius: "18px",
+                    overflow: "hidden",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                    boxShadow: "0 0 28px rgba(255, 207, 69, 0.24)",
+                  }}
+                >
+                  <img
+                    src="/Aspire-hero.png"
+                    alt="Aspire Game Academy yellow astronaut at a computer"
+                    style={{ width: "100%", height: "auto", display: "block" }}
+                  />
                 </div>
 
                 <div
@@ -530,10 +529,10 @@ export default function Home() {
                   }}
                 >
                   {[
-                    ["Format", "In-Person"],
-                    ["Length", "7 Days"],
-                    ["Focus", "Production"],
-                    ["Outcome", "Certificate"],
+                    ["Format", "Pop-Up Academy"],
+                    ["Options", "3-Day or 7-Day"],
+                    ["Focus", "Real Studio Workflows"],
+                    ["Outcome", "Aspire Badges"],
                   ].map(([label, value]) => (
                     <div
                       key={label}
