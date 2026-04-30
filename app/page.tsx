@@ -344,7 +344,7 @@ export default function Home() {
                   "0 0 16px rgba(114,230,255,0.25), 0 0 34px rgba(141,91,255,0.22)",
               }}
             >
-              Global Pop-Up
+              Global Pop-Up AAA
               <br />
               <span style={{ color: colors.cyan }}>Game Academy</span>
             </h1>
@@ -359,7 +359,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Real-world game industry training led by working professionals.
+              Real-world AAA game industry training led by working professionals.
             </p>
 
             <p
@@ -374,7 +374,7 @@ export default function Home() {
               Aspire Game Academy brings hands-on production, QA, design, live ops, art, and technical training to cities around the world through immersive pop-up learning experiences.
               <br />
               <br />
-              Choose a 3-day condensed intensive or a 7-day part-time academy format. Learn the workflows, tools, and thinking used inside modern game studios.
+              Train in the same workflows, tools, and thinking used inside AAA game studios.
             </p>
 
             <div
@@ -499,7 +499,7 @@ export default function Home() {
                       maxWidth: "430px",
                     }}
                   >
-                    Students complete real-world challenges, build practical skills, and earn Aspire Badges across production, game design, QA + DevQA, live ops, game art, and technical foundations.
+                    Students complete real-world AAA-style challenges, build practical skills, and earn Aspire Badges across production, game design, QA + DevQA, live ops, game art, and technical foundations.
                   </p>
                 </div>
 
