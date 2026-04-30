@@ -366,9 +366,9 @@ export default function Home() {
                 maxWidth: "980px",
               }}
             >
-              Break into the
+              Enter the future of
               <br />
-              <span style={{ color: colors.cyan }}>game industry in 7 days.</span>
+              <span style={{ color: colors.cyan }}>game careers.</span>
             </h1>
 
             <p
@@ -381,7 +381,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              Learn how modern game teams actually work across production, QA, live ops, and delivery — and build a small team project during the week.
+              A cinematic, high-energy academy experience inspired by 1980s neon and built for the modern global games industry.
             </p>
 
             <p
@@ -393,7 +393,7 @@ export default function Home() {
                 maxWidth: "920px",
               }}
             >
-              A global, in-person pop-up academy built by Aspire Agency Global Inc.
+              Train in-person across production, QA, live ops, and delivery with a premium learning model designed for fast growth.
             </p>
 
             <div
@@ -437,12 +437,12 @@ export default function Home() {
               style={{
                 position: "relative",
                 borderRadius: "30px",
-                padding: "26px",
+                padding: "18px",
                 background:
-                  "linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03))",
-                border: "1px solid rgba(255,255,255,0.12)",
+                  "linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04))",
+                border: "1px solid rgba(114,230,255,0.30)",
                 boxShadow:
-                  "0 18px 60px rgba(0,0,0,0.32), 0 0 40px rgba(114,230,255,0.08)",
+                  "0 20px 70px rgba(0,0,0,0.40), 0 0 55px rgba(114,230,255,0.20), 0 0 40px rgba(141,91,255,0.18)",
                 overflow: "hidden",
               }}
             >
@@ -469,107 +469,19 @@ export default function Home() {
                 }}
               />
 
-              <div
+              <img
+                src="/Aspire-hero.png"
+                alt="Aspire Game Academy astronaut at retro computer in a neon cinematic scene"
                 style={{
                   position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "22px",
-                  alignItems: "center",
-                  textAlign: "center",
+                  width: "100%",
+                  height: "min(540px, 66vh)",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  display: "block",
+                  filter: "drop-shadow(0 0 24px rgba(114,230,255,0.30)) drop-shadow(0 0 20px rgba(141,91,255,0.24))",
                 }}
-              >
-                <div>
-                  <div
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 800,
-                      color: colors.cyan,
-                      letterSpacing: "2.5px",
-                      textTransform: "uppercase",
-                      marginBottom: "12px",
-                    }}
-                  >
-                    Aspire PODS Connection
-                  </div>
-
-                  <div
-                    style={{
-                      fontSize: "clamp(28px, 3vw, 40px)",
-                      fontWeight: 900,
-                      lineHeight: 1.06,
-                      letterSpacing: "-1px",
-                      marginBottom: "14px",
-                    }}
-                  >
-                    Learn it.
-                    <br />
-                    Build it.
-                  </div>
-
-                  <p
-                    style={{
-                      margin: 0,
-                      color: colors.muted,
-                      fontSize: "18px",
-                      lineHeight: 1.7,
-                      maxWidth: "430px",
-                    }}
-                  >
-                    Train closer to the real industry through the same production mindset behind Aspire PODS.
-                  </p>
-                </div>
-
-                <div
-                  className="metrics-grid"
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-                    gap: "14px",
-                    width: "100%",
-                  }}
-                >
-                  {[
-                    ["Format", "In-Person"],
-                    ["Length", "7 Days"],
-                    ["Focus", "Production"],
-                    ["Outcome", "Certificate"],
-                  ].map(([label, value]) => (
-                    <div
-                      key={label}
-                      style={{
-                        background: "rgba(255,255,255,0.05)",
-                        border: "1px solid rgba(255,255,255,0.10)",
-                        borderRadius: "16px",
-                        padding: "16px",
-                        textAlign: "left",
-                      }}
-                    >
-                      <div
-                        style={{
-                          color: colors.soft,
-                          fontSize: "13px",
-                          fontWeight: 700,
-                          textTransform: "uppercase",
-                          letterSpacing: "1.5px",
-                          marginBottom: "6px",
-                        }}
-                      >
-                        {label}
-                      </div>
-                      <div
-                        style={{
-                          color: colors.text,
-                          fontSize: "20px",
-                          fontWeight: 800,
-                        }}
-                      >
-                        {value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              />
             </div>
           </div>
         </div>
