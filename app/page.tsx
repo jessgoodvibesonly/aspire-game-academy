@@ -578,33 +578,36 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Why It’s Different</div>
-          <h2 style={h2Style}>Train closer to the real industry</h2>
+          <div style={smallLabelStyle}>WHY IT’S DIFFERENT</div>
+          <h2 style={h2Style}>This is how modern game teams actually work.</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Aspire Game Academy is connected to the same production mindset behind Aspire PODS.
+            Built around small, focused teams, real collaboration, and fast iteration — not lectures.
           </p>
           <p style={bodyStyle}>
-            Small, structured teams are how modern games stay aligned across production, QA, communication, and delivery. This academy is built to give students a real feel for how that world works.
+            Students work in structured groups, simulating real studio environments across production, QA, design, and live operations. The focus is on how work moves, how teams communicate, and how decisions are made under real conditions.
+          </p>
+          <p style={bodyStyle}>
+            This is about understanding the system — not just learning isolated skills.
           </p>
         </div>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Built for modern studios</h3>
+            <h3 style={cardTitleStyle}>Team-Based Workflows</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Learn how teams coordinate, communicate, and move work forward in real production environments.
+              Operate in small teams that mirror real studio structures, with clear roles, communication, and delivery cycles.
             </p>
           </div>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Faster than traditional pathways</h3>
+            <h3 style={cardTitleStyle}>Short, Focused Sprints</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Get a focused industry immersion in one week instead of months of disconnected theory.
+              Work through condensed production cycles designed to simulate real timelines and decision-making.
             </p>
           </div>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Closer to real opportunities</h3>
+            <h3 style={cardTitleStyle}>Clarity on Your Role</h3>
             <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Designed to help students understand where they fit and how to move toward real game industry roles.
+              Understand where you fit in the pipeline and how different disciplines connect in real production environments.
             </p>
           </div>
         </div>
