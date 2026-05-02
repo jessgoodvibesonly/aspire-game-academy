@@ -798,14 +798,59 @@ export default function Home() {
                 fontSize: "clamp(42px, 5vw, 58px)",
                 fontWeight: 900,
                 color: colors.cyan,
-                marginBottom: "12px",
+                marginBottom: "8px",
                 letterSpacing: "-1px",
               }}
             >
               $1,985 USD
             </div>
-            <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
-              Includes 7 live in-person training days, a small team project, practical production exposure, and a certificate of completion.
+            <p
+              style={{
+                color: "rgba(220, 252, 255, 0.72)",
+                fontSize: "14px",
+                lineHeight: 1.6,
+                textAlign: "center",
+                margin: "0 0 14px 0",
+              }}
+            >
+              Limited cohort — 10 to 20 students per city
+            </p>
+            <p style={{ color: colors.muted, lineHeight: 1.75, margin: "0 0 18px 0" }}>
+              Learn how real games are built, shipped, and operated — directly from industry professionals. Includes live instruction, a small team project, real production exposure, and a certificate of completion.
+            </p>
+            <div style={{ textAlign: "center", marginBottom: "12px" }}>
+              <a
+                href={studentFormLink}
+                style={{
+                  ...buttonPrimaryStyle,
+                  background: "linear-gradient(135deg, #44d8ff 0%, #3587ff 100%)",
+                  boxShadow: "0 14px 34px rgba(68, 216, 255, 0.34)",
+                }}
+              >
+                Apply Now
+              </a>
+            </div>
+            <p
+              style={{
+                color: "rgba(220, 252, 255, 0.74)",
+                fontSize: "14px",
+                lineHeight: 1.6,
+                textAlign: "center",
+                margin: "0 0 8px 0",
+              }}
+            >
+              Built by AAA industry professionals. Not theory. Real production.
+            </p>
+            <p
+              style={{
+                color: "rgba(220, 252, 255, 0.62)",
+                fontSize: "13px",
+                lineHeight: 1.5,
+                textAlign: "center",
+                margin: 0,
+              }}
+            >
+              First cohort launching now
             </p>
           </div>
 
