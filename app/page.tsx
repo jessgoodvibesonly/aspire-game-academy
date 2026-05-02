@@ -839,29 +839,31 @@ export default function Home() {
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Instructor structure</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              $1,500 base instructor fee
+              70 / 30 revenue split per student
               <br />
-              + $150 per student
+              70% to instructor
               <br />
-              + $500 bonus at 20 students
+              30% to Aspire Game Academy
+              <br />
+              Simple, scalable compensation
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Program schedule</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              7 consecutive days
+              Two flexible format options
               <br />
-              10:00 AM to 2:00 PM daily
+              3-day intensive: 9:00 AM to 5:00 PM
               <br />
-              10 to 20 students
+              7-day cohort: 10:00 AM to 2:00 PM
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Ideal fit</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              Strong communicators with real studio experience and a practical teaching mindset.
+              Experienced game industry professionals who can lead, mentor, and teach practical studio workflows in a high-energy learning environment.
             </p>
           </div>
         </div>
