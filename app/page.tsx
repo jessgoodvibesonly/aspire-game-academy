@@ -857,11 +857,17 @@ export default function Home() {
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>What’s Included</h3>
             <p style={{ color: colors.muted, lineHeight: 1.9, margin: 0 }}>
-              Live instruction
+              • Live instruction (AAA-led)
               <br />
-              Small team project
+              • Small team production project
               <br />
-              Certificate included
+              • Aspire Badge (verified industry credential)
+              <br />
+              • Real production workflows (not theory)
+              <br />
+              • Portfolio-ready experience
+              <br />
+              • Certificate of completion
             </p>
           </div>
         </div>
