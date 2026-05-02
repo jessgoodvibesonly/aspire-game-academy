@@ -802,7 +802,7 @@ export default function Home() {
                 letterSpacing: "-1px",
               }}
             >
-              $1,997 USD
+              $1,985 USD
             </div>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: 0 }}>
               Includes 7 live in-person training days, a small team project, practical production exposure, and a certificate of completion.
@@ -812,8 +812,6 @@ export default function Home() {
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>What’s Included</h3>
             <p style={{ color: colors.muted, lineHeight: 1.9, margin: 0 }}>
-              28 total hours
-              <br />
               Live instruction
               <br />
               Small team project
