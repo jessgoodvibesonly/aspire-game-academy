@@ -237,7 +237,7 @@ export default function Home() {
     courseFocus:
       "AAA Game Production, Studio Pipelines, Team Leadership, Production Systems, and Sustainable Delivery",
     badge: "Production",
-    location: "UK and France",
+    location: "UK & France",
   };
 
 
@@ -296,12 +296,14 @@ export default function Home() {
     {
       name: "Fred Dossola",
       role: "Senior Games Producer | Production Systems Specialist",
-      location: "Oxford, UK | France",
-      languages: "English, French",
+      location: "UK & France",
+      languages: "English, Spanish",
       specialties: "Game production, agile workflows, team leadership, pipeline design, AAA development",
-      bio: "I am a Senior Games Producer with over 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. I have contributed to the production and delivery of globally recognized titles including Uncharted 4, The Last of Us Part II, and Star Citizen. My journey began in the 80s, playing arcade cabinets and Atari at home — a passion that evolved into a career dedicated to building and shipping great games. Today, I specialize in designing production systems and cultivating team cultures that enable studios to deliver high-quality work sustainably, without burnout. I am passionate about helping teams operate at their best — aligning people, process, and production to create environments where both games and developers thrive.",
+      bio: "I am a Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. I grew up in the 80s playing arcade cabinets and Atari at home, and that love for games never went away, it just turned into a career. Today I specialize in building production systems and team cultures that help studios ship great work without burning out teams. When I'm not performing production heroics, I'm probably still playing games, watching anime, or diving into something equally nerdy.",
       courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
       badge: "Aspire Badge: Production",
+      imageSrc: "/Fred.png",
+      imageAlt: "Fred Dossola",
     },
     {
       name: "John Myers",
