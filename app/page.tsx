@@ -291,14 +291,16 @@ export default function Home() {
       badge: "Aspire Badge: Pod Leadership Mentor",
     },
     {
-      name: "Diego Alvarez",
-      role: "Live Ops & Monetization Lead",
-      location: "Mexico City, Mexico",
-      languages: "Spanish, English",
-      specialties: "Live events, KPI analysis, release planning, player retention",
-      bio: "Diego blends player-first design thinking with operational discipline to help teams ship updates that are both stable and engaging.",
-      courseFocus: "Live ops planning, event cadence, and data-informed production choices.",
-      badge: "Aspire Badge: Live Operations Architect",
+      name: "John Myers",
+      role: "Game Creator | Game Design Specialist",
+      location: "Los Angeles, USA",
+      languages: "English",
+      specialties: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
+      bio: "I am an experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. I’ve worked across diverse teams, platforms, and production pipelines, giving me a well-rounded perspective on how great games are built and shipped. I’m passionate about the medium of play and love sharing practical, real-world insights with others. I’m especially driven by mentorship, collaboration, and helping foster strong, supportive creative communities where developers at all levels can grow and succeed.",
+      courseFocus: "Game design foundations, gameplay systems, and real-world production workflows, from concept to playable experience. Students will learn how to think like a game creator, collaborate effectively within a team, and turn ideas into functional, engaging gameplay.",
+      badge: "Aspire Badge: Game Design",
+      imageSrc: "/johnmyers.png",
+      imageAlt: "John Myers",
     },
     {
       name: "Amina Okafor",
@@ -975,18 +977,33 @@ export default function Home() {
                     position: "relative",
                     zIndex: 1,
                     aspectRatio: "4 / 5",
-                    display: "grid",
-                    placeItems: "center",
-                    color: "rgba(255,255,255,0.75)",
-                    fontWeight: 700,
-                    letterSpacing: "1.2px",
-                    textTransform: "uppercase",
-                    fontSize: "13px",
-                    textAlign: "center",
-                    padding: "14px",
                   }}
                 >
-                  Photo Placeholder
+                  {instructor.imageSrc ? (
+                    <img
+                      src={instructor.imageSrc}
+                      alt={instructor.imageAlt ?? instructor.name}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        display: "grid",
+                        placeItems: "center",
+                        color: "rgba(255,255,255,0.75)",
+                        fontWeight: 700,
+                        letterSpacing: "1.2px",
+                        textTransform: "uppercase",
+                        fontSize: "13px",
+                        textAlign: "center",
+                        padding: "14px",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    >
+                      Photo Placeholder
+                    </div>
+                  )}
                 </div>
               </div>
 
