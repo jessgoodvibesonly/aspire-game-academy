@@ -281,14 +281,14 @@ export default function Home() {
 
   const globalInstructors = [
     {
-      name: "Maya Chen",
-      role: "Senior Game Producer",
-      location: "Singapore",
-      languages: "English, Mandarin",
-      specialties: "Agile production, cross-studio coordination, milestone planning",
-      bio: "Maya has led mobile and PC teams through multi-region launches, with a focus on transparent workflows and healthy production rhythm.",
-      courseFocus: "Production leadership and sprint execution for small, high-output teams.",
-      badge: "Aspire Badge: Pod Leadership Mentor",
+      name: "Fred Dossola",
+      role: "Senior Games Producer | Production Systems Specialist",
+      location: "Oxford, UK | France",
+      languages: "English, French",
+      specialties: "Game production, agile workflows, team leadership, pipeline design, AAA development",
+      bio: "I am a Senior Games Producer with over 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. I have contributed to the production and delivery of globally recognized titles including Uncharted 4, The Last of Us Part II, and Star Citizen. My journey began in the 80s, playing arcade cabinets and Atari at home — a passion that evolved into a career dedicated to building and shipping great games. Today, I specialize in designing production systems and cultivating team cultures that enable studios to deliver high-quality work sustainably, without burnout. I am passionate about helping teams operate at their best — aligning people, process, and production to create environments where both games and developers thrive.",
+      courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
+      badge: "Aspire Badge: Production",
     },
     {
       name: "John Myers",
@@ -1032,6 +1032,55 @@ export default function Home() {
                 {instructor.badge}
               </p>
             </article>
+          ))}
+        </div>
+
+        <div
+          style={{
+            width: "min(560px, 92%)",
+            height: "2px",
+            margin: "48px auto 24px auto",
+            borderRadius: "999px",
+            background: "linear-gradient(90deg, rgba(141,91,255,0.92) 0%, rgba(95,220,255,0.96) 50%, rgba(255,76,172,0.92) 100%)",
+            boxShadow: "0 0 14px rgba(141,91,255,0.36), 0 0 18px rgba(95,220,255,0.28), 0 0 14px rgba(255,76,172,0.28)",
+          }}
+        />
+
+        <div
+          style={{
+            maxWidth: "640px",
+            margin: "0 auto",
+            textAlign: "center",
+            display: "grid",
+            gap: "11px",
+          }}
+        >
+          {[
+            ["Fred Dossola", "How Games Ship"],
+            ["John Myers", "How Games Feel"],
+            ["Aydan Aliyeva", "How Games Work"],
+          ].map(([name, focus]) => (
+            <p
+              key={name}
+              style={{
+                margin: 0,
+                color: colors.soft,
+                fontSize: "clamp(18px, 2.2vw, 22px)",
+                lineHeight: 1.6,
+                textShadow: "0 0 10px rgba(114,230,255,0.24)",
+                transition: "transform 180ms ease, text-shadow 180ms ease",
+              }}
+              onMouseEnter={(event) => {
+                event.currentTarget.style.transform = "scale(1.02)";
+                event.currentTarget.style.textShadow = "0 0 14px rgba(114,230,255,0.36), 0 0 10px rgba(141,91,255,0.3)";
+              }}
+              onMouseLeave={(event) => {
+                event.currentTarget.style.transform = "scale(1)";
+                event.currentTarget.style.textShadow = "0 0 10px rgba(114,230,255,0.24)";
+              }}
+            >
+              <strong style={{ color: colors.text }}>{name}</strong> → {focus}
+            </p>
           ))}
         </div>
 
