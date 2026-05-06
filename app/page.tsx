@@ -294,14 +294,14 @@ export default function Home() {
 
   const globalInstructors = [
     {
-      name: "Maya Chen",
-      role: "Senior Game Producer",
-      location: "Singapore",
-      languages: "English, Mandarin",
-      specialties: "Agile production, cross-studio coordination, milestone planning",
-      bio: "Maya has led mobile and PC teams through multi-region launches, with a focus on transparent workflows and healthy production rhythm.",
-      courseFocus: "Production leadership and sprint execution for small, high-output teams.",
-      badge: "Aspire Badge: Pod Leadership Mentor",
+      name: "Fred Dossola",
+      role: "Senior Games Producer | Production Systems Specialist",
+      location: "Oxford, UK | France",
+      languages: "English, French",
+      specialties: "Game production, agile workflows, team leadership, pipeline design, AAA development",
+      bio: "I am a Senior Games Producer with over 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. I have contributed to the production and delivery of globally recognized titles including Uncharted 4, The Last of Us Part II, and Star Citizen. My journey began in the 80s, playing arcade cabinets and Atari at home — a passion that evolved into a career dedicated to building and shipping great games. Today, I specialize in designing production systems and cultivating team cultures that enable studios to deliver high-quality work sustainably, without burnout. I am passionate about helping teams operate at their best — aligning people, process, and production to create environments where both games and developers thrive.",
+      courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
+      badge: "Aspire Badge: Production",
     },
     {
       name: "John Myers",
@@ -326,6 +326,18 @@ export default function Home() {
       badge: "Aspire Badge: Technical Foundations",
       imageSrc: "/aydan.png",
       imageAlt: "Aydan Aliyeva",
+    },
+    {
+      name: "Zachary Kosma",
+      role: "Creative Technologist | XR & Monetization Specialist",
+      location: "Las Vegas / Los Angeles, USA",
+      languages: "English",
+      specialties: "XR, Unity, monetization strategy, QA, indie game development, game business models",
+      bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, and business. He helps developers understand not only how to build engaging interactive experiences, but how to think strategically about the systems, audiences, and revenue models that support them. With experience across both technical development and game business strategy, Zachary brings a practical, future-focused perspective to students who want to build games that are playable, scalable, and commercially thoughtful.",
+      courseFocus: "Game business models, monetization strategy, XR prototyping, and Unity-based development foundations. Students will learn how to shape a game idea into a viable product, explore revenue pathways, and understand the technical and strategic decisions behind building modern interactive experiences.",
+      badge: "Aspire Badge: Technical Foundations",
+      imageSrc: "/zachary.png",
+      imageAlt: "Zachary Kosma",
     },
   ];
 
@@ -996,6 +1008,9 @@ export default function Home() {
               key={instructor.name}
               style={{
                 ...cardStyle,
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
                 borderRadius: "16px",
                 padding: "20px",
                 background:
@@ -1097,6 +1112,35 @@ export default function Home() {
         >
           More global instructors are being added as new city cohorts open.
         </p>
+
+        <div
+          style={{
+            marginTop: "26px",
+            display: "grid",
+            gap: "10px",
+            textAlign: "center",
+          }}
+        >
+          {[
+            ["Fred Dossola", "How Games Ship"],
+            ["John Myers", "How Games Feel"],
+            ["Aydan Aliyeva", "How Games Work"],
+            ["Zachary Kosma", "How Games Grow"],
+          ].map(([name, focus]) => (
+            <p
+              key={name}
+              style={{
+                margin: 0,
+                color: "rgba(224, 255, 255, 0.92)",
+                textShadow: "0 0 10px rgba(95, 220, 255, 0.34)",
+                letterSpacing: "0.2px",
+                lineHeight: 1.55,
+              }}
+            >
+              <strong style={{ fontWeight: 800 }}>{name}</strong> → {focus}
+            </p>
+          ))}
+        </div>
       </section>
 
       <div style={dividerStyle} />
