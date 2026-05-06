@@ -1006,100 +1006,46 @@ export default function Home() {
           }}
         >
           {globalInstructors.map((instructor) => (
-            <article
-              key={instructor.name}
-              style={{
-                ...cardStyle,
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                borderRadius: "16px",
-                padding: "20px",
-                background:
-                  "linear-gradient(180deg, rgba(111,99,255,0.16), rgba(8,10,18,0.92) 38%, rgba(8,10,18,0.98))",
-                boxShadow:
-                  "0 0 20px rgba(95,220,255,0.12), 0 0 28px rgba(141,91,255,0.12), inset 0 0 0 1px rgba(114,230,255,0.10)",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  borderRadius: "10px",
-                  border: "1px solid rgba(114,230,255,0.34)",
-                  overflow: "hidden",
-                  marginBottom: "16px",
-                  background:
-                    "linear-gradient(180deg, rgba(8,12,22,0.95), rgba(20,10,34,0.95))",
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage:
-                      "linear-gradient(rgba(114,230,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(114,230,255,0.16) 1px, transparent 1px)",
-                    backgroundSize: "26px 26px",
-                    opacity: 0.5,
-                  }}
-                />
-                <div
-                  style={{
-                    position: "relative",
-                    zIndex: 1,
-                    aspectRatio: "4 / 5",
-                  }}
-                >
+            <div key={instructor.name} className="w-full px-3 mb-8">
+              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
+                <div className="w-full aspect-[4/5] overflow-hidden">
                   {instructor.imageSrc ? (
                     <img
                       src={instructor.imageSrc}
                       alt={instructor.imageAlt ?? instructor.name}
-                      loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-center"
                     />
                   ) : (
-                    <div
-                      style={{
-                        display: "grid",
-                        placeItems: "center",
-                        color: "rgba(255,255,255,0.75)",
-                        fontWeight: 700,
-                        letterSpacing: "1.2px",
-                        textTransform: "uppercase",
-                        fontSize: "13px",
-                        textAlign: "center",
-                        padding: "14px",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    >
+                    <div className="w-full h-full grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
                       Photo Placeholder
                     </div>
                   )}
                 </div>
-              </div>
 
-              <h3 style={{ ...cardTitleStyle, marginBottom: "6px" }}>{instructor.name}</h3>
-              <p style={{ margin: "0 0 12px 0", color: colors.mint, fontWeight: 700 }}>
-                {instructor.role}
-              </p>
-              <p style={{ margin: "0 0 6px 0", color: colors.soft, lineHeight: 1.65 }}>
-                <strong style={{ color: colors.text }}>Location:</strong> {instructor.location}
-              </p>
-              <p style={{ margin: "0 0 6px 0", color: colors.soft, lineHeight: 1.65 }}>
-                <strong style={{ color: colors.text }}>Languages:</strong> {instructor.languages}
-              </p>
-              <p style={{ margin: "0 0 10px 0", color: colors.soft, lineHeight: 1.65 }}>
-                <strong style={{ color: colors.text }}>Specialty Areas:</strong> {instructor.specialties}
-              </p>
-              <p style={{ margin: "0 0 10px 0", color: colors.muted, lineHeight: 1.7 }}>
-                {instructor.bio}
-              </p>
-              <p style={{ margin: "0 0 10px 0", color: colors.muted, lineHeight: 1.7 }}>
-                <strong style={{ color: colors.text }}>Course Focus:</strong> {instructor.courseFocus}
-              </p>
-              <p style={{ margin: 0, color: colors.cyan, fontWeight: 700, lineHeight: 1.65 }}>
-                {instructor.badge}
-              </p>
-            </article>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
+                  <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
+                  <p className="text-xs text-purple-300 mb-3">
+                    {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
+                  </p>
+                  <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
+                  <p className="text-sm text-gray-200 leading-relaxed mb-2">
+                    <strong>Specialty Areas:</strong> {instructor.specialties}
+                  </p>
+                  <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
+                  <p className="text-sm text-gray-300 leading-relaxed mt-2 mb-0">
+                    <strong>Course Focus:</strong> {instructor.courseFocus}
+                  </p>
+                  <div className="mt-4">
+                    <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
+                      {instructor.badge}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
