@@ -329,12 +329,12 @@ export default function Home() {
     },
     {
       name: "Zachary Kosma",
-      role: "Creative Technologist | XR & Monetization Specialist",
+      role: "Creative Technologist | XR & Product Systems",
       location: "Las Vegas / Los Angeles, USA",
       languages: "English",
-      specialties: "XR, Unity, monetization strategy, QA, indie game development, game business models",
+      specialties: "XR, Unity, product systems, monetization strategy, QA, indie game development",
       bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, and business. He helps developers understand not only how to build engaging interactive experiences, but how to think strategically about the systems, audiences, and revenue models that support them. With experience across both technical development and game business strategy, Zachary brings a practical, future-focused perspective to students who want to build games that are playable, scalable, and commercially thoughtful.",
-      courseFocus: "Game business models, monetization strategy, XR prototyping, and Unity-based development foundations. Students will learn how to shape a game idea into a viable product, explore revenue pathways, and understand the technical and strategic decisions behind building modern interactive experiences.",
+      courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
       badge: "Aspire Badge: Technical Foundations",
       imageSrc: "/zachary.png",
       imageAlt: "Zachary Kosma",
@@ -1125,7 +1125,7 @@ export default function Home() {
             ["Fred Dossola", "How Games Ship"],
             ["John Myers", "How Games Feel"],
             ["Aydan Aliyeva", "How Games Work"],
-            ["Zachary Kosma", "How Games Grow"],
+            ["Zachary Kosma", "How Games Scale"],
           ].map(([name, focus]) => (
             <p
               key={name}
