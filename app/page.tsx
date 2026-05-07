@@ -1,4 +1,3 @@
-import Image from "next/image";
 export default function Home() {
   const colors = {
     bg0: "#04060c",
@@ -298,7 +297,7 @@ export default function Home() {
       specialty: "Game production, agile workflows, team leadership, pipeline design, AAA development",
       bio: "I am a Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. I grew up in the 80s playing arcade cabinets and Atari at home, and that love for games never went away, it just turned into a career. Today I specialize in building production systems and team cultures that help studios ship great work without burning out teams. When I'm not performing production heroics, I'm probably still playing games, watching anime, or diving into something equally nerdy.",
       courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
-      badge: "Aspire Badge: Production",
+      badge: "Production",
       image: "/Fred.png",
       imageAlt: "Fred Dossola",
     },
@@ -310,7 +309,7 @@ export default function Home() {
       specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
       bio: "I am an experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. I’ve worked across diverse teams, platforms, and production pipelines, giving me a well-rounded perspective on how great games are built and shipped. I’m passionate about the medium of play and love sharing practical, real-world insights with others. I’m especially driven by mentorship, collaboration, and helping foster strong, supportive creative communities where developers at all levels can grow and succeed.",
       courseFocus: "Game design foundations, gameplay systems, and real-world production workflows, from concept to playable experience. Students will learn how to think like a game creator, collaborate effectively within a team, and turn ideas into functional, engaging gameplay.",
-      badge: "Aspire Badge: Game Design",
+      badge: "Game Design",
       image: "/johnmyers.png",
       imageAlt: "John Myers",
     },
@@ -318,11 +317,11 @@ export default function Home() {
       name: "Aydan Aliyeva",
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
-      languages: "English",
+      languages: "Azerbaijani • Turkish • English",
       specialty: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
       bio: "I am an Unreal Authorized Instructor dedicated to helping creators build the technical foundation needed to bring ambitious ideas to life. My focus goes beyond simply teaching tools — I guide developers in understanding the underlying systems that power real-time experiences. I specialize in Unreal Engine 5, from skeletal mesh systems to immersive environment design, with a strong emphasis on industry-level standards and workflows. Through mentorship with organizations like IGDA and collaboration on serious game projects, I support developers in building the confidence and technical depth required to innovate in a rapidly evolving real-time landscape.",
       courseFocus: "Unreal Engine 5 fundamentals, real-time systems, and technical workflows for modern game development. Students will learn how to build, optimize, and understand core systems including environments, assets, and interactive elements while working within industry-standard pipelines.",
-      badge: "Aspire Badge: Technical Foundations",
+      badge: "Technical Foundations",
       image: "/aydan.png",
       imageAlt: "Aydan Aliyeva",
     },
@@ -334,7 +333,7 @@ export default function Home() {
       specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
       bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, product thinking, and real-time development. He helps developers understand how to build engaging interactive experiences while also thinking strategically about the systems, audiences, and decisions that support them. With experience across technical development, education, QA, and product strategy, Zachary brings a practical, future-focused perspective to students who want to build games and immersive experiences that are playable, scalable, and commercially thoughtful.",
       courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
-      badge: "Aspire Badge: Technical Foundations",
+      badge: "Technical Foundations",
       image: "/zachary.png",
       imageAlt: "Zachary Kosma",
     },
@@ -955,96 +954,64 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Global Faculty</div>
-          <h2 style={h2Style}>Meet the Global Instructors</h2>
-          <p style={bodyStyle}>
-            Meet a growing network of experienced game industry instructors bringing global studio perspective into each Aspire cohort.
+      <section className="px-6 py-24 bg-gradient-to-b from-[#090516] via-[#120724] to-[#080812] text-white">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-cyan-300">
+            GLOBAL FACULTY
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
-                {instructor.image ? (
-                  <Image
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+            Meet the Global Instructors
+          </h2>
+
+          <p className="mt-6 max-w-4xl text-xl text-white/70">
+            Meet a growing network of experienced game industry instructors leading Aspire Badge tracks across production, design, QA, live ops, art, and technical foundations.
+          </p>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {globalInstructors.map((instructor) => (
+              <article
+                key={instructor.name}
+                className="flex flex-col rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-violet-950/70 via-slate-950/90 to-cyan-950/30 p-5 shadow-[0_0_35px_rgba(103,232,249,0.14)]"
+              >
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl border border-fuchsia-400/30 bg-black/40">
+                  <img
                     src={instructor.image}
                     alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    className="w-full h-full object-cover object-center"
                   />
-                ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
-                    Photo Placeholder
-                  </div>
-                )}
+                </div>
 
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
-                  <p className="text-xs text-purple-300 mb-3">
-                    {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
+                <div className="mt-5 flex flex-1 flex-col">
+                  <h3 className="text-2xl font-black text-white">
+                    {instructor.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm font-bold text-cyan-200 leading-snug">
+                    {instructor.role}
                   </p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
-                  {instructor.specialty ? (
-                    <p className="text-sm text-gray-200 leading-relaxed mb-2">
-                      <strong>Specialty:</strong> {instructor.specialty}
-                    </p>
-                  ) : null}
-                  <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
-                  <div className="mt-4">
-                    <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
-                      {instructor.badge}
+
+                  <p className="mt-4 text-sm text-white/70">
+                    <strong>Location:</strong> {instructor.location}
+                  </p>
+
+                  <p className="mt-2 text-sm text-white/70">
+                    <strong>Languages:</strong> {instructor.languages}
+                  </p>
+
+                  <p className="mt-4 text-sm text-white/70 leading-relaxed">
+                    {instructor.specialty}
+                  </p>
+
+                  <div className="mt-auto pt-6">
+                    <span className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-cyan-200">
+                      Aspire Badge: {instructor.badge}
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p
-          style={{
-            ...bodyStyle,
-            fontSize: "16px",
-            marginTop: "18px",
-            color: colors.soft,
-            maxWidth: "none",
-          }}
-        >
-          More global instructors are being added as new city cohorts open.
-        </p>
-
-        <div
-          style={{
-            marginTop: "26px",
-            display: "grid",
-            gap: "10px",
-            textAlign: "center",
-          }}
-        >
-          {[
-            ["Fred Dossola", "How Games Ship"],
-            ["John Myers", "How Games Feel"],
-            ["Aydan Aliyeva", "How Games Work"],
-            ["Zachary Kosma", "How Games Scale"],
-          ].map(([name, focus]) => (
-            <p
-              key={name}
-              style={{
-                margin: 0,
-                color: "rgba(224, 255, 255, 0.92)",
-                textShadow: "0 0 10px rgba(95, 220, 255, 0.34)",
-                letterSpacing: "0.2px",
-                lineHeight: 1.55,
-              }}
-            >
-              <strong style={{ fontWeight: 800 }}>{name}</strong> → {focus}
-            </p>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
