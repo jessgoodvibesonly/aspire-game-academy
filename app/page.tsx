@@ -858,7 +858,10 @@ export default function Home() {
               Limited cohort — 10 to 20 students per city
             </p>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: "0 0 18px 0" }}>
-              Learn how real games are built, shipped, and operated — directly from industry professionals. Includes live instruction, a small team project, real production exposure, and a certificate of completion.
+              Train inside real game production systems with direct exposure to how modern
+              teams plan, build, test, launch, and operate games. The experience is
+              structured around Aspire Badge tracks, giving students practical,
+              portfolio-ready experience across multiple disciplines.
             </p>
             <div style={{ textAlign: "center", marginBottom: "12px" }}>
               <a
@@ -881,33 +884,23 @@ export default function Home() {
                 margin: "0 0 8px 0",
               }}
             >
-              Built by AAA industry professionals. Not theory. Real production.
-            </p>
-            <p
-              style={{
-                color: "rgba(220, 252, 255, 0.62)",
-                fontSize: "13px",
-                lineHeight: 1.5,
-                textAlign: "center",
-                margin: 0,
-              }}
-            >
-              First cohort launching now
+              Built around real production workflows. Not theory.
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>What’s Included</h3>
             <p style={{ color: colors.muted, lineHeight: 1.9, margin: 0 }}>
-              • Live instruction (AAA-led)
+              • Live instruction from AAA industry professionals
               <br />
-              • Small team production project
-              <br />
-              • Aspire Badge (verified industry credential)
+              • Aspire Badge tracks (Production, Design, QA + DevQA, Live Ops, Art,
+              Technical)
               <br />
               • Real production workflows (not theory)
               <br />
-              • Portfolio-ready experience
+              • Team-based production experience
+              <br />
+              • Portfolio-ready project work
               <br />
               • Certificate of completion
             </p>
