@@ -732,11 +732,16 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Curriculum</div>
-          <h2 style={h2Style}>Created with AAA production leadership</h2>
+          <div style={smallLabelStyle}>CURRICULUM</div>
+          <h2 style={h2Style}>Built around real production systems — not theory</h2>
           <p style={bodyStyle}>
-            The production-heavy foundation of this program was created by{" "}
-            <strong style={{ color: colors.text }}>Fred Dossola</strong> for Aspire Game Academy, bringing real studio production thinking into the structure, pace, and focus of the experience.
+            The Aspire Game Academy curriculum is structured around six real-world production tracks: Production, Game Design, QA + DevQA, Live Ops, Game Art, and Technical Foundations. Each track reflects how modern studios actually build, ship, operate, and evolve games.
+          </p>
+          <p style={bodyStyle}>
+            Students don’t just learn concepts — they experience how work flows between roles, how decisions are made under pressure, and how creative ideas become finished products.
+          </p>
+          <p style={bodyStyle}>
+            This structure replaces traditional lecture-based learning with a system that mirrors real production environments, giving students clarity, confidence, and practical experience across the full game development pipeline.
           </p>
         </div>
       </section>
