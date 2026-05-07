@@ -999,20 +999,20 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
+            <div key={instructor.name} className="flex flex-col h-full rounded-2xl overflow-hidden">
               <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
                 {instructor.image ? (
                   <Image
                     src={instructor.image}
                     alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    width={500}
+                    height={625}
+                    className="w-full h-[320px] object-cover rounded-xl"
                   />
                 ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
+                  <div className="w-full h-[320px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
                     Photo Placeholder
                   </div>
                 )}
