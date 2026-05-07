@@ -410,6 +410,14 @@ export default function Home() {
               Train in the same workflows, tools, and thinking used inside AAA game studios.
             </p>
 
+            <div className="mt-6 mb-6 inline-block">
+              <img
+                src="/aspirebadges.png"
+                alt="Aspire Game Academy production badges"
+                className="block w-[220px] max-w-full h-auto rounded-xl border border-white/10 bg-black/40 p-2 shadow-[0_0_20px_rgba(34,211,238,0.18)]"
+              />
+            </div>
+
             <div
               className="cta-row"
               style={{
