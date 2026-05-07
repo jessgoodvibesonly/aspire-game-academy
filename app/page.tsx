@@ -999,17 +999,16 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
+            <div key={instructor.name} className="flex flex-col h-full overflow-hidden rounded-2xl border border-white/10 bg-white/5">
                 {instructor.image ? (
                   <Image
                     src={instructor.image}
                     alt={instructor.name}
                     width={400}
                     height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    className="w-full h-[300px] object-cover object-center rounded-t-2xl"
                   />
                 ) : (
                   <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
@@ -1037,7 +1036,6 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
