@@ -295,7 +295,7 @@ export default function Home() {
       role: "Senior Games Producer | Production Systems Specialist",
       location: "UK & France",
       languages: "English, Spanish",
-      specialties: "Game production, agile workflows, team leadership, pipeline design, AAA development",
+      specialty: "Game production, agile workflows, team leadership, pipeline design, AAA development",
       bio: "I am a Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. I grew up in the 80s playing arcade cabinets and Atari at home, and that love for games never went away, it just turned into a career. Today I specialize in building production systems and team cultures that help studios ship great work without burning out teams. When I'm not performing production heroics, I'm probably still playing games, watching anime, or diving into something equally nerdy.",
       courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
       badge: "Aspire Badge: Production",
@@ -307,7 +307,7 @@ export default function Home() {
       role: "Game Creator | Game Design Specialist",
       location: "Los Angeles, USA",
       languages: "English",
-      specialties: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
+      specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
       bio: "I am an experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. I’ve worked across diverse teams, platforms, and production pipelines, giving me a well-rounded perspective on how great games are built and shipped. I’m passionate about the medium of play and love sharing practical, real-world insights with others. I’m especially driven by mentorship, collaboration, and helping foster strong, supportive creative communities where developers at all levels can grow and succeed.",
       courseFocus: "Game design foundations, gameplay systems, and real-world production workflows, from concept to playable experience. Students will learn how to think like a game creator, collaborate effectively within a team, and turn ideas into functional, engaging gameplay.",
       badge: "Aspire Badge: Game Design",
@@ -319,7 +319,7 @@ export default function Home() {
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
       languages: "English",
-      specialties: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
+      specialty: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
       bio: "I am an Unreal Authorized Instructor dedicated to helping creators build the technical foundation needed to bring ambitious ideas to life. My focus goes beyond simply teaching tools — I guide developers in understanding the underlying systems that power real-time experiences. I specialize in Unreal Engine 5, from skeletal mesh systems to immersive environment design, with a strong emphasis on industry-level standards and workflows. Through mentorship with organizations like IGDA and collaboration on serious game projects, I support developers in building the confidence and technical depth required to innovate in a rapidly evolving real-time landscape.",
       courseFocus: "Unreal Engine 5 fundamentals, real-time systems, and technical workflows for modern game development. Students will learn how to build, optimize, and understand core systems including environments, assets, and interactive elements while working within industry-standard pipelines.",
       badge: "Aspire Badge: Technical Foundations",
@@ -331,7 +331,7 @@ export default function Home() {
       role: "Creative Technologist | XR & Product Systems",
       location: "Las Vegas / Los Angeles, USA",
       languages: "English",
-      specialties: "XR, Unity, product systems, monetization strategy, QA, indie game development",
+      specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
       bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, product thinking, and real-time development. He helps developers understand how to build engaging interactive experiences while also thinking strategically about the systems, audiences, and decisions that support them. With experience across technical development, education, QA, and product strategy, Zachary brings a practical, future-focused perspective to students who want to build games and immersive experiences that are playable, scalable, and commercially thoughtful.",
       courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
       badge: "Aspire Badge: Technical Foundations",
@@ -989,13 +989,12 @@ export default function Home() {
                     {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
                   </p>
                   <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">
-                    <strong>Specialty Areas:</strong> {instructor.specialties}
-                  </p>
+                  {instructor.specialty ? (
+                    <p className="text-sm text-gray-200 leading-relaxed mb-2">
+                      <strong>Specialty:</strong> {instructor.specialty}
+                    </p>
+                  ) : null}
                   <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
-                  <p className="text-sm text-gray-300 leading-relaxed mt-2 mb-0">
-                    <strong>Course Focus:</strong> {instructor.courseFocus}
-                  </p>
                   <div className="mt-4">
                     <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
                       {instructor.badge}
