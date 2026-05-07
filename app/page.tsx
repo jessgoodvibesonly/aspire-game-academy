@@ -228,18 +228,6 @@ export default function Home() {
     "Communicate like a real studio team",
   ];
 
-  const fredBio = {
-    name: "Fred Dossola",
-    title: "Senior Game Producer | AAA Production Leadership",
-    bio1:
-      "Fred Dossola is a senior game producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. His credits include Uncharted 4, The Last of Us Part II, and Star Citizen.",
-    bio2:
-      "He grew up in the 80s playing arcade cabinets and Atari at home, and that love for games became a lifelong career. Today, Fred specializes in building the production systems, team rhythms, and studio cultures that help teams ship exceptional work without burning people out.",
-    courseFocus:
-      "AAA Game Production, Studio Pipelines, Team Leadership, Production Systems, and Sustainable Delivery",
-    badge: "Production",
-    location: "UK & France",
-  };
 
 
   const responsiveStyles = `
@@ -743,42 +731,6 @@ export default function Home() {
           <p style={bodyStyle}>
             This structure replaces traditional lecture-based learning with a system that mirrors real production environments, giving students clarity, confidence, and practical experience across the full game development pipeline.
           </p>
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
-
-
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Program Architect</div>
-          <h2 style={h2Style}>{fredBio.name}</h2>
-          <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 700 }}>
-            {fredBio.title}
-          </p>
-          <p style={bodyStyle}>{fredBio.bio1}</p>
-          <p style={bodyStyle}>{fredBio.bio2}</p>
-        </div>
-
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Course Focus</h3>
-            <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              {fredBio.courseFocus}
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Aspire Badge</h3>
-            <p style={{ margin: 0, color: colors.cyan, fontWeight: 700, lineHeight: 1.7 }}>
-              {fredBio.badge}
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Location</h3>
-            <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              {fredBio.location}
-            </p>
-          </div>
         </div>
       </section>
 
