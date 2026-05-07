@@ -626,6 +626,12 @@ export default function Home() {
           </p>
         </div>
 
+        <img
+          src="/aspirebadges.png"
+          alt="Aspire Game Academy production badge tracks"
+          className="w-full max-w-5xl mx-auto rounded-3xl shadow-2xl border border-white/10"
+        />
+
         <div style={gridStyle}>
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>Team-Based Workflows</h3>
