@@ -1,4 +1,3 @@
-import Image from "next/image";
 export default function Home() {
   const colors = {
     bg0: "#04060c",
@@ -964,25 +963,27 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
-                {instructor.image ? (
-                  <Image
+            <div
+              key={instructor.name}
+              className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-950/30 p-4 shadow-[0_0_30px_rgba(168,85,247,0.12)]"
+            >
+              {instructor.image ? (
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-xl border border-cyan-300/20 bg-black/30">
+                  <img
                     src={instructor.image}
                     alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    className="w-full h-full object-cover object-center"
                   />
-                ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
-                    Photo Placeholder
-                  </div>
-                )}
+                </div>
+              ) : (
+                <div className="w-full aspect-[4/5] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4 rounded-xl border border-cyan-300/20 bg-black/30">
+                  Photo Placeholder
+                </div>
+              )}
 
-                <div className="p-5 flex flex-col flex-grow">
+              <div className="p-5 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
                   <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
                   <p className="text-xs text-purple-300 mb-3">
@@ -1002,7 +1003,6 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
