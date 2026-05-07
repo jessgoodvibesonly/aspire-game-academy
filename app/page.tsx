@@ -182,41 +182,30 @@ export default function Home() {
     },
   ];
 
-  const curriculumDays = [
+  const programBadges = [
     {
-      day: "Day 1",
-      title: "How Games Actually Ship",
-      text: "Production reality, roles, pods, multi-studio setups, milestones, tools, and mapping a game idea into a roadmap.",
+      title: "Production",
+      text: "Planning, priorities, team communication, delivery structure, and how work moves across a studio.",
     },
     {
-      day: "Day 2",
-      title: "Production Thinking & Prioritization",
-      text: "Backlogs, epics, scope, time, quality, dependencies, critical path basics, and writing clearer tickets.",
+      title: "Game Design",
+      text: "Player experience, mechanics, systems thinking, feedback, and iteration.",
     },
     {
-      day: "Day 3",
-      title: "Agile in Practice",
-      text: "Sprint cadence, estimation, definition of ready, definition of done, WIP limits, reporting, and running a mock sprint.",
+      title: "QA + DevQA",
+      text: "Testing, bug reporting, build validation, release readiness, and technical quality.",
     },
     {
-      day: "Day 4",
-      title: "Art & External Development Pipelines",
-      text: "Managing art pipelines, vendor briefs, review loops, quality control, handoffs, approvals, and communication standards.",
+      title: "Live Ops",
+      text: "Events, updates, player flows, retention, support, and post-launch operations.",
     },
     {
-      day: "Day 5",
-      title: "QA, Builds & Release Readiness",
-      text: "Bug lifecycle, triage, severity vs priority, build pipelines, certification basics, release gates, and readiness reporting.",
+      title: "Game Art",
+      text: "Visual direction, asset creation, production-ready artwork, and creative collaboration.",
     },
     {
-      day: "Day 6",
-      title: "Live Ops, Data & Continuous Delivery",
-      text: "Live ops cadence, metrics, A/B testing, player feedback loops, KPIs, experiments, and coordinating updates across teams.",
-    },
-    {
-      day: "Day 7",
-      title: "Leadership, Communication & Career Readiness",
-      text: "Stakeholder communication, meetings, conflict resolution, time management, CV positioning, and a full mini-production cycle.",
+      title: "Technical Foundations",
+      text: "Engines, tools, workflows, technical problem-solving, and interactive systems.",
     },
   ];
 
@@ -738,28 +727,16 @@ export default function Home() {
 
       <section id="curriculum" style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Inside the 7 Days</div>
-          <h2 style={h2Style}>Production-focused curriculum</h2>
+          <div style={smallLabelStyle}>INSIDE THE PROGRAM</div>
+          <h2 style={h2Style}>A flexible badge-based learning experience</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            A practical week designed to move from concept to release to live ops.
+            Students move through practical studio-style challenges across six Aspire Badge tracks.
           </p>
         </div>
 
-        <div style={gridStyle}>
-          {curriculumDays.map((item) => (
-            <div key={item.day} style={cardStyle}>
-              <div
-                style={{
-                  color: colors.cyan,
-                  fontWeight: 800,
-                  fontSize: "15px",
-                  letterSpacing: "1.6px",
-                  marginBottom: "10px",
-                  textTransform: "uppercase",
-                }}
-              >
-                {item.day}
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {programBadges.map((item) => (
+            <div key={item.title} style={cardStyle}>
               <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>
                 {item.title}
               </h3>
