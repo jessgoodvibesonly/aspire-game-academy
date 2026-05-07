@@ -623,6 +623,16 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="my-8 flex justify-center">
+          <div className="w-full max-w-[420px] rounded-2xl border border-cyan-300/20 bg-black/30 p-3 shadow-[0_0_30px_rgba(34,211,238,0.18)]">
+            <img
+              src="/aspirebadges.png"
+              alt="Aspire Game Academy production badge tracks"
+              className="w-full h-auto rounded-xl object-contain"
+            />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {[
             {
