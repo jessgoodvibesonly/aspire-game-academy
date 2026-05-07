@@ -210,11 +210,30 @@ export default function Home() {
   ];
 
   const outcomes = [
-    "Build and present a small team project",
-    "Run standups and production check-ins",
-    "Track scope, blockers, and priorities",
-    "Respond to release and live ops scenarios",
-    "Communicate like a real studio team",
+    {
+      title: "Production Thinking",
+      text: "Understand how work is planned, prioritized, and delivered across teams.",
+    },
+    {
+      title: "Game Design Awareness",
+      text: "Build and iterate on player experiences, systems, and mechanics.",
+    },
+    {
+      title: "Quality & DevQA Skills",
+      text: "Test builds, report issues clearly, and support release readiness.",
+    },
+    {
+      title: "Live Ops Understanding",
+      text: "Respond to events, updates, player flows, and post-launch realities.",
+    },
+    {
+      title: "Creative Production Output",
+      text: "Contribute to visual assets and collaborative production workflows.",
+    },
+    {
+      title: "Technical Confidence",
+      text: "Work within engines, tools, and systems that power game development.",
+    },
   ];
 
 
@@ -752,17 +771,22 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Outcome</div>
-          <h2 style={h2Style}>By the end of the week, students can</h2>
+          <div style={smallLabelStyle}>OUTCOME</div>
+          <h2 style={h2Style}>Students leave with real production capability</h2>
           <p style={bodyStyle}>
-            Students leave with clearer production awareness, stronger team communication, and something tangible to present from the week.
+            Through the Aspire Badge system, students develop practical experience across production, design, QA + DevQA, live operations, art, and technical foundations. The focus is on how work actually happens inside modern game teams — not just learning concepts, but applying them in real scenarios.
           </p>
         </div>
 
-        <div style={gridStyle}>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {outcomes.map((item) => (
-            <div key={item} style={cardStyle}>
-              <h3 style={cardTitleStyle}>{item}</h3>
+            <div key={item.title} style={cardStyle}>
+              <h3 style={{ ...cardTitleStyle, marginBottom: "10px" }}>
+                {item.title}
+              </h3>
+              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
+                {item.text}
+              </p>
             </div>
           ))}
         </div>
