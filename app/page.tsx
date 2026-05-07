@@ -912,16 +912,16 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Teach With Aspire</div>
-          <h2 style={h2Style}>Lead a cohort</h2>
+          <div style={smallLabelStyle}>TEACH WITH ASPIRE</div>
+          <h2 style={h2Style}>Lead a badge track</h2>
           <p style={bodyStyle}>
-            Aspire Game Academy is built for experienced industry professionals who can lead, mentor, and bring real studio knowledge into a fast, exciting pop-up learning environment.
+            Aspire Game Academy is built for experienced industry professionals who can lead, mentor, and guide students through real production workflows. Instructors don’t just teach — they lead one of the Aspire Badge tracks, helping students understand how modern teams actually operate.
           </p>
         </div>
 
         <div style={gridStyle}>
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Instructor structure</h3>
+            <h3 style={cardTitleStyle}>Instructor Model</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
               70 / 30 revenue split per student
               <br />
@@ -929,25 +929,25 @@ export default function Home() {
               <br />
               30% to Aspire Game Academy
               <br />
-              Simple, scalable compensation
+              Simple, scalable compensation tied to cohort performance
             </p>
           </div>
 
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Program schedule</h3>
+            <h3 style={cardTitleStyle}>Program Format</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              Two flexible format options
+              Flexible delivery options
               <br />
-              3-day intensive: 9:00 AM to 5:00 PM
+              3-day intensive or 7-day cohort formats
               <br />
-              7-day cohort: 10:00 AM to 2:00 PM
+              Designed around badge tracks and real production workflows
             </p>
           </div>
 
           <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Ideal fit</h3>
+            <h3 style={cardTitleStyle}>Ideal Instructor</h3>
             <p style={{ color: colors.muted, lineHeight: 1.85, margin: 0 }}>
-              Experienced game industry professionals who can lead, mentor, and teach practical studio workflows in a high-energy learning environment.
+              Experienced game industry professionals who can lead a badge track, mentor students, and bring real studio workflows into a high-energy, practical learning environment
             </p>
           </div>
         </div>
