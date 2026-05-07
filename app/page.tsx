@@ -1,4 +1,3 @@
-import Image from "next/image";
 export default function Home() {
   const colors = {
     bg0: "#04060c",
@@ -955,97 +954,50 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Global Faculty</div>
-          <h2 style={h2Style}>Meet the Global Instructors</h2>
-          <p style={bodyStyle}>
+      <section className="px-6 py-24 bg-[#070816] text-white">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-cyan-300">
+            GLOBAL FACULTY
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+            Meet the Global Instructors
+          </h2>
+
+          <p className="mt-6 max-w-4xl text-xl text-white/70">
             Meet a growing network of experienced game industry instructors bringing global studio perspective into each Aspire cohort.
           </p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
-                {instructor.image ? (
-                  <Image
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            {globalInstructors.map((instructor) => (
+              <article
+                key={instructor.name}
+                className="flex flex-col rounded-2xl border border-violet-400/20 bg-violet-950/30 p-4 shadow-[0_0_30px_rgba(168,85,247,0.12)]"
+              >
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-xl border border-cyan-300/20 bg-black/30">
+                  <img
                     src={instructor.image}
                     alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    className="w-full h-full object-cover object-center"
                   />
-                ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
-                    Photo Placeholder
-                  </div>
-                )}
-
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
-                  <p className="text-xs text-purple-300 mb-3">
-                    {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
-                  </p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">
-                    <strong>Specialty Areas:</strong> {instructor.specialties}
-                  </p>
-                  <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
-                  <p className="text-sm text-gray-300 leading-relaxed mt-2 mb-0">
-                    <strong>Course Focus:</strong> {instructor.courseFocus}
-                  </p>
-                  <div className="mt-4">
-                    <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
-                      {instructor.badge}
-                    </span>
-                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        <p
-          style={{
-            ...bodyStyle,
-            fontSize: "16px",
-            marginTop: "18px",
-            color: colors.soft,
-            maxWidth: "none",
-          }}
-        >
-          More global instructors are being added as new city cohorts open.
-        </p>
-
-        <div
-          style={{
-            marginTop: "26px",
-            display: "grid",
-            gap: "10px",
-            textAlign: "center",
-          }}
-        >
-          {[
-            ["Fred Dossola", "How Games Ship"],
-            ["John Myers", "How Games Feel"],
-            ["Aydan Aliyeva", "How Games Work"],
-            ["Zachary Kosma", "How Games Scale"],
-          ].map(([name, focus]) => (
-            <p
-              key={name}
-              style={{
-                margin: 0,
-                color: "rgba(224, 255, 255, 0.92)",
-                textShadow: "0 0 10px rgba(95, 220, 255, 0.34)",
-                letterSpacing: "0.2px",
-                lineHeight: 1.55,
-              }}
-            >
-              <strong style={{ fontWeight: 800 }}>{name}</strong> → {focus}
-            </p>
-          ))}
+                <div className="mt-5 space-y-3">
+                  <h3 className="text-2xl font-black">{instructor.name}</h3>
+                  <p className="text-cyan-200 font-bold">{instructor.title}</p>
+                  <p className="text-white/75">
+                    <strong>Location:</strong> {instructor.location}
+                  </p>
+                  <p className="text-white/75">
+                    <strong>Languages:</strong> {instructor.languages}
+                  </p>
+                  <p className="text-white/75">
+                    <strong>Aspire Badge:</strong> {instructor.badge}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
