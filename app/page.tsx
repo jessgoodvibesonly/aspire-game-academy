@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Home() {
   const colors = {
     bg0: "#04060c",
@@ -998,24 +999,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "22px",
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="w-full px-3 mb-8">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
-                <div className="w-full aspect-[4/5] overflow-hidden">
+            <div key={instructor.name} className="flex flex-col h-full">
+              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col h-full">
+                <div className="relative w-full aspect-[4/5] overflow-hidden rounded-xl">
                   {instructor.imageSrc ? (
-                    <img
+                    <Image
                       src={instructor.imageSrc}
                       alt={instructor.imageAlt ?? instructor.name}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover object-center"
+                      fill
+                      className="object-cover"
                     />
                   ) : (
                     <div className="w-full h-full grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
