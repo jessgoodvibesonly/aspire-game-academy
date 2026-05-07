@@ -964,40 +964,43 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
+            <div key={instructor.name} className="flex flex-col mb-3">
+              <div className="rounded-3xl border border-cyan-300/20 bg-gradient-to-br from-violet-950/60 via-slate-950/80 to-cyan-950/40 p-5 shadow-[0_0_35px_rgba(103,232,249,0.12)] h-full flex flex-col">
                 {instructor.image ? (
-                  <Image
-                    src={instructor.image}
-                    alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
-                  />
+                  <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl border border-fuchsia-400/30 bg-black/40 mb-5">
+                    <Image
+                      src={instructor.image}
+                      alt={instructor.name}
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
                 ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
+                  <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl border border-fuchsia-400/30 bg-black/40 mb-5 grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
                     Photo Placeholder
                   </div>
                 )}
 
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
-                  <p className="text-xs text-purple-300 mb-3">
+                <div className="flex flex-col flex-grow">
+                  <h3 className="text-2xl font-black text-white tracking-tight">{instructor.name}</h3>
+                  <p className="mt-2 text-sm font-bold text-cyan-200 leading-snug">{instructor.role}</p>
+                  <p className="mt-3 text-sm text-white/70 leading-relaxed">{instructor.location}</p>
+                  <p className="mt-3 text-sm text-white/70 leading-relaxed">
                     {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
                   </p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
                   {instructor.specialty ? (
-                    <p className="text-sm text-gray-200 leading-relaxed mb-2">
-                      <strong>Specialty:</strong> {instructor.specialty}
-                    </p>
+                    <>
+                      <p className="mt-4 text-sm font-bold text-fuchsia-200">Specialty</p>
+                      <p className="mt-2 text-sm text-white/70 leading-relaxed">{instructor.specialty}</p>
+                    </>
                   ) : null}
-                  <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
-                  <div className="mt-4">
-                    <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
-                      {instructor.badge}
+                  <p className="mt-2 text-sm text-white/70 leading-relaxed flex-grow">{instructor.bio}</p>
+                  <div className="mt-6 pt-4 border-t border-white/10">
+                    <span className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-cyan-200">
+                      Aspire Badge: {instructor.badge}
                     </span>
                   </div>
                 </div>
