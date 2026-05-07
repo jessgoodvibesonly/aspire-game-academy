@@ -623,50 +623,45 @@ export default function Home() {
           </p>
         </div>
 
+        <p style={bodyStyle}>
+          This is about understanding the system — not just learning isolated skills.
+        </p>
+
+        <div className="mt-10 flex justify-center">
+          <img
+            src="/aspirebadges.png"
+            alt="Aspire Game Academy production badge tracks"
+            className="w-full max-w-2xl rounded-xl opacity-95"
+          />
+        </div>
+
+        <div className="mt-10" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Production",
-              text: "Planning, coordination, delivery cycles, team communication, and how work moves across a studio.",
-            },
-            {
-              title: "Game Design",
-              text: "Player experience, mechanics, systems thinking, iteration, feedback, and creative problem-solving.",
-            },
-            {
-              title: "QA + DevQA",
-              text: "Testing, bug reporting, build validation, technical quality, and how teams protect the player experience.",
-            },
-            {
-              title: "Live Ops",
-              text: "Ongoing updates, events, player support, retention, community rhythm, and post-launch operations.",
-            },
-            {
-              title: "Game Art",
-              text: "Visual storytelling, asset creation, style direction, production-ready artwork, and creative collaboration.",
-            },
-            {
-              title: "Technical Foundations",
-              text: "Game engines, tools, workflows, technical problem-solving, and the systems behind interactive experiences.",
-            },
-          ].map((track) => (
-            <div key={track.title} style={cardStyle}>
-              <div
-                style={{
-                  color: colors.cyan,
-                  fontSize: "11px",
-                  fontWeight: 800,
-                  letterSpacing: "1.6px",
-                  textTransform: "uppercase",
-                  marginBottom: "10px",
-                }}
-              >
-                ASPIRE BADGE TRACK
-              </div>
-              <h3 style={cardTitleStyle}>{track.title}</h3>
-              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>{track.text}</p>
-            </div>
-          ))}
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">Production</h3>
+            <p className="text-sm text-white/70">Planning, coordination, and delivery across teams.</p>
+          </div>
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">Game Design</h3>
+            <p className="text-sm text-white/70">Mechanics, systems, and player-centered experience design.</p>
+          </div>
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">QA + DevQA</h3>
+            <p className="text-sm text-white/70">Testing, validation, and quality standards across development.</p>
+          </div>
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">Live Ops</h3>
+            <p className="text-sm text-white/70">Post-launch updates, events, and ongoing player engagement.</p>
+          </div>
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">Game Art</h3>
+            <p className="text-sm text-white/70">Visual direction, asset creation, and collaborative art production.</p>
+          </div>
+          <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+            <h3 className="text-lg font-semibold mb-2">Technical Foundations</h3>
+            <p className="text-sm text-white/70">Engines, tools, and workflows that power production.</p>
+          </div>
         </div>
       </section>
 
