@@ -614,37 +614,59 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>WHY IT’S DIFFERENT</div>
-          <h2 style={h2Style}>This is how modern game teams actually work.</h2>
+          <h2 style={h2Style}>Students don’t just learn games. They move through the production pipeline.</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Built around small, focused teams, real collaboration, and fast iteration — not lectures.
+            Aspire Game Academy is built around six real-world production tracks that reflect how modern studios actually build, ship, operate, and evolve games.
           </p>
           <p style={bodyStyle}>
-            Students work in structured groups, simulating real studio environments across production, QA, design, and live operations. The focus is on how work moves, how teams communicate, and how decisions are made under real conditions.
-          </p>
-          <p style={bodyStyle}>
-            This is about understanding the system — not just learning isolated skills.
+            Students work in focused teams across Production, Game Design, QA + DevQA, Live Ops, Game Art, and Technical Foundations. Each badge represents a practical studio function, helping students understand where they fit, how teams collaborate, and how creative work becomes a shipped experience.
           </p>
         </div>
 
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Team-Based Workflows</h3>
-            <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Operate in small teams that mirror real studio structures, with clear roles, communication, and delivery cycles.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Short, Focused Sprints</h3>
-            <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Work through condensed production cycles designed to simulate real timelines and decision-making.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Clarity on Your Role</h3>
-            <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-              Understand where you fit in the pipeline and how different disciplines connect in real production environments.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Production",
+              text: "Planning, coordination, delivery cycles, team communication, and how work moves across a studio.",
+            },
+            {
+              title: "Game Design",
+              text: "Player experience, mechanics, systems thinking, iteration, feedback, and creative problem-solving.",
+            },
+            {
+              title: "QA + DevQA",
+              text: "Testing, bug reporting, build validation, technical quality, and how teams protect the player experience.",
+            },
+            {
+              title: "Live Ops",
+              text: "Ongoing updates, events, player support, retention, community rhythm, and post-launch operations.",
+            },
+            {
+              title: "Game Art",
+              text: "Visual storytelling, asset creation, style direction, production-ready artwork, and creative collaboration.",
+            },
+            {
+              title: "Technical Foundations",
+              text: "Game engines, tools, workflows, technical problem-solving, and the systems behind interactive experiences.",
+            },
+          ].map((track) => (
+            <div key={track.title} style={cardStyle}>
+              <div
+                style={{
+                  color: colors.cyan,
+                  fontSize: "11px",
+                  fontWeight: 800,
+                  letterSpacing: "1.6px",
+                  textTransform: "uppercase",
+                  marginBottom: "10px",
+                }}
+              >
+                ASPIRE BADGE TRACK
+              </div>
+              <h3 style={cardTitleStyle}>{track.title}</h3>
+              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>{track.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
