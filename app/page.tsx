@@ -812,49 +812,6 @@ export default function Home() {
       <div style={dividerStyle} />
 
       <section style={sectionStyle}>
-        <div className="marquee-wrapper">
-          <div className="marquee-track">
-            <span>
-              Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
-            </span>
-            <span>
-              Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
-            </span>
-          </div>
-        </div>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Pop-Up Locations 2026</div>
-          <h2 style={h2Style}>Pop-up cohorts will be announced by city</h2>
-          <p style={bodyStyle}>
-            Aspire Game Academy is launching as a pop-up model, with future cohorts planned in select cities. Join the first cohort and be first to hear when locations open.
-          </p>
-        </div>
-
-        <div style={gridStyle}>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Early access</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Be first to receive cohort details, launch updates, and city announcements.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Limited spots</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              Each cohort is designed to stay focused, practical, and high-touch.
-            </p>
-          </div>
-          <div style={cardStyle}>
-            <h3 style={cardTitleStyle}>Built to scale</h3>
-            <p style={{ color: colors.muted, lineHeight: 1.7, margin: 0 }}>
-              The model is designed to expand city by city while keeping the quality high.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
-
-      <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Tuition</div>
           <h2 style={h2Style}>Simple and clear</h2>
@@ -1127,7 +1084,34 @@ export default function Home() {
         >
           Limited spots. Early applicants will be first to receive cohort details, launch updates, and city announcements.
         </p>
-
+        <div
+          style={{
+            margin: "0 auto 24px auto",
+            maxWidth: "920px",
+          }}
+        >
+          <div
+            style={{
+              ...smallLabelStyle,
+              fontSize: "11px",
+              letterSpacing: "2px",
+              marginBottom: "10px",
+              color: "rgba(114,230,255,0.76)",
+            }}
+          >
+            GLOBAL POP-UP LOCATIONS
+          </div>
+          <div className="marquee-wrapper" style={{ opacity: 0.82 }}>
+            <div className="marquee-track">
+              <span>
+                Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
+              </span>
+              <span>
+                Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
+              </span>
+            </div>
+          </div>
+        </div>
         <div
           style={{
             display: "flex",
