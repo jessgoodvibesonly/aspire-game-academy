@@ -999,17 +999,21 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
           {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
+            <div
+              key={instructor.name}
+              className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg"
+            >
+              <div className="h-full flex flex-col">
                 {instructor.image ? (
                   <Image
                     src={instructor.image}
                     alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
+                    width={600}
+                    height={750}
+                    className="block w-full h-[280px] sm:h-[300px] xl:h-[320px] object-cover object-center rounded-t-2xl"
+                    priority={false}
                   />
                 ) : (
                   <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
@@ -1017,7 +1021,7 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="p-5 flex flex-col flex-grow">
+                <div className="flex flex-col gap-2 p-4">
                   <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
                   <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
                   <p className="text-xs text-purple-300 mb-3">
