@@ -674,20 +674,55 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>What You’ll Actually Do</div>
-          <h2 style={h2Style}>More than just listening</h2>
+          <div style={smallLabelStyle}>WHAT YOU’LL ACTUALLY DO</div>
+          <h2 style={h2Style}>Move through the real game production pipeline</h2>
           <p style={bodyStyle}>
-            This is a practical, team-based experience where students work through a mini production cycle and build a small project together during the week.
+            Students work through practical studio-style challenges across six Aspire Badge tracks: Production, Game Design, QA + DevQA, Live Ops, Game Art, and Technical Foundations. Instead of just listening, they learn how modern game teams plan, build, test, launch, support, and improve creative work together.
           </p>
         </div>
 
-        <div style={gridStyle}>
-          {studentWork.map((item) => (
-            <div key={item.title} style={cardStyle}>
-              <h3 style={cardTitleStyle}>{item.title}</h3>
-              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>
-                {item.text}
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Production",
+              text: "Plan the work, organize priorities, communicate across roles, and understand how a project moves from idea to delivery.",
+            },
+            {
+              title: "Game Design",
+              text: "Shape player experience, build mechanics, test ideas, respond to feedback, and improve the game through iteration.",
+            },
+            {
+              title: "QA + DevQA",
+              text: "Find issues, report clearly, validate builds, protect quality, and understand how QA connects directly to development.",
+            },
+            {
+              title: "Live Ops",
+              text: "Explore events, updates, player flows, retention, support, and what happens after a game goes live.",
+            },
+            {
+              title: "Game Art",
+              text: "Create visual assets, understand style direction, collaborate with production, and learn how art supports gameplay.",
+            },
+            {
+              title: "Technical Foundations",
+              text: "Work with engines, tools, workflows, technical problem-solving, and the systems that support interactive experiences.",
+            },
+          ].map((track) => (
+            <div key={track.title} style={cardStyle}>
+              <div
+                style={{
+                  color: colors.cyan,
+                  fontSize: "11px",
+                  fontWeight: 800,
+                  letterSpacing: "1.6px",
+                  textTransform: "uppercase",
+                  marginBottom: "10px",
+                }}
+              >
+                ASPIRE BADGE TRACK
+              </div>
+              <h3 style={cardTitleStyle}>{track.title}</h3>
+              <p style={{ margin: 0, color: colors.muted, lineHeight: 1.7 }}>{track.text}</p>
             </div>
           ))}
         </div>
