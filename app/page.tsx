@@ -288,20 +288,25 @@ export default function Home() {
       }
 
       .instructor-image-wrap {
-        width: 140px !important;
-        height: 170px !important;
+        width: 100% !important;
+        max-height: 300px !important;
+        height: 300px !important;
         margin: 0 auto !important;
       }
     }
 
     @media (max-width: 980px) and (min-width: 641px) {
+      .instructors-grid {
+        grid-template-columns: 1fr !important;
+      }
+
       .instructor-card {
-        grid-template-columns: 160px minmax(0, 1fr) !important;
+        grid-template-columns: 220px minmax(0, 1fr) !important;
       }
 
       .instructor-image-wrap {
-        width: 160px !important;
-        height: 190px !important;
+        width: 220px !important;
+        height: 280px !important;
       }
     }
 
@@ -309,22 +314,22 @@ export default function Home() {
       .instructors-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: clamp(24px, 3vw, 32px);
+        gap: 24px;
         margin-top: 28px;
       }
 
       .instructor-card {
         position: relative;
         display: grid;
-        grid-template-columns: 180px minmax(0, 1fr);
+        grid-template-columns: 230px minmax(0, 1fr);
         gap: 18px;
         align-items: start;
-        height: 100%;
+        height: auto;
         padding: clamp(20px, 2.2vw, 24px);
         border-radius: 22px;
-        background: linear-gradient(165deg, rgba(22, 14, 46, 0.94), rgba(9, 15, 39, 0.88));
-        border: 1px solid rgba(170, 124, 255, 0.55);
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 18px rgba(151, 88, 255, 0.35), 0 0 28px rgba(84, 197, 255, 0.2);
+        background: rgba(10, 8, 35, 0.82);
+        border: 1px solid rgba(145, 125, 255, 0.55);
+        box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45), 0 0 22px rgba(186, 93, 255, 0.26), 0 0 30px rgba(92, 212, 255, 0.2);
         overflow: visible;
         transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
       }
@@ -337,10 +342,10 @@ export default function Home() {
 
       .instructor-image-wrap {
         position: relative;
-        width: 180px;
-        height: 220px;
+        width: 230px;
+        height: 300px;
         overflow: hidden;
-        border-radius: 18px;
+        border-radius: 16px;
         border: 1px solid rgba(121, 217, 255, 0.6);
         box-shadow: 0 0 0 1px rgba(178, 120, 255, 0.3), 0 0 18px rgba(85, 204, 255, 0.22), 0 0 24px rgba(176, 103, 255, 0.2);
       }
@@ -377,7 +382,7 @@ export default function Home() {
         box-shadow: 0 0 14px rgba(106, 219, 255, 0.45), 0 0 28px rgba(162, 91, 255, 0.28);
         color: rgba(232, 249, 255, 0.96);
         line-height: 1.2;
-        font-size: 10px;
+        font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.4px;
         text-transform: uppercase;
@@ -400,13 +405,12 @@ export default function Home() {
         line-height: 1.7;
         color: rgba(221, 236, 255, 0.88);
         max-width: 62ch;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
       }
 
       .aspire-badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
         border-radius: 999px;
         background: linear-gradient(135deg, rgba(195, 108, 255, 0.98), rgba(69, 188, 255, 0.98));
         border: 1px solid rgba(222, 184, 255, 0.8);
@@ -434,9 +438,8 @@ export default function Home() {
       role: "Senior Games Producer | Production Systems Specialist",
       location: "UK & France",
       specialty: "Game production, agile workflows, team leadership, pipeline design, AAA development",
-      bio: "I am a Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. I grew up in the 80s playing arcade cabinets and Atari at home, and that love for games never went away, it just turned into a career. Today I specialize in building production systems and team cultures that help studios ship great work without burning out teams. When I'm not performing production heroics, I'm probably still playing games, watching anime, or diving into something equally nerdy.",
-      courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
-      badge: "Aspire Badge: Production",
+      bio: "Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. Fred has worked on titles including Uncharted 4, The Last of Us Part II, and Star Citizen, and helps teams build production systems that support great work without burnout.",
+      badge: "ASPIRE BADGE: PRODUCTION",
       image: "/Fred.png",
       imageAlt: "Fred Dossola",
     },
@@ -445,9 +448,8 @@ export default function Home() {
       role: "Game Creator | Game Design Specialist",
       location: "Los Angeles, USA",
       specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
-      bio: "I am an experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. I’ve worked across diverse teams, platforms, and production pipelines, giving me a well-rounded perspective on how great games are built and shipped. I’m passionate about the medium of play and love sharing practical, real-world insights with others. I’m especially driven by mentorship, collaboration, and helping foster strong, supportive creative communities where developers at all levels can grow and succeed.",
-      courseFocus: "Game design foundations, gameplay systems, and real-world production workflows, from concept to playable experience. Students will learn how to think like a game creator, collaborate effectively within a team, and turn ideas into functional, engaging gameplay.",
-      badge: "Aspire Badge: Game Design",
+      bio: "Experienced game creator with a degree in Game Design and over six years of industry experience across indie startups and large-scale studios. John brings practical insight into how strong games are built, shipped, and supported by healthy creative teams.",
+      badge: "ASPIRE BADGE: GAME DESIGN",
       image: "/johnmyers.png",
       imageAlt: "John Myers",
     },
@@ -456,9 +458,8 @@ export default function Home() {
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
       specialty: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
-      bio: "I am an Unreal Authorized Instructor dedicated to helping creators build the technical foundation needed to bring ambitious ideas to life. My focus goes beyond simply teaching tools — I guide developers in understanding the underlying systems that power real-time experiences. I specialize in Unreal Engine 5, from skeletal mesh systems to immersive environment design, with a strong emphasis on industry-level standards and workflows. Through mentorship with organizations like IGDA and collaboration on serious game projects, I support developers in building the confidence and technical depth required to innovate in a rapidly evolving real-time landscape.",
-      courseFocus: "Unreal Engine 5 fundamentals, real-time systems, and technical workflows for modern game development. Students will learn how to build, optimize, and understand core systems including environments, assets, and interactive elements while working within industry-standard pipelines.",
-      badge: "Aspire Badge: Technical Foundations",
+      bio: "Unreal Authorized Instructor focused on helping creators understand the systems behind real-time experiences. Aydan specializes in Unreal Engine 5, environment design, technical workflows, and industry-level production standards.",
+      badge: "ASPIRE BADGE: TECHNICAL FOUNDATIONS",
       image: "/aydan.png",
       imageAlt: "Aydan Aliyeva",
     },
@@ -467,9 +468,8 @@ export default function Home() {
       role: "Creative Technologist | XR & Product Systems",
       location: "Las Vegas / Los Angeles, USA",
       specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
-      bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, product thinking, and real-time development. He helps developers understand how to build engaging interactive experiences while also thinking strategically about the systems, audiences, and decisions that support them. With experience across technical development, education, QA, and product strategy, Zachary brings a practical, future-focused perspective to students who want to build games and immersive experiences that are playable, scalable, and commercially thoughtful.",
-      courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
-      badge: "Aspire Badge: Interactive Systems",
+      bio: "Creative technologist and games leader with experience across education, indie development, XR, QA, Unity, and product strategy. Zachary helps developers build interactive experiences that are playable, scalable, and commercially thoughtful.",
+      badge: "ASPIRE BADGE: INTERACTIVE SYSTEMS",
       image: "/zachary.png",
       imageAlt: "Zachary Kosma",
     },
@@ -929,10 +929,12 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={{ ...sectionStyle, maxWidth: "1240px", paddingTop: "80px", paddingBottom: "80px" }}>
+      <section style={{ ...sectionStyle, maxWidth: "1500px", paddingTop: "80px", paddingBottom: "80px", position: "relative", overflow: "hidden", borderRadius: "26px", background: "radial-gradient(circle at 12% 15%, rgba(80, 213, 255, 0.16), transparent 26%), radial-gradient(circle at 90% 10%, rgba(204, 92, 255, 0.16), transparent 28%), linear-gradient(135deg, rgba(4, 10, 32, 0.92), rgba(20, 8, 46, 0.9))" }}>
         <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>GLOBAL INSTRUCTOR NETWORK</div>
-          <h2 style={h2Style}>Meet the Global Instructors</h2>
+          <div style={{ ...smallLabelStyle, color: "rgba(138, 222, 255, 0.95)" }}>MEET THE</div>
+          <h2 style={{ ...h2Style, marginBottom: "14px", fontSize: "clamp(44px, 7vw, 86px)", fontWeight: 900 }}> 
+            <span style={{ background: "linear-gradient(92deg, #ff66ce 0%, #b97cff 48%, #6ed8ff 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>GLOBAL INSTRUCTORS</span>
+          </h2>
           <p style={bodyStyle}>
             A growing network of experienced game industry instructors bringing real studio knowledge into Aspire Game Academy cohorts around the world.
           </p>
@@ -948,7 +950,7 @@ export default function Home() {
               <div className="instructor-content" style={{ paddingBottom: "6px" }}>
               {instructor.name === "Fred Dossola" ? (
                 <div className="fred-callout" style={{ marginBottom: "10px" }}>
-                  LIVE COHORT Oxford • June 12–14
+                  LIVE COHORT<br />OXFORD • JUNE 12–14
                 </div>
               ) : null}
               <h3 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
@@ -958,18 +960,18 @@ export default function Home() {
               <div className="instructor-divider" />
               <p className="instructor-bio">{instructor.bio}</p>
               <div style={{ marginTop: "6px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                <span className="aspire-badge-pill">{instructor.badge}</span>
+                <span className="aspire-badge-pill">✦ {instructor.badge}</span>
               </div>
               </div>
             </article>
           ))}
         </div>
 
-        <p style={{ ...bodyStyle, marginTop: "20px", color: colors.soft, fontSize: "16px", maxWidth: "none" }}>
+        <p style={{ ...bodyStyle, marginTop: "20px", color: colors.soft, fontSize: "16px", maxWidth: "none", textAlign: "center" }}>
           More global instructors are being added as new city cohorts open.
         </p>
 
-        <div style={{ marginTop: "24px" }}>
+        <div style={{ marginTop: "24px", textAlign: "center" }}>
           <a href={instructorFormLink} style={buttonPrimaryStyle}>
             Apply to Teach with Aspire Game Academy
           </a>
