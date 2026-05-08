@@ -184,28 +184,20 @@ export default function Home() {
 
   const programBadges = [
     {
-      title: "Production",
-      text: "Planning, priorities, team communication, delivery structure, and how work moves across a studio.",
+      title: "Production Systems",
+      text: "Planning, priorities, collaboration rituals, and delivery frameworks used to ship projects predictably.",
     },
     {
       title: "Game Design",
-      text: "Player experience, mechanics, systems thinking, feedback, and iteration.",
-    },
-    {
-      title: "QA + DevQA",
-      text: "Testing, bug reporting, build validation, release readiness, and technical quality.",
-    },
-    {
-      title: "Live Ops",
-      text: "Events, updates, player flows, retention, support, and post-launch operations.",
-    },
-    {
-      title: "Game Art",
-      text: "Visual direction, asset creation, production-ready artwork, and creative collaboration.",
+      text: "Player-first mechanics, balancing, systems thinking, and iteration informed by testing and feedback.",
     },
     {
       title: "Technical Foundations",
-      text: "Engines, tools, workflows, technical problem-solving, and interactive systems.",
+      text: "Core engine workflows, tools, debugging patterns, and production-friendly technical execution.",
+    },
+    {
+      title: "Interactive Systems",
+      text: "Build interactive features that blend product systems, engagement strategy, and playable experience design.",
     },
   ];
 
@@ -703,7 +695,7 @@ export default function Home() {
                       maxWidth: "430px",
                     }}
                   >
-                    Students complete real-world AAA-style challenges, build practical skills, and earn Aspire Badges across production, game design, QA + DevQA, live ops, game art, and technical foundations.
+                    Students learn studio-ready workflows, choose a badge track, and leave with a Certificate of Completion plus Aspire Badges that prove what they practiced.
                   </p>
                 </div>
 
@@ -795,38 +787,30 @@ export default function Home() {
           <div style={smallLabelStyle}>WHY IT’S DIFFERENT</div>
           <h2 style={h2Style}>Students don’t just learn games. They move through the production pipeline.</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Aspire Game Academy is built around six real-world production tracks that reflect how modern studios actually build, ship, operate, and evolve games.
+            Aspire Game Academy is built around four badge tracks that match how modern teams ship interactive products.
           </p>
           <p style={bodyStyle}>
-            Students work in focused teams across Production, Game Design, QA + DevQA, Live Ops, Game Art, and Technical Foundations. Each badge represents a practical studio function, helping students understand where they fit, how teams collaborate, and how creative work becomes a shipped experience.
+            Students choose one track — Production Systems, Game Design, Technical Foundations, or Interactive Systems — and practice role-specific work inside collaborative team scenarios.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {[
             {
-              title: "Production",
-              text: "Planning, coordination, delivery cycles, team communication, and how work moves across a studio.",
+              title: "Production Systems",
+              text: "Scope planning, sprint flow, delivery rhythm, communication rituals, and studio-ready production execution.",
             },
             {
               title: "Game Design",
-              text: "Player experience, mechanics, systems thinking, iteration, feedback, and creative problem-solving.",
-            },
-            {
-              title: "QA + DevQA",
-              text: "Testing, bug reporting, build validation, technical quality, and how teams protect the player experience.",
-            },
-            {
-              title: "Live Ops",
-              text: "Ongoing updates, events, player support, retention, community rhythm, and post-launch operations.",
-            },
-            {
-              title: "Game Art",
-              text: "Visual storytelling, asset creation, style direction, production-ready artwork, and creative collaboration.",
+              text: "Core loops, mechanics tuning, player feedback, systems thinking, and iteration through playtests.",
             },
             {
               title: "Technical Foundations",
-              text: "Game engines, tools, workflows, technical problem-solving, and the systems behind interactive experiences.",
+              text: "Engine workflows, debugging habits, toolchains, and technical decision-making for reliable builds.",
+            },
+            {
+              title: "Interactive Systems",
+              text: "Prototype interactive features that connect product thinking, engagement, and real-time experience design.",
             },
           ].map((track) => (
             <div key={track.title} style={cardStyle}>
@@ -932,7 +916,7 @@ export default function Home() {
           <div style={smallLabelStyle}>INSIDE THE PROGRAM</div>
           <h2 style={h2Style}>A flexible badge-based learning experience</h2>
           <p style={{ ...bodyStyle, color: colors.mint, fontWeight: 800 }}>
-            Students move through practical studio-style challenges across six Aspire Badge tracks.
+            Students learn by doing, choose a track focus, and produce outcomes that map to real studio responsibilities.
           </p>
         </div>
 
@@ -957,7 +941,7 @@ export default function Home() {
           <div style={smallLabelStyle}>OUTCOME</div>
           <h2 style={h2Style}>Students leave with real production capability</h2>
           <p style={bodyStyle}>
-            Through the Aspire Badge system, students develop practical experience across production, design, QA + DevQA, live operations, art, and technical foundations. The focus is on how work actually happens inside modern game teams — not just learning concepts, but applying them in real scenarios.
+            Students complete track-based projects, receive a Certificate of Completion, and earn Aspire Badges that validate practical production skills.
           </p>
         </div>
 
