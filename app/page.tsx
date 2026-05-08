@@ -283,17 +283,22 @@ export default function Home() {
         grid-template-columns: 1fr !important;
       }
 
+      .global-instructors-inner {
+        width: calc(100% - 32px) !important;
+      }
+
       .instructor-card {
         flex-direction: column !important;
-        gap: 32px !important;
+        gap: 24px !important;
+        padding: 22px !important;
       }
 
       .instructor-image-wrap {
         width: 100% !important;
-        max-width: 320px !important;
-        height: 360px !important;
-        aspect-ratio: 4 / 5 !important;
+        max-width: 280px !important;
+        height: 320px !important;
         margin: 0 auto !important;
+        flex-basis: auto !important;
       }
 
       .instructor-badge-wrap {
@@ -312,9 +317,9 @@ export default function Home() {
       }
 
       .instructor-image-wrap {
-        width: 240px !important;
-        height: 300px !important;
-        aspect-ratio: 4 / 5 !important;
+        width: 200px !important;
+        height: 240px !important;
+        flex: 0 0 200px !important;
       }
 
       .instructor-badge-wrap {
@@ -322,6 +327,12 @@ export default function Home() {
       }
     }
 
+
+      .global-instructors-inner {
+        width: calc(100% - 48px);
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
       .instructors-grid {
         display: grid;
@@ -334,9 +345,9 @@ export default function Home() {
         position: relative;
         display: flex;
         align-items: flex-start;
-        gap: 36px;
+        gap: 32px;
         height: auto;
-        padding: clamp(24px, 2.5vw, 28px);
+        padding: 28px;
         border-radius: 22px;
         background: rgba(10, 8, 35, 0.82);
         border: 1px solid rgba(145, 125, 255, 0.55);
@@ -353,13 +364,15 @@ export default function Home() {
 
       .instructor-image-wrap {
         position: relative;
-        width: 260px;
-        height: 320px;
-        aspect-ratio: 4 / 5;
+        width: 220px;
+        height: 260px;
+        flex: 0 0 220px;
         overflow: hidden;
-        border-radius: 18px;
-        border: 1px solid rgba(121, 217, 255, 0.6);
-        box-shadow: 0 0 0 1px rgba(178, 120, 255, 0.3), 0 0 18px rgba(85, 204, 255, 0.22), 0 0 24px rgba(176, 103, 255, 0.2);
+        border-radius: 20px;
+        border: 1px solid rgba(125, 211, 252, 0.65);
+        box-shadow:
+          0 0 18px rgba(96, 199, 255, 0.45),
+          0 0 28px rgba(236, 72, 255, 0.25);
       }
 
       .instructor-image-wrap::after {
@@ -956,7 +969,8 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={{ ...sectionStyle, maxWidth: "1500px", paddingTop: "80px", paddingBottom: "80px", position: "relative", overflow: "hidden", borderRadius: "26px", background: "radial-gradient(circle at 12% 15%, rgba(80, 213, 255, 0.16), transparent 26%), radial-gradient(circle at 90% 10%, rgba(204, 92, 255, 0.16), transparent 28%), linear-gradient(135deg, rgba(4, 10, 32, 0.92), rgba(20, 8, 46, 0.9))" }}>
+      <section style={{ ...sectionStyle, maxWidth: "none", width: "100%", paddingTop: "80px", paddingBottom: "80px", position: "relative", overflow: "hidden", borderRadius: "26px", background: "radial-gradient(circle at 12% 15%, rgba(80, 213, 255, 0.16), transparent 26%), radial-gradient(circle at 90% 10%, rgba(204, 92, 255, 0.16), transparent 28%), linear-gradient(135deg, rgba(4, 10, 32, 0.92), rgba(20, 8, 46, 0.9))" }}>
+        <div className="global-instructors-inner">
         <div style={sectionIntroStyle}>
           <div style={{ ...smallLabelStyle, color: "rgba(138, 222, 255, 0.95)" }}>MEET THE</div>
           <h2 style={{ ...h2Style, marginBottom: "14px", fontSize: "clamp(44px, 7vw, 86px)", fontWeight: 900 }}> 
@@ -1004,6 +1018,7 @@ export default function Home() {
           <a href={instructorFormLink} style={buttonPrimaryStyle}>
             Apply to Teach with Aspire Game Academy
           </a>
+        </div>
         </div>
       </section>
 
