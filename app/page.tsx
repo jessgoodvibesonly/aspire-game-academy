@@ -278,7 +278,93 @@ export default function Home() {
       .metrics-grid {
         grid-template-columns: minmax(0, 1fr) !important;
       }
+
+      .instructors-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .instructor-image-wrap {
+        height: 160px !important;
+      }
     }
+
+    @media (max-width: 980px) and (min-width: 641px) {
+      .instructor-image-wrap {
+        height: 180px !important;
+      }
+    }
+
+
+      .instructors-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 3vw, 32px);
+        margin-top: 28px;
+      }
+
+      .instructor-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: clamp(20px, 2.2vw, 24px);
+        border-radius: 22px;
+        background: linear-gradient(165deg, rgba(22, 14, 46, 0.94), rgba(9, 15, 39, 0.88));
+        border: 1px solid rgba(170, 124, 255, 0.55);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 18px rgba(151, 88, 255, 0.35), 0 0 28px rgba(84, 197, 255, 0.2);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .instructor-card:hover {
+        border-color: rgba(221, 156, 255, 0.8);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 26px rgba(204, 115, 255, 0.45), 0 0 36px rgba(85, 205, 255, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .instructor-image-wrap {
+        position: relative;
+        width: 100%;
+        height: 220px;
+        max-height: 220px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .instructor-image-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(160deg, rgba(190, 98, 255, 0.18), rgba(86, 200, 255, 0.07));
+        pointer-events: none;
+      }
+
+      .instructor-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        transition: transform 0.3s ease;
+      }
+
+      .instructor-card:hover .instructor-image {
+        transform: scale(1.03);
+      }
+
+      .fred-callout {
+        margin-top: 14px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(111, 226, 255, 0.4);
+        background: rgba(61, 142, 218, 0.18);
+        color: rgba(220, 245, 255, 0.95);
+        line-height: 1.55;
+        font-size: 14px;
+      }
+
   `;
 
   const builtFor = [
@@ -334,7 +420,7 @@ export default function Home() {
       specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
       bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, product thinking, and real-time development. He helps developers understand how to build engaging interactive experiences while also thinking strategically about the systems, audiences, and decisions that support them. With experience across technical development, education, QA, and product strategy, Zachary brings a practical, future-focused perspective to students who want to build games and immersive experiences that are playable, scalable, and commercially thoughtful.",
       courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
-      badge: "Aspire Badge: Technical Foundations",
+      badge: "Aspire Badge: Interactive Systems",
       image: "/zachary.png",
       imageAlt: "Zachary Kosma",
     },
@@ -796,6 +882,64 @@ export default function Home() {
 
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
+          <div style={smallLabelStyle}>GLOBAL INSTRUCTOR NETWORK</div>
+          <h2 style={h2Style}>Meet the Global Instructors</h2>
+          <p style={bodyStyle}>
+            A growing network of experienced game industry instructors bringing real studio knowledge into Aspire Game Academy cohorts around the world.
+          </p>
+        </div>
+
+        <div className="instructors-grid">
+          {globalInstructors.map((instructor) => (
+            <article key={instructor.name} className="instructor-card">
+              <div className="instructor-image-wrap">
+                <Image src={instructor.image} alt={instructor.name} width={640} height={440} className="instructor-image" />
+              </div>
+
+              <h3 style={{ margin: 0, fontSize: "clamp(24px, 2.5vw, 30px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
+              <p style={{ margin: "8px 0 6px", color: "rgba(197, 237, 255, 0.9)", fontWeight: 700 }}>{instructor.location}</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "12px" }}>
+                {instructor.languages.split(",").map((language) => (
+                  <span key={language} style={{ borderRadius: "999px", border: "1px solid rgba(161, 151, 255, 0.58)", background: "rgba(106, 72, 196, 0.23)", padding: "6px 11px", fontSize: "12px", fontWeight: 700, color: "#efe5ff" }}>
+                    {language.trim()}
+                  </span>
+                ))}
+              </div>
+
+              <p style={{ margin: "0 0 12px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700 }}>{instructor.role}</p>
+              <p style={{ margin: "0 0 12px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong>Specialty:</strong> {instructor.specialty}</p>
+              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", flexGrow: 1 }}>{instructor.bio}</p>
+              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                <span style={{ borderRadius: "999px", background: "linear-gradient(135deg, rgba(180, 88, 255, 0.9), rgba(76, 178, 255, 0.9))", padding: "7px 14px", fontSize: "12px", fontWeight: 800 }}>{instructor.badge}</span>
+              </div>
+
+              {instructor.name === "Fred Dossola" ? (
+                <div className="fred-callout">
+                  <strong>First Oxford Cohort</strong><br />
+                  June 12, 13 &amp; 14<br />
+                  9:00 AM – 5:00 PM each day<br />
+                  Condensed 3-Day Production Intensive
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </div>
+
+        <p style={{ ...bodyStyle, marginTop: "20px", color: colors.soft, fontSize: "16px", maxWidth: "none" }}>
+          More global instructors are being added as new city cohorts open.
+        </p>
+
+        <div style={{ marginTop: "24px" }}>
+          <a href={instructorFormLink} style={buttonPrimaryStyle}>
+            Apply to Teach with Aspire Game Academy
+          </a>
+        </div>
+      </section>
+
+      <div style={dividerStyle} />
+
+      <section style={sectionStyle}>
+        <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Built For</div>
           <h2 style={h2Style}>For people who want real industry context fast</h2>
         </div>
@@ -952,103 +1096,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div style={dividerStyle} />
-
-      <section style={sectionStyle}>
-        <div style={sectionIntroStyle}>
-          <div style={smallLabelStyle}>Global Faculty</div>
-          <h2 style={h2Style}>Meet the Global Instructors</h2>
-          <p style={bodyStyle}>
-            Meet a growing network of experienced game industry instructors bringing global studio perspective into each Aspire cohort.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {globalInstructors.map((instructor) => (
-            <div key={instructor.name} className="flex flex-col">
-              <div className="bg-black/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 h-full flex flex-col">
-                {instructor.image ? (
-                  <Image
-                    src={instructor.image}
-                    alt={instructor.name}
-                    width={400}
-                    height={500}
-                    className="w-full h-[400px] object-cover rounded-xl"
-                  />
-                ) : (
-                  <div className="w-full h-[400px] grid place-items-center text-white/75 font-bold tracking-wider uppercase text-xs text-center p-4">
-                    Photo Placeholder
-                  </div>
-                )}
-
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-xl font-semibold text-white mb-1">{instructor.name}</h3>
-                  <p className="text-sm text-gray-300 mb-2">{instructor.location}</p>
-                  <p className="text-xs text-purple-300 mb-3">
-                    {instructor.languages.split(",").map((language) => language.trim()).join(" • ")}
-                  </p>
-                  <p className="text-sm text-gray-200 leading-relaxed mb-2">{instructor.role}</p>
-                  {instructor.specialty ? (
-                    <p className="text-sm text-gray-200 leading-relaxed mb-2">
-                      <strong>Specialty:</strong> {instructor.specialty}
-                    </p>
-                  ) : null}
-                  <p className="text-sm text-gray-200 leading-relaxed flex-grow">{instructor.bio}</p>
-                  <div className="mt-4">
-                    <span className="inline-block text-xs bg-purple-600/80 text-white px-3 py-1 rounded-full">
-                      {instructor.badge}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p
-          style={{
-            ...bodyStyle,
-            fontSize: "16px",
-            marginTop: "18px",
-            color: colors.soft,
-            maxWidth: "none",
-          }}
-        >
-          More global instructors are being added as new city cohorts open.
-        </p>
-
-        <div
-          style={{
-            marginTop: "26px",
-            display: "grid",
-            gap: "10px",
-            textAlign: "center",
-          }}
-        >
-          {[
-            ["Fred Dossola", "How Games Ship"],
-            ["John Myers", "How Games Feel"],
-            ["Aydan Aliyeva", "How Games Work"],
-            ["Zachary Kosma", "How Games Scale"],
-          ].map(([name, focus]) => (
-            <p
-              key={name}
-              style={{
-                margin: 0,
-                color: "rgba(224, 255, 255, 0.92)",
-                textShadow: "0 0 10px rgba(95, 220, 255, 0.34)",
-                letterSpacing: "0.2px",
-                lineHeight: 1.55,
-              }}
-            >
-              <strong style={{ fontWeight: 800 }}>{name}</strong> → {focus}
-            </p>
-          ))}
-        </div>
-      </section>
-
-      <div style={dividerStyle} />
 
       <section
         style={{
