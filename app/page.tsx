@@ -284,14 +284,18 @@ export default function Home() {
       }
 
       .instructor-card {
-        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
       }
 
       .instructor-image-wrap {
         width: 100% !important;
-        max-height: 300px !important;
+        max-width: 100% !important;
         height: 300px !important;
         margin: 0 auto !important;
+      }
+
+      .instructor-badge-wrap {
+        margin-top: 20px !important;
       }
     }
 
@@ -301,12 +305,17 @@ export default function Home() {
       }
 
       .instructor-card {
-        grid-template-columns: 220px minmax(0, 1fr) !important;
+        flex-direction: column !important;
       }
 
       .instructor-image-wrap {
-        width: 220px !important;
-        height: 280px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+
+      .instructor-badge-wrap {
+        margin-top: 20px !important;
       }
     }
 
@@ -320,13 +329,10 @@ export default function Home() {
 
       .instructor-card {
         position: relative;
-        display: grid;
-        grid-template-columns: 230px minmax(0, 1fr);
-        gap: 18px;
-        align-items: stretch;
+        display: flex;
+        align-items: flex-start;
+        gap: 28px;
         height: auto;
-        min-height: 0;
-        max-height: none;
         padding: clamp(24px, 2.5vw, 28px);
         border-radius: 22px;
         background: rgba(10, 8, 35, 0.82);
@@ -393,10 +399,9 @@ export default function Home() {
       .instructor-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         min-width: 0;
-        height: 100%;
-        padding-bottom: 28px;
+        height: auto;
+        padding-bottom: 32px;
       }
 
       .instructor-main {
@@ -456,7 +461,7 @@ export default function Home() {
       role: "Senior Games Producer | Production Systems Specialist",
       location: "UK & France",
       specialty: "Game production, agile workflows, team leadership, pipeline design, AAA development",
-      bio: "Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond. Fred has worked on titles including Uncharted 4, The Last of Us Part II, and Star Citizen, and helps teams build production systems that support great work without burnout.",
+      bio: "Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. Fred grew up in the 80s playing arcade cabinets and Atari at home, and that early passion for games evolved into a career focused on building strong production systems and team cultures. Today, he specializes in helping studios ship high-quality work efficiently while protecting teams from burnout, creating environments where creativity and execution can thrive together.",
       badge: "ASPIRE BADGE: PRODUCTION",
       image: "/Fred.png",
       imageAlt: "Fred Dossola",
@@ -466,7 +471,7 @@ export default function Home() {
       role: "Game Creator | Game Design Specialist",
       location: "Los Angeles, USA",
       specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
-      bio: "Experienced game creator with a degree in Game Design and over six years of industry experience across indie startups and large-scale studios. John brings practical insight into how strong games are built, shipped, and supported by healthy creative teams.",
+      bio: "Experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. John has worked across diverse teams, platforms, and production pipelines, giving him a well-rounded perspective on how great games are built and shipped. He is passionate about the medium of play and enjoys sharing practical, real-world insights with others. His focus is on mentorship, collaboration, and helping developers grow within supportive and high-performing creative environments.",
       badge: "ASPIRE BADGE: GAME DESIGN",
       image: "/johnmyers.png",
       imageAlt: "John Myers",
@@ -476,7 +481,7 @@ export default function Home() {
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
       specialty: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
-      bio: "Unreal Authorized Instructor focused on helping creators understand the systems behind real-time experiences. Aydan specializes in Unreal Engine 5, environment design, technical workflows, and industry-level production standards.",
+      bio: "Unreal Authorized Instructor dedicated to helping creators build the technical foundation required to bring ambitious ideas to life. Aydan goes beyond teaching tools, focusing on helping developers understand the underlying systems that power real-time experiences. Specializing in Unreal Engine 5, environment design, and technical workflows, Aydan emphasizes industry-level standards and production practices. Through mentorship with organizations like IGDA and work on serious game projects, Aydan supports developers in building confidence and technical depth in an evolving real-time landscape.",
       badge: "ASPIRE BADGE: TECHNICAL FOUNDATIONS",
       image: "/aydan.png",
       imageAlt: "Aydan Aliyeva",
@@ -486,7 +491,7 @@ export default function Home() {
       role: "Creative Technologist | XR & Product Systems",
       location: "Las Vegas / Los Angeles, USA",
       specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
-      bio: "Creative technologist and games leader with experience across education, indie development, XR, QA, Unity, and product strategy. Zachary helps developers build interactive experiences that are playable, scalable, and commercially thoughtful.",
+      bio: "Creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. Zachary works at the intersection of creativity, technology, and product thinking, helping developers understand how to build engaging interactive experiences while making smart, strategic decisions. With experience across technical development, education, and product systems, he brings a practical, forward-thinking perspective to developers who want to create experiences that are both playable and commercially viable.",
       badge: "ASPIRE BADGE: INTERACTIVE SYSTEMS",
       image: "/zachary.png",
       imageAlt: "Zachary Kosma",
