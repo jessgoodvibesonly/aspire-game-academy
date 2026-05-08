@@ -284,13 +284,13 @@ export default function Home() {
       }
 
       .instructor-image-wrap {
-        height: 160px !important;
+        height: 150px !important;
       }
     }
 
     @media (max-width: 980px) and (min-width: 641px) {
       .instructor-image-wrap {
-        height: 180px !important;
+        height: 170px !important;
       }
     }
 
@@ -319,17 +319,18 @@ export default function Home() {
       .instructor-card:hover {
         border-color: rgba(221, 156, 255, 0.8);
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5), 0 0 26px rgba(204, 115, 255, 0.45), 0 0 36px rgba(85, 205, 255, 0.35);
-        transform: translateY(-2px);
+        transform: translateY(-4px);
       }
 
       .instructor-image-wrap {
         position: relative;
         width: 100%;
-        height: 220px;
-        max-height: 220px;
+        height: 200px;
+        max-height: 200px;
+        padding-top: 8px;
         overflow: hidden;
         border-radius: 12px;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
         border: 1px solid rgba(255, 255, 255, 0.14);
       }
 
@@ -346,23 +347,37 @@ export default function Home() {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 30%;
+        transform: scale(0.95);
         transition: transform 0.3s ease;
       }
 
       .instructor-card:hover .instructor-image {
-        transform: scale(1.03);
+        transform: scale(1.02);
       }
 
       .fred-callout {
-        margin-top: 14px;
-        padding: 12px 14px;
-        border-radius: 12px;
-        border: 1px solid rgba(111, 226, 255, 0.4);
-        background: rgba(61, 142, 218, 0.18);
-        color: rgba(220, 245, 255, 0.95);
-        line-height: 1.55;
-        font-size: 14px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 3;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(125, 227, 255, 0.75);
+        background: linear-gradient(135deg, rgba(32, 175, 255, 0.28), rgba(153, 76, 255, 0.32));
+        box-shadow: 0 0 14px rgba(106, 219, 255, 0.45), 0 0 28px rgba(162, 91, 255, 0.28);
+        color: rgba(232, 249, 255, 0.96);
+        line-height: 1.35;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+
+      .instructor-divider {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(132, 215, 255, 0.05), rgba(132, 215, 255, 0.5), rgba(195, 118, 255, 0.05));
+        margin: 0 0 10px;
       }
 
   `;
@@ -880,7 +895,7 @@ export default function Home() {
 
       <div style={dividerStyle} />
 
-      <section style={sectionStyle}>
+      <section style={{ ...sectionStyle, maxWidth: "1240px", paddingTop: "80px", paddingBottom: "80px" }}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>GLOBAL INSTRUCTOR NETWORK</div>
           <h2 style={h2Style}>Meet the Global Instructors</h2>
@@ -892,35 +907,33 @@ export default function Home() {
         <div className="instructors-grid">
           {globalInstructors.map((instructor) => (
             <article key={instructor.name} className="instructor-card">
+              {instructor.name === "Fred Dossola" ? (
+                <div className="fred-callout">
+                  LIVE COHORT<br />
+                  Oxford • June 12–14
+                </div>
+              ) : null}
               <div className="instructor-image-wrap">
                 <Image src={instructor.image} alt={instructor.name} width={640} height={440} className="instructor-image" />
               </div>
 
-              <h3 style={{ margin: 0, fontSize: "clamp(24px, 2.5vw, 30px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
-              <p style={{ margin: "8px 0 6px", color: "rgba(197, 237, 255, 0.9)", fontWeight: 700 }}>{instructor.location}</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "12px" }}>
+              <h3 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
+              <p style={{ margin: "0 0 10px", color: "rgba(197, 237, 255, 0.72)", fontWeight: 600 }}>{instructor.location}</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
                 {instructor.languages.split(",").map((language) => (
-                  <span key={language} style={{ borderRadius: "999px", border: "1px solid rgba(161, 151, 255, 0.58)", background: "rgba(106, 72, 196, 0.23)", padding: "6px 11px", fontSize: "12px", fontWeight: 700, color: "#efe5ff" }}>
+                  <span key={language} style={{ borderRadius: "999px", border: "1px solid rgba(161, 151, 255, 0.62)", background: "rgba(106, 72, 196, 0.2)", boxShadow: "0 0 10px rgba(160, 118, 255, 0.22)", padding: "4px 10px", fontSize: "12px", fontWeight: 700, color: "#efe5ff" }}>
                     {language.trim()}
                   </span>
                 ))}
               </div>
 
-              <p style={{ margin: "0 0 12px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700 }}>{instructor.role}</p>
-              <p style={{ margin: "0 0 12px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong>Specialty:</strong> {instructor.specialty}</p>
-              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", flexGrow: 1 }}>{instructor.bio}</p>
+              <p style={{ margin: "0 0 10px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700, fontSize: "17px" }}>{instructor.role}</p>
+              <p style={{ margin: "0 0 10px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
+              <div className="instructor-divider" />
+              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", maxWidth: "62ch", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 5, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{instructor.bio}</p>
               <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "10px" }}>
                 <span style={{ borderRadius: "999px", background: "linear-gradient(135deg, rgba(180, 88, 255, 0.9), rgba(76, 178, 255, 0.9))", padding: "7px 14px", fontSize: "12px", fontWeight: 800 }}>{instructor.badge}</span>
               </div>
-
-              {instructor.name === "Fred Dossola" ? (
-                <div className="fred-callout">
-                  <strong>First Oxford Cohort</strong><br />
-                  June 12, 13 &amp; 14<br />
-                  9:00 AM – 5:00 PM each day<br />
-                  Condensed 3-Day Production Intensive
-                </div>
-              ) : null}
             </article>
           ))}
         </div>
