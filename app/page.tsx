@@ -314,7 +314,7 @@ export default function Home() {
       .instructors-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
+        gap: 32px;
         margin-top: 28px;
       }
 
@@ -323,9 +323,11 @@ export default function Home() {
         display: grid;
         grid-template-columns: 230px minmax(0, 1fr);
         gap: 18px;
-        align-items: start;
+        align-items: stretch;
         height: auto;
-        padding: clamp(20px, 2.2vw, 24px);
+        min-height: 0;
+        max-height: none;
+        padding: clamp(24px, 2.5vw, 28px);
         border-radius: 22px;
         background: rgba(10, 8, 35, 0.82);
         border: 1px solid rgba(145, 125, 255, 0.55);
@@ -392,6 +394,9 @@ export default function Home() {
         display: flex;
         flex-direction: column;
         min-width: 0;
+        height: auto;
+        padding-bottom: 32px;
+        gap: 2px;
       }
 
       .instructor-divider {
@@ -401,7 +406,7 @@ export default function Home() {
       }
 
       .instructor-bio {
-        margin: 0 0 12px;
+        margin: 0 0 16px;
         line-height: 1.7;
         color: rgba(221, 236, 255, 0.88);
         max-width: 62ch;
@@ -947,7 +952,7 @@ export default function Home() {
                 <Image src={instructor.image} alt={instructor.name} width={640} height={440} className="instructor-image" />
               </div>
 
-              <div className="instructor-content" style={{ paddingBottom: "6px" }}>
+              <div className="instructor-content">
               {instructor.name === "Fred Dossola" ? (
                 <div className="fred-callout" style={{ marginBottom: "10px" }}>
                   LIVE COHORT<br />OXFORD • JUNE 12–14
@@ -959,7 +964,7 @@ export default function Home() {
               <p style={{ margin: "0 0 10px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
               <div className="instructor-divider" />
               <p className="instructor-bio">{instructor.bio}</p>
-              <div style={{ marginTop: "6px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              <div style={{ marginTop: "10px", marginBottom: "2px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
                 <span className="aspire-badge-pill">✦ {instructor.badge}</span>
               </div>
               </div>
