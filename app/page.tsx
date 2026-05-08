@@ -735,13 +735,21 @@ export default function Home() {
                   }}
                 >
                   {[
-                    ["Format", "Pop-Up Academy"],
-                    ["Options", "3-Day or 7-Day"],
-                    ["Focus", "Real Studio Workflows"],
-                    ["Outcome", "Aspire Badges"],
-                  ].map(([label, value]) => (
+                    { label: "Format", value: "Pop-Up Academy" },
+                    { label: "Options", value: "3-Day or 7-Day" },
+                    { label: "Focus", value: "Real Studio Workflows" },
+                    {
+                      label: "Outcome",
+                      value: (
+                        <span style={{ display: "inline-flex", flexDirection: "column", gap: "7px" }}>
+                          <span>Certificate of Completion</span>
+                          <span>Aspire Badges</span>
+                        </span>
+                      ),
+                    },
+                  ].map((item) => (
                     <div
-                      key={label}
+                      key={item.label}
                       style={{
                         background: "rgba(255,255,255,0.05)",
                         border: "1px solid rgba(255,255,255,0.10)",
@@ -760,7 +768,7 @@ export default function Home() {
                           marginBottom: "6px",
                         }}
                       >
-                        {label}
+                        {item.label}
                       </div>
                       <div
                         style={{
@@ -769,7 +777,7 @@ export default function Home() {
                           fontWeight: 800,
                         }}
                       >
-                        {value}
+                        {item.value}
                       </div>
                     </div>
                   ))}
