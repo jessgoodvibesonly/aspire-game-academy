@@ -285,12 +285,14 @@ export default function Home() {
 
       .instructor-card {
         flex-direction: column !important;
+        gap: 32px !important;
       }
 
       .instructor-image-wrap {
         width: 100% !important;
-        max-width: 100% !important;
-        height: 300px !important;
+        max-width: 320px !important;
+        height: 360px !important;
+        aspect-ratio: 4 / 5 !important;
         margin: 0 auto !important;
       }
 
@@ -305,13 +307,14 @@ export default function Home() {
       }
 
       .instructor-card {
-        flex-direction: column !important;
+        flex-direction: row !important;
+        gap: 32px !important;
       }
 
       .instructor-image-wrap {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 240px !important;
         height: 300px !important;
+        aspect-ratio: 4 / 5 !important;
       }
 
       .instructor-badge-wrap {
@@ -331,7 +334,7 @@ export default function Home() {
         position: relative;
         display: flex;
         align-items: flex-start;
-        gap: 28px;
+        gap: 36px;
         height: auto;
         padding: clamp(24px, 2.5vw, 28px);
         border-radius: 22px;
@@ -350,10 +353,11 @@ export default function Home() {
 
       .instructor-image-wrap {
         position: relative;
-        width: 230px;
-        height: 300px;
+        width: 260px;
+        height: 320px;
+        aspect-ratio: 4 / 5;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 18px;
         border: 1px solid rgba(121, 217, 255, 0.6);
         box-shadow: 0 0 0 1px rgba(178, 120, 255, 0.3), 0 0 18px rgba(85, 204, 255, 0.22), 0 0 24px rgba(176, 103, 255, 0.2);
       }
