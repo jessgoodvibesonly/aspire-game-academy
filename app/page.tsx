@@ -1226,14 +1226,30 @@ export default function Home() {
           >
             GLOBAL POP-UP LOCATIONS
           </div>
-          <div className="marquee-wrapper" style={{ opacity: 0.82 }}>
-            <div className="marquee-track">
-              <span>
-                Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
-              </span>
-              <span>
-                Los Angeles, CA · San Francisco, CA · Las Vegas, NV · Chicago, IL · Austin, TX · St. Petersburg, FL · Charlottetown, Canada · Ottawa, Canada · Across England · Across France · Amsterdam, Netherlands ·
-              </span>
+          <div className="marquee-wrapper" style={{ opacity: 0.92 }}>
+            <div className="marquee-track" aria-label="Global pop-up locations">
+              <div className="marquee-group" aria-hidden="true">
+                <span className="marquee-item">UK</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">France</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Netherlands</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Las Vegas, USA</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Los Angeles, USA</span>
+              </div>
+              <div className="marquee-group" aria-hidden="true">
+                <span className="marquee-item">UK</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">France</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Netherlands</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Las Vegas, USA</span>
+                <span className="marquee-separator">•</span>
+                <span className="marquee-item">Los Angeles, USA</span>
+              </div>
             </div>
           </div>
         </div>
