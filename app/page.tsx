@@ -393,23 +393,36 @@ export default function Home() {
       .instructor-content {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         min-width: 0;
-        height: auto;
-        padding-bottom: 32px;
-        gap: 2px;
+        height: 100%;
+        padding-bottom: 28px;
+      }
+
+      .instructor-main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 0;
       }
 
       .instructor-divider {
         height: 1px;
         background: linear-gradient(90deg, rgba(132, 215, 255, 0.05), rgba(132, 215, 255, 0.5), rgba(195, 118, 255, 0.05));
-        margin: 0 0 10px;
+        margin: 0;
       }
 
       .instructor-bio {
-        margin: 0 0 16px;
+        margin: 0;
+        font-size: 1rem;
         line-height: 1.7;
-        color: rgba(221, 236, 255, 0.88);
+        color: rgba(255,255,255,0.82);
         max-width: 62ch;
+      }
+
+      .instructor-badge-wrap {
+        margin-top: auto;
+        padding-top: 16px;
       }
 
       .aspire-badge-pill {
@@ -953,20 +966,22 @@ export default function Home() {
               </div>
 
               <div className="instructor-content">
-              {instructor.name === "Fred Dossola" ? (
-                <div className="fred-callout" style={{ marginBottom: "10px" }}>
-                  LIVE COHORT<br />OXFORD • JUNE 12–14
+                <div className="instructor-main">
+                  {instructor.name === "Fred Dossola" ? (
+                    <div className="fred-callout">
+                      LIVE COHORT<br />OXFORD • JUNE 12–14
+                    </div>
+                  ) : null}
+                  <h3 style={{ margin: 0, fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
+                  <p style={{ margin: 0, color: "rgba(197, 237, 255, 0.72)", fontWeight: 600 }}>{instructor.location}</p>
+                  <p style={{ margin: 0, lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700, fontSize: "17px" }}>{instructor.role}</p>
+                  <p style={{ margin: 0, lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
+                  <div className="instructor-divider" />
+                  <p className="instructor-bio">{instructor.bio}</p>
                 </div>
-              ) : null}
-              <h3 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
-              <p style={{ margin: "0 0 10px", color: "rgba(197, 237, 255, 0.72)", fontWeight: 600 }}>{instructor.location}</p>
-              <p style={{ margin: "0 0 10px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700, fontSize: "17px" }}>{instructor.role}</p>
-              <p style={{ margin: "0 0 10px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
-              <div className="instructor-divider" />
-              <p className="instructor-bio">{instructor.bio}</p>
-              <div style={{ marginTop: "10px", marginBottom: "2px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                <span className="aspire-badge-pill">✦ {instructor.badge}</span>
-              </div>
+                <div className="instructor-badge-wrap">
+                  <span className="aspire-badge-pill">✦ {instructor.badge}</span>
+                </div>
               </div>
             </article>
           ))}
