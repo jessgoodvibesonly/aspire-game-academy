@@ -283,14 +283,25 @@ export default function Home() {
         grid-template-columns: 1fr !important;
       }
 
+      .instructor-card {
+        grid-template-columns: 1fr !important;
+      }
+
       .instructor-image-wrap {
-        height: 150px !important;
+        width: 140px !important;
+        height: 170px !important;
+        margin: 0 auto !important;
       }
     }
 
     @media (max-width: 980px) and (min-width: 641px) {
+      .instructor-card {
+        grid-template-columns: 160px minmax(0, 1fr) !important;
+      }
+
       .instructor-image-wrap {
-        height: 170px !important;
+        width: 160px !important;
+        height: 190px !important;
       }
     }
 
@@ -304,8 +315,10 @@ export default function Home() {
 
       .instructor-card {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
         height: 100%;
         padding: clamp(20px, 2.2vw, 24px);
         border-radius: 22px;
@@ -324,14 +337,12 @@ export default function Home() {
 
       .instructor-image-wrap {
         position: relative;
-        width: 100%;
-        height: 200px;
-        max-height: 200px;
-        padding-top: 8px;
+        width: 180px;
+        height: 220px;
         overflow: hidden;
-        border-radius: 12px;
-        margin-bottom: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        border: 1px solid rgba(121, 217, 255, 0.6);
+        box-shadow: 0 0 0 1px rgba(178, 120, 255, 0.3), 0 0 18px rgba(85, 204, 255, 0.22), 0 0 24px rgba(176, 103, 255, 0.2);
       }
 
       .instructor-image-wrap::after {
@@ -347,8 +358,8 @@ export default function Home() {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 30%;
-        transform: scale(0.95);
+        object-position: center center;
+        transform: scale(1);
         transition: transform 0.3s ease;
       }
 
@@ -357,10 +368,8 @@ export default function Home() {
       }
 
       .fred-callout {
-        position: absolute;
-        top: 20px;
-        left: 20px;
         z-index: 3;
+        width: fit-content;
         padding: 8px 12px;
         border-radius: 999px;
         border: 1px solid rgba(125, 227, 255, 0.75);
@@ -372,6 +381,12 @@ export default function Home() {
         font-weight: 800;
         letter-spacing: 0.4px;
         text-transform: uppercase;
+      }
+
+      .instructor-content {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
       }
 
       .instructor-divider {
@@ -907,16 +922,17 @@ export default function Home() {
         <div className="instructors-grid">
           {globalInstructors.map((instructor) => (
             <article key={instructor.name} className="instructor-card">
-              {instructor.name === "Fred Dossola" ? (
-                <div className="fred-callout">
-                  LIVE COHORT<br />
-                  Oxford • June 12–14
-                </div>
-              ) : null}
               <div className="instructor-image-wrap">
                 <Image src={instructor.image} alt={instructor.name} width={640} height={440} className="instructor-image" />
               </div>
 
+              <div className="instructor-content">
+              {instructor.name === "Fred Dossola" ? (
+                <div className="fred-callout" style={{ marginBottom: "10px" }}>
+                  LIVE COHORT<br />
+                  Oxford • June 12–14
+                </div>
+              ) : null}
               <h3 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
               <p style={{ margin: "0 0 10px", color: "rgba(197, 237, 255, 0.72)", fontWeight: 600 }}>{instructor.location}</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
@@ -930,9 +946,10 @@ export default function Home() {
               <p style={{ margin: "0 0 10px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700, fontSize: "17px" }}>{instructor.role}</p>
               <p style={{ margin: "0 0 10px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
               <div className="instructor-divider" />
-              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", maxWidth: "62ch", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 5, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{instructor.bio}</p>
+              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", maxWidth: "62ch", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 4, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{instructor.bio}</p>
               <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "10px" }}>
                 <span style={{ borderRadius: "999px", background: "linear-gradient(135deg, rgba(180, 88, 255, 0.9), rgba(76, 178, 255, 0.9))", padding: "7px 14px", fontSize: "12px", fontWeight: 800 }}>{instructor.badge}</span>
+              </div>
               </div>
             </article>
           ))}
