@@ -728,7 +728,49 @@ export default function Home() {
                 >
                   {[
                     { label: "Format", value: "Pop-Up Academy" },
-                    { label: "Options", value: "3-Day or 7-Day" },
+                    {
+                      label: "Options",
+                      value: (
+                        <span
+                          style={{
+                            display: "inline-flex",
+                            flexDirection: "column",
+                            gap: "10px",
+                            maxWidth: "100%",
+                          }}
+                        >
+                          <span style={{ fontSize: "18px", lineHeight: 1.3, fontWeight: 800 }}>
+                            3-Day Intensive or 7-Day Flexible
+                          </span>
+
+                          <span style={{ display: "inline-flex", flexDirection: "column", gap: "10px", fontSize: "14px", lineHeight: 1.5, fontWeight: 600, color: colors.soft }}>
+                            <span style={{ display: "inline-flex", flexDirection: "column", gap: "2px" }}>
+                              <span style={{ color: colors.text, fontSize: "15px", fontWeight: 700 }}>3-Day Intensive</span>
+                              <span>9:00 AM – 5:00 PM (Full immersion)</span>
+                            </span>
+
+                            <span style={{ display: "inline-flex", flexDirection: "column", gap: "2px" }}>
+                              <span style={{ color: colors.text, fontSize: "15px", fontWeight: 700 }}>7-Day Flexible</span>
+                              <span>10:00 AM – 2:00 PM (Same total hours, spread out)</span>
+                            </span>
+                          </span>
+
+                          <span
+                            style={{
+                              marginTop: "2px",
+                              paddingTop: "8px",
+                              borderTop: "1px solid rgba(255,255,255,0.14)",
+                              color: colors.soft,
+                              fontSize: "12px",
+                              fontWeight: 600,
+                              lineHeight: 1.4,
+                            }}
+                          >
+                            Same total learning hours. Two ways to experience it.
+                          </span>
+                        </span>
+                      ),
+                    },
                     { label: "Focus", value: "Real Studio Workflows" },
                     {
                       label: "Outcome",
