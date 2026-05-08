@@ -325,7 +325,7 @@ export default function Home() {
         background: linear-gradient(165deg, rgba(22, 14, 46, 0.94), rgba(9, 15, 39, 0.88));
         border: 1px solid rgba(170, 124, 255, 0.55);
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 18px rgba(151, 88, 255, 0.35), 0 0 28px rgba(84, 197, 255, 0.2);
-        overflow: hidden;
+        overflow: visible;
         transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
       }
 
@@ -370,14 +370,14 @@ export default function Home() {
       .fred-callout {
         z-index: 3;
         width: fit-content;
-        padding: 8px 12px;
+        padding: 5px 10px;
         border-radius: 999px;
         border: 1px solid rgba(125, 227, 255, 0.75);
         background: linear-gradient(135deg, rgba(32, 175, 255, 0.28), rgba(153, 76, 255, 0.32));
         box-shadow: 0 0 14px rgba(106, 219, 255, 0.45), 0 0 28px rgba(162, 91, 255, 0.28);
         color: rgba(232, 249, 255, 0.96);
-        line-height: 1.35;
-        font-size: 11px;
+        line-height: 1.2;
+        font-size: 10px;
         font-weight: 800;
         letter-spacing: 0.4px;
         text-transform: uppercase;
@@ -395,6 +395,29 @@ export default function Home() {
         margin: 0 0 10px;
       }
 
+      .instructor-bio {
+        margin: 0 0 12px;
+        line-height: 1.7;
+        color: rgba(221, 236, 255, 0.88);
+        max-width: 62ch;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .aspire-badge-pill {
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(195, 108, 255, 0.98), rgba(69, 188, 255, 0.98));
+        border: 1px solid rgba(222, 184, 255, 0.8);
+        box-shadow: 0 0 18px rgba(189, 120, 255, 0.56), 0 0 30px rgba(84, 200, 255, 0.45);
+        padding: 8px 14px;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.3px;
+        color: #f9f6ff;
+      }
+
   `;
 
   const builtFor = [
@@ -410,7 +433,6 @@ export default function Home() {
       name: "Fred Dossola",
       role: "Senior Games Producer | Production Systems Specialist",
       location: "UK & France",
-      languages: "English, Spanish",
       specialty: "Game production, agile workflows, team leadership, pipeline design, AAA development",
       bio: "I am a Senior Games Producer with 11 years of AAA experience across Sony, Cloud Imperium Games, Black Forest Games, and beyond, shipping titles like Uncharted 4, The Last of Us Part II, and Star Citizen. I grew up in the 80s playing arcade cabinets and Atari at home, and that love for games never went away, it just turned into a career. Today I specialize in building production systems and team cultures that help studios ship great work without burning out teams. When I'm not performing production heroics, I'm probably still playing games, watching anime, or diving into something equally nerdy.",
       courseFocus: "Production leadership, agile workflows, and real-world game development operations. Students will learn how to manage teams, structure production pipelines, and ship games efficiently while maintaining healthy, high-performing team environments.",
@@ -422,7 +444,6 @@ export default function Home() {
       name: "John Myers",
       role: "Game Creator | Game Design Specialist",
       location: "Los Angeles, USA",
-      languages: "English",
       specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
       bio: "I am an experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. I’ve worked across diverse teams, platforms, and production pipelines, giving me a well-rounded perspective on how great games are built and shipped. I’m passionate about the medium of play and love sharing practical, real-world insights with others. I’m especially driven by mentorship, collaboration, and helping foster strong, supportive creative communities where developers at all levels can grow and succeed.",
       courseFocus: "Game design foundations, gameplay systems, and real-world production workflows, from concept to playable experience. Students will learn how to think like a game creator, collaborate effectively within a team, and turn ideas into functional, engaging gameplay.",
@@ -434,7 +455,6 @@ export default function Home() {
       name: "Aydan Aliyeva",
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
-      languages: "English",
       specialty: "Unreal Engine 5, real-time systems, environment design, technical workflows, interactive experiences",
       bio: "I am an Unreal Authorized Instructor dedicated to helping creators build the technical foundation needed to bring ambitious ideas to life. My focus goes beyond simply teaching tools — I guide developers in understanding the underlying systems that power real-time experiences. I specialize in Unreal Engine 5, from skeletal mesh systems to immersive environment design, with a strong emphasis on industry-level standards and workflows. Through mentorship with organizations like IGDA and collaboration on serious game projects, I support developers in building the confidence and technical depth required to innovate in a rapidly evolving real-time landscape.",
       courseFocus: "Unreal Engine 5 fundamentals, real-time systems, and technical workflows for modern game development. Students will learn how to build, optimize, and understand core systems including environments, assets, and interactive elements while working within industry-standard pipelines.",
@@ -446,7 +466,6 @@ export default function Home() {
       name: "Zachary Kosma",
       role: "Creative Technologist | XR & Product Systems",
       location: "Las Vegas / Los Angeles, USA",
-      languages: "English",
       specialty: "XR, Unity, product systems, monetization strategy, QA, indie game development",
       bio: "Zachary Kosma is a creative technologist and games leader with a background spanning education, indie game development, XR, QA, Unity, and monetization strategy. His work sits at the intersection of creativity, technology, product thinking, and real-time development. He helps developers understand how to build engaging interactive experiences while also thinking strategically about the systems, audiences, and decisions that support them. With experience across technical development, education, QA, and product strategy, Zachary brings a practical, future-focused perspective to students who want to build games and immersive experiences that are playable, scalable, and commercially thoughtful.",
       courseFocus: "XR prototyping, Unity foundations, product systems, and monetization strategy for modern interactive experiences. Students will learn how to shape an idea into a playable prototype, understand the systems behind engagement and revenue, and make technical and strategic decisions that support long-term viability.",
@@ -926,29 +945,20 @@ export default function Home() {
                 <Image src={instructor.image} alt={instructor.name} width={640} height={440} className="instructor-image" />
               </div>
 
-              <div className="instructor-content">
+              <div className="instructor-content" style={{ paddingBottom: "6px" }}>
               {instructor.name === "Fred Dossola" ? (
                 <div className="fred-callout" style={{ marginBottom: "10px" }}>
-                  LIVE COHORT<br />
-                  Oxford • June 12–14
+                  LIVE COHORT Oxford • June 12–14
                 </div>
               ) : null}
               <h3 style={{ margin: "0 0 10px", fontSize: "clamp(26px, 2.6vw, 32px)", fontWeight: 800, textShadow: "0 0 16px rgba(125, 219, 255, 0.24)" }}>{instructor.name}</h3>
               <p style={{ margin: "0 0 10px", color: "rgba(197, 237, 255, 0.72)", fontWeight: 600 }}>{instructor.location}</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "10px" }}>
-                {instructor.languages.split(",").map((language) => (
-                  <span key={language} style={{ borderRadius: "999px", border: "1px solid rgba(161, 151, 255, 0.62)", background: "rgba(106, 72, 196, 0.2)", boxShadow: "0 0 10px rgba(160, 118, 255, 0.22)", padding: "4px 10px", fontSize: "12px", fontWeight: 700, color: "#efe5ff" }}>
-                    {language.trim()}
-                  </span>
-                ))}
-              </div>
-
               <p style={{ margin: "0 0 10px", lineHeight: 1.6, color: "rgba(255,255,255,0.95)", fontWeight: 700, fontSize: "17px" }}>{instructor.role}</p>
               <p style={{ margin: "0 0 10px", lineHeight: 1.65, color: "rgba(214, 236, 255, 0.92)" }}><strong style={{ fontWeight: 800 }}>Specialty:</strong> <span style={{ fontWeight: 500 }}>{instructor.specialty}</span></p>
               <div className="instructor-divider" />
-              <p style={{ margin: "0 0 14px", lineHeight: 1.7, color: "rgba(221, 236, 255, 0.88)", maxWidth: "62ch", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 4, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{instructor.bio}</p>
-              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                <span style={{ borderRadius: "999px", background: "linear-gradient(135deg, rgba(180, 88, 255, 0.9), rgba(76, 178, 255, 0.9))", padding: "7px 14px", fontSize: "12px", fontWeight: 800 }}>{instructor.badge}</span>
+              <p className="instructor-bio">{instructor.bio}</p>
+              <div style={{ marginTop: "6px", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+                <span className="aspire-badge-pill">{instructor.badge}</span>
               </div>
               </div>
             </article>
