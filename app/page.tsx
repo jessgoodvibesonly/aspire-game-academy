@@ -476,16 +476,6 @@ export default function Home() {
       imageAlt: "Fred Dossola",
     },
     {
-      name: "John Myers",
-      role: "Game Creator | Game Design Specialist",
-      location: "Los Angeles, USA",
-      specialty: "Game design, gameplay systems, team collaboration, production pipelines, mentorship",
-      bio: "Experienced game creator with a degree in Game Design and over six years of industry experience spanning both indie startups and large-scale studios. John has worked across diverse teams, platforms, and production pipelines, giving him a well-rounded perspective on how great games are built and shipped. He is passionate about the medium of play and enjoys sharing practical, real-world insights with others. His focus is on mentorship, collaboration, and helping developers grow within supportive and high-performing creative environments.",
-      badge: "ASPIRE BADGE: GAME DESIGN",
-      image: "/johnmyers.png",
-      imageAlt: "John Myers",
-    },
-    {
       name: "Aydan Aliyeva",
       role: "Unreal Authorized Instructor | Real-Time Technology Specialist",
       location: "Utrecht, Netherlands",
@@ -1078,7 +1068,7 @@ export default function Home() {
       <section style={sectionStyle}>
         <div style={sectionIntroStyle}>
           <div style={smallLabelStyle}>Tuition</div>
-          <h2 style={h2Style}>Simple and clear</h2>
+          <h2 style={h2Style}>Accessible premium training, globally</h2>
         </div>
 
         <div
@@ -1108,24 +1098,37 @@ export default function Home() {
                 letterSpacing: "-1px",
               }}
             >
-              $1,985 USD
+              Early Bird: $997 USD
             </div>
-            <p
+            <div
               style={{
-                color: "rgba(220, 252, 255, 0.72)",
-                fontSize: "14px",
-                lineHeight: 1.6,
+                display: "grid",
+                gap: "8px",
+                marginBottom: "14px",
                 textAlign: "center",
-                margin: "0 0 14px 0",
               }}
             >
-              Limited cohort — 10 to 20 students per city
+              <div style={{ fontSize: "18px", fontWeight: 800, color: colors.text }}>Standard: $1497 USD</div>
+              <p
+                style={{
+                  color: "rgba(220, 252, 255, 0.72)",
+                  fontSize: "14px",
+                  lineHeight: 1.6,
+                  textAlign: "center",
+                  margin: 0,
+                }}
+              >
+                Limited cohort — small group live instruction per city
+              </p>
+            </div>
+            <p style={{ color: colors.muted, lineHeight: 1.75, margin: "0 0 14px 0" }}>
+              Premium AAA-led training, now priced to be more accessible for international cohorts.
             </p>
             <p style={{ color: colors.muted, lineHeight: 1.75, margin: "0 0 18px 0" }}>
-              Train inside real game production systems with direct exposure to how modern
-              teams plan, build, test, launch, and operate games. The experience is
-              structured around Aspire Badge tracks, giving students practical,
-              portfolio-ready experience across multiple disciplines.
+              Small cohort sizes. Live instruction. Real production workflows. Aspire Badges and Certificate of Completion included.
+            </p>
+            <p style={{ color: colors.muted, lineHeight: 1.75, margin: "0 0 18px 0" }}>
+              Aspire Game Academy is built for global access: premium game-industry training without traditional university-level cost or long-term commitment.
             </p>
             <div style={{ textAlign: "center", marginBottom: "12px" }}>
               <a
@@ -1148,7 +1151,7 @@ export default function Home() {
                 margin: "0 0 8px 0",
               }}
             >
-              Built around real production workflows. Not theory.
+              3-Day Intensive: $497–$697 USD • 7-Day Intensive: Early Bird $997 USD / Standard $1497 USD
             </p>
           </div>
 
