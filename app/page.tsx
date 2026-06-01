@@ -495,6 +495,16 @@ export default function Home() {
       image: "/zachary.png",
       imageAlt: "Zachary Kosma",
     },
+    {
+      name: "Ty Carriere",
+      role: "Educational Program Director | Instructional Design Leader | Digital Artist",
+      location: "LA / San Francisco, USA",
+      specialty: "Instructional design, curriculum development, Unreal Engine, game art education, creative technology, AI-enhanced learning",
+      bio: "Ty Carriere is an instructional design leader, educator, and digital artist with more than 25 years of experience training artists, designers, and technologists across higher education, game development, animation, and visual effects. He has developed learning programs and curriculum initiatives for organizations including Netflix Animation, NASA, Sega, Framestore, and Intel, helping bridge creative and technical disciplines through scalable, learner-focused training systems. Ty has taught college-level courses in 3D Modeling, Digital Sculpting, Texture & Lighting, Game Design, Previsualization, and Unreal Engine. Known for his calm leadership style and systems-thinking approach, he specializes in transforming complex workflows into accessible, production-ready learning experiences that prepare students for real-world careers.",
+      badge: "ASPIRE BADGE: GAME ART + DESIGN",
+      image: "/TY1.png",
+      imageAlt: "Ty Carriere",
+    },
   ];
 
   return (
