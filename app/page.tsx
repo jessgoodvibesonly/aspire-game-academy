@@ -247,6 +247,10 @@ export default function Home() {
         margin: 0 auto;
       }
 
+      .hero-panel-main {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+
       .tuition-grid {
         grid-template-columns: minmax(0, 1fr) !important;
       }
@@ -647,13 +651,13 @@ export default function Home() {
               />
 
               <div
+                className="hero-panel-main"
                 style={{
                   position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
+                  display: "grid",
+                  gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
                   gap: "22px",
-                  alignItems: "center",
-                  textAlign: "center",
+                  alignItems: "start",
                 }}
               >
                 <div>
@@ -697,6 +701,14 @@ export default function Home() {
                   >
                     Students learn studio-ready workflows, choose a badge track, and leave with a Certificate of Completion plus Aspire Badges that prove what they practiced.
                   </p>
+
+                  <div className="mt-8 w-full max-w-sm rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-xl">
+                    <img
+                      src="/aspirebadges.png"
+                      alt="Aspire Game Academy badge tracks"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
                 </div>
 
                 <div
@@ -724,6 +736,7 @@ export default function Home() {
                     gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
                     gap: "14px",
                     width: "100%",
+                    gridColumn: "1 / -1",
                   }}
                 >
                   {[
